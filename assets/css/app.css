@@ -1,0 +1,182 @@
+@font-face {
+    font-family: SedgewickAve;
+    src: url(/assets/fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
+}
+
+@font-face {
+    font-family: GermaniaOne;
+    src: url(/assets/fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: UnicaOne;
+    src: url(/assets/fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
+}
+
+/*Sticky Header for Mobile. Student.*/
+html,
+body {
+    background-image: url(/assets/img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+header div.mobile-top-nav.hide-for-medium {
+    background-image: url(/assets/img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat no-repeat;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.music-logo img {
+    padding: 4.25px;
+    max-height: 59px;
+}
+
+.mobile-top-nav button .help {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #0C2179;
+    margin-top: 10px;
+}
+
+/*Mobile Body*/
+div.main-content-mobile {
+    margin-top: 6% !important;
+    /*background-color: #1C4B7E;*/
+    padding-top: 31.25px;
+    color: #FFFFFF;
+    /*text-shadow: -1px 7px 14px #000000;*/
+    background-image: url(/assets/img/header-bg.png);
+    background-position: center;
+    background-size: 208% 723px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: UnicaOne;
+    padding-bottom: 70.25px;
+}
+
+.welcome-student-mobile {
+    text-align: center;
+    background: url(/assets/img/ladder-active-overlay.png) 0 0 / cover no-repeat;
+    /*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    -moz-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    -webkit-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+}
+
+.welcome-student-mobile div h1 {
+    font-weight: bold;
+    font-size: 27px;
+    font-family: SedgewickAve;
+    color: white;
+    text-shadow: 0 0 51px #000000;
+    padding: 10.25px;
+}
+
+.instruments-student-mobile .current-level {
+    /*+box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    -moz-box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    -webkit-box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+}
+
+.instruments-student-mobile-header,
+.current-teacher-instrument,
+.next-level-date {
+    /*+box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    -moz-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    -webkit-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+}
+
+.instruments-student-mobile-header h3 {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: UnicaOne;
+    text-decoration: underline double rgba(45, 43, 81, 0.629);
+}
+
+div.instruments-student-mobile,
+div.instruments-student-mobile-header {
+    text-align: center;
+    padding: 9.25px;
+    background-color: rgba(68, 85, 103, 0.603);
+}
+
+div.instruments-student-mobile-header {
+    font-weight: 600;
+    font-size: 18px;
+    padding-top: 30px;
+    background-color: rgba(68, 85, 103, 0.603);
+}
+
+.current-teacher-instrument {
+    padding-top: 11%;
+    font-size: 19px;
+}
+
+.instruments-student-mobile-header .current-level,
+.next-level-date-title {
+    padding-top: 15px;
+}
+
+.next-level-date {
+    padding-top: 19%;
+    vertical-align: middle;
+    font-size: 19px;
+    text-shadow: -2px 1px 4px #0E00A2;
+    font-family: GermaiaOne;
+}
+
+.song-bird {
+    background: url(/assets/img/LV2_Song-Bird-overlay.png) 0 0 / cover no-repeat;
+}
+
+.musician {
+    background: url(/assets/img/LV3_Musician-overlay.png) 0 0 / cover no-repeat;
+}
+
+.bravo {
+    background: url(/assets/img/LV13_Bravo-overlay.png) 0 0 / cover no-repeat;
+}
+
+/*Sticky Footer Style for Mobile. Student.*/
+.mobile-app-icon-bar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    background-image: url(/assets/img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat no-repeat;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.mobile-app-icon-bar button {
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+.mobile-app-icon-bar button svg,
+.mobile-app-icon-bar button i,
+.mobile-app-icon-bar button img {
+    font-size: 2rem;
+    max-height: 2rem;
+    max-width: 2rem;
+    color: #0C2179;
+}
