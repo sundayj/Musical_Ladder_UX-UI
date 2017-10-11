@@ -1,29 +1,30 @@
 @font-face {
     font-family: SedgewickAve;
-    src: url(/assets/fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
+    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
 }
 
 @font-face {
     font-family: GermaniaOne;
-    src: url(/assets/fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
+    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
 }
 
 @font-face {
     font-family: UnicaOne;
-    src: url(/assets/fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
+    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
 }
 
 /*Sticky Header for Mobile. Student.*/
+
 html,
 body {
-    background-image: url(/assets/img/header-bg.png);
+    background-image: url(../img/header-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
 }
 
 header div.mobile-top-nav.hide-for-medium {
-    background-image: url(/assets/img/header-bg.png);
+    background-image: url(../img/header-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: repeat no-repeat;
@@ -47,13 +48,14 @@ header div.mobile-top-nav.hide-for-medium {
 }
 
 /*Mobile Body*/
+
 div.main-content-mobile {
     margin-top: 6% !important;
     /*background-color: #1C4B7E;*/
     padding-top: 31.25px;
     color: #FFFFFF;
     /*text-shadow: -1px 7px 14px #000000;*/
-    background-image: url(/assets/img/header-bg.png);
+    background-image: url(../img/header-bg.png);
     background-position: center;
     background-size: 208% 723px;
     background-repeat: no-repeat;
@@ -64,7 +66,7 @@ div.main-content-mobile {
 
 .welcome-student-mobile {
     text-align: center;
-    background: url(/assets/img/ladder-active-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/ladder-active-overlay.png) 0 0 / cover no-repeat;
     /*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
     -moz-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
     -webkit-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
@@ -136,18 +138,19 @@ div.instruments-student-mobile-header {
 }
 
 .song-bird {
-    background: url(/assets/img/LV2_Song-Bird-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/LV2_Song-Bird-overlay.png) 0 0 / cover no-repeat;
 }
 
 .musician {
-    background: url(/assets/img/LV3_Musician-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/LV3_Musician-overlay.png) 0 0 / cover no-repeat;
 }
 
 .bravo {
-    background: url(/assets/img/LV13_Bravo-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/LV13_Bravo-overlay.png) 0 0 / cover no-repeat;
 }
 
 /*Sticky Footer Style for Mobile. Student.*/
+
 .mobile-app-icon-bar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -158,7 +161,7 @@ div.instruments-student-mobile-header {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    background-image: url(/assets/img/header-bg.png);
+    background-image: url(../img/header-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: repeat no-repeat;
