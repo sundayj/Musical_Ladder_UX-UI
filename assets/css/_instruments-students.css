@@ -13,48 +13,20 @@
     src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
 }
 
-/*Sticky Header for Mobile. Student.*/
-
 html,
 body {
     background-image: url(../img/header-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
-}
-
-header div.mobile-top-nav.hide-for-medium {
-    background-image: url(../img/header-bg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat no-repeat;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    padding-top: 0;
+    margin-top: 0;
     height: auto;
-    width: 100%;
+    color: white;
+    padding-bottom: 0;
 }
-
-.music-logo img {
-    padding: 4.25px;
-    max-height: 59px;
-}
-
-.mobile-top-nav button .help {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #0C2179;
-    margin-top: 10px;
-}
-
-/*Mobile Body*/
 
 div.main-content-mobile {
-    margin-top: 6% !important;
-    /*background-color: #1C4B7E;*/
-    padding-top: 31.25px;
-    color: #FFFFFF;
-    /*text-shadow: -1px 7px 14px #000000;*/
     background-image: url(../img/header-bg.png);
     background-position: center;
     background-size: 208% 723px;
@@ -62,9 +34,14 @@ div.main-content-mobile {
     background-attachment: fixed;
     font-family: UnicaOne;
     padding-bottom: 70.25px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .welcome-student-mobile {
+    position: fixed;
+    top: 60px;
+    width: 100%;
     text-align: center;
     background: url(../img/ladder-active-overlay.png) 0 0 / cover no-repeat;
     /*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
@@ -80,6 +57,14 @@ div.main-content-mobile {
     color: white;
     text-shadow: 0 0 51px #000000;
     padding: 10.25px;
+}
+
+/*Header for Student Instruments on Mobile*/
+
+div.instruments-student-mobile-header {
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgba(68, 85, 103, 0.603);
 }
 
 .instruments-student-mobile .current-level {
@@ -98,24 +83,19 @@ div.main-content-mobile {
     box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
 }
 
-.instruments-student-mobile-header h3 {
+.instrument-table-title h3 {
     font-size: 22px;
     font-weight: 900;
     font-family: UnicaOne;
     text-decoration: underline double rgba(45, 43, 81, 0.629);
 }
 
+/*Main Content for Student Instruments on Mobile*/
+
 div.instruments-student-mobile,
 div.instruments-student-mobile-header {
     text-align: center;
     padding: 9.25px;
-    background-color: rgba(68, 85, 103, 0.603);
-}
-
-div.instruments-student-mobile-header {
-    font-weight: 600;
-    font-size: 18px;
-    padding-top: 30px;
     background-color: rgba(68, 85, 103, 0.603);
 }
 
@@ -147,39 +127,4 @@ div.instruments-student-mobile-header {
 
 .bravo {
     background: url(../img/LV13_Bravo-overlay.png) 0 0 / cover no-repeat;
-}
-
-/*Sticky Footer Style for Mobile. Student.*/
-
-.mobile-app-icon-bar {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    background-image: url(../img/header-bg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat no-repeat;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-}
-
-.mobile-app-icon-bar button {
-    padding: 1.25rem;
-    cursor: pointer;
-}
-
-.mobile-app-icon-bar button svg,
-.mobile-app-icon-bar button i,
-.mobile-app-icon-bar button img {
-    font-size: 2rem;
-    max-height: 2rem;
-    max-width: 2rem;
-    color: #0C2179;
 }

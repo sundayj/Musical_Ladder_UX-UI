@@ -1,0 +1,39 @@
+@font-face {
+    font-family: SedgewickAve;
+    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
+}
+
+@font-face {
+    font-family: GermaniaOne;
+    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: UnicaOne;
+    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
+}
+
+html,
+body {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    padding-top: 0;
+    margin-top: 0;
+    height: auto;
+    color: white;
+    padding-bottom: 0;
+}
+
+div.main-content-mobile {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: 208% 723px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: UnicaOne;
+    padding-bottom: 70.25px;
+    margin-top: 0;
+    padding-top: 0;
+}

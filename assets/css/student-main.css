@@ -1,0 +1,193 @@
+@font-face {
+    font-family: SedgewickAve;
+    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
+}
+
+@font-face {
+    font-family: GermaniaOne;
+    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: UnicaOne;
+    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
+}
+
+/*Fixed Header for Mobile. Student.*/
+html,
+body {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100%;
+}
+
+header div.mobile-top-nav.hide-for-medium {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat no-repeat;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 61px;
+    width: 100%;
+    text-align: center;
+}
+
+.music-logo img {
+    padding: 4.25px;
+    height: 60px;
+    width: 65px;
+}
+
+.mobile-top-nav button .help {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #0C2179;
+    margin-top: 10px;
+}
+
+/*Fixed Header for medium and large screens. Student.*/
+header div.medium-top-nav.show-for-medium {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat no-repeat;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 105px;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.music-logo-medium img {
+    padding: 4.25px;
+    max-height: 100px;
+}
+
+.medium-top-nav button .help {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #0C2179;
+    margin-top: 10px;
+}
+
+/*Mobile Body*/
+section {
+    height: 90%;
+}
+
+div.main-content-mobile {
+    /*background-color: #1C4B7E;*/
+    /*padding-top: 0px;*/
+    color: #FFFFFF;
+    /*text-shadow: -1px 7px 14px #000000;*/
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: 208% 723px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: UnicaOne;
+    padding-bottom: 70.25px;
+}
+
+.welcome-student-mobile {
+    width: 100%;
+    text-align: center;
+    background: url(../img/ladder-active-overlay.png) 0 0 / cover no-repeat;
+    /*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    -moz-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    -webkit-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+}
+
+.welcome-student-mobile div h1 {
+    font-weight: bold;
+    font-size: 27px;
+    font-family: SedgewickAve;
+    color: white;
+    text-shadow: 0 0 51px #000000;
+    padding: 10.25px;
+}
+
+iframe {
+    width: 100%;
+    height: 80%;
+    position: fixed;
+    top: 60px;
+    padding-bottom: 20.25px;
+}
+
+/*Medium and Larger Body*/
+div.main-content-medium {
+    margin-top: 70px !important;
+    /*background-color: #1C4B7E;*/
+    padding-top: 31.25px;
+    color: #FFFFFF;
+    /*text-shadow: -1px 7px 14px #000000;*/
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: 208% 723px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: UnicaOne;
+    padding-bottom: 70.25px;
+}
+
+.welcome-student-medium {
+    text-align: center;
+    background: url(../img/ladder-active-overlay.png) 0 0 / cover repeat-y;
+    /*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    -moz-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    -webkit-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    height: 122px;
+    padding: 10px 16px 16px;
+}
+
+.welcome-student-medium div h1 {
+    font-weight: bold;
+    font-size: 40px;
+    font-family: SedgewickAve;
+    color: white;
+    text-shadow: 0 0 51px #000000;
+}
+
+/*Sticky Footer Style for Mobile. Student.*/
+.mobile-app-icon-bar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat no-repeat;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 10%;
+}
+
+.mobile-app-icon-bar button {
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+.mobile-app-icon-bar button svg,
+.mobile-app-icon-bar button i,
+.mobile-app-icon-bar button img {
+    font-size: 2rem;
+    max-height: 2rem;
+    max-width: 2rem;
+    color: #0C2179;
+}

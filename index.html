@@ -6,10 +6,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=100%, initial-scale=1, minimum scale=1, user-scalable=no, maximum-scale=1" />
     <meta name="description" content="Website designed for the Musical Ladder System, through Severien, by Justin Sunday. Copyright 2017">
-    <title>New UX-UI</title>
+    <title>New UX-UI Student</title>
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/student-main.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <div class="mobile-top-nav grid-container full hide-for-medium">
             <div class="grid-x">
                 <div class="small-2 small-offset-5 cell">
-                    <span class="music-logo"><img src="assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></span>
+                    <span class="music-logo"><a href="index.html"><img src="assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></a></span>
                 </div>
                 <div class="small-2 small-offset-3 cell">
                     <button><i class="fa fa-question-circle help" aria-hidden="true"></i></button>
@@ -27,74 +27,52 @@
             </div>
         </div>
 
+
+        <!--Tablet and Desktop Fixed Header-->
+        <div class="medium-top-nav grid-container full show-for-medium">
+            <div class="grid-x">
+                <div class="medium-2 medium-offset-5 cell">
+                    <span class="music-logo-medium"><img src="assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></span>
+                </div>
+                <div class="medium-2 medium-offset-3 cell">
+                    <button><i class="fa fa-question-circle help" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!--Main Content   -->
-
     <section>
+
+        <!--Main Content Mobile  -->
         <div class="main-content-mobile grid-container full hide-for-medium">
-            <div class="welcome-student-mobile grid-x">
-                <div class="small-6 small-offset-3 cell">
-                    <h1>Welcome<br>Rhiele!</h1>
+
+            <div class="view-holder grid-x">
+                <div class="small-12">
+                    <iframe src="student-views/_instruments-students.html" frameborder="0" name="iframe_a"></iframe>
                 </div>
             </div>
-            <div class="instruments-student-mobile-header grid-x">
-                <div class="small-6 small-offset-3 cell">
-                    <h3>Instrument(s)</h3>
-                </div>
-                <div class="current-level small-4 cell">
-                    <p>Current<br>Level</p>
-                </div>
-                <div class="teacher-instrument-title small-4 cell">
-                    <p>Teacher<br>/<br>Instrument</p>
-                </div>
-                <div class="next-level-date-title small-4 cell">
-                    <p>Next<br>Level</p>
-                </div>
-            </div>
-            <div class="instruments-student-mobile grid-x">
-                <div class="current-level small-4 cell">
-                    <img src="assets/img/LV1_Apprentice.png" alt="Apprentice">
-                </div>
-                <div class="current-teacher-instrument small-4 cell">
-                    <p>John<br>/<br>Piano</p>
-                </div>
-                <div class="next-level-date song-bird small-4 cell">
-                    <p>9/4/18</p>
-                </div>
-            </div>
-            <div class="instruments-student-mobile grid-x">
-                <div class="current-level small-4 cell">
-                    <img src="assets/img/LV2_Song-Bird.png" alt="Song Bird">
-                </div>
-                <div class="current-teacher-instrument small-4 cell">
-                    <p>Juliet<br>/<br>Cello</p>
-                </div>
-                <div class="next-level-date musician small-4 cell">
-                    <p>12/16/18</p>
-                </div>
-            </div>
-            <div class="instruments-student-mobile grid-x">
-                <div class="current-level small-4 cell">
-                    <img src="assets/img/LV13_Prima.png" alt="Prima">
-                </div>
-                <div class="current-teacher-instrument small-4 cell">
-                    <p>Lindsey<br>/<br>Violin</p>
-                </div>
-                <div class="next-level-date bravo small-4 cell">
-                    <p>7/16/18</p>
-                </div>
-            </div>
+
 
         </div>
+
+
+        <!--Main Content for Medium Screens or Larger-->
+        <div class="main-content-medium grid-container full show-for-medium">
+            <div class="welcome-student-medium grid-x">
+                <div class="medium-6 medium-offset-3 cell">
+                    <h1>Welcome<br>Riehle</h1>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <footer>
         <!--Mobile only Fixed footer-->
         <div class="mobile-app-icon-bar hide-for-medium">
-            <button><i class="fa fa-file-text" aria-hidden="true"></i></button>
-            <button><i class="fa fa-commenting" aria-hidden="true"></i></button>
-            <button><i class="fa fa-calendar" aria-hidden="true"></i></button>
+            <button><a href="student-views/_tests-student.html" target="iframe_a"><i class="fa fa-file-text" aria-hidden="true"></i></a></button>
+            <button><a href="student-views/_notes-student.html" target="iframe_a"><i class="fa fa-commenting" aria-hidden="true"></i></a></button>
+            <button><a href="student-views/_events-student.html" target="iframe_a"><i class="fa fa-calendar" aria-hidden="true"></i></a></button>
             <button><i class="fa fa-flag" aria-hidden="true"></i></button>
         </div>
 

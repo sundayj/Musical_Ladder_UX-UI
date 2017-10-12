@@ -1,0 +1,88 @@
+@font-face {
+    font-family: SedgewickAve;
+    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
+}
+
+@font-face {
+    font-family: GermaniaOne;
+    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: UnicaOne;
+    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
+}
+
+html,
+body {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    padding-top: 0;
+    margin-top: 0;
+    height: auto;
+    color: white;
+    padding-bottom: 0;
+}
+
+div.main-content-mobile {
+    background-image: url(../img/header-bg.png);
+    background-position: center;
+    background-size: 208% 723px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: UnicaOne;
+    padding-bottom: 0px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*Test Mobile Header for Student*/
+.test-grid-mobile.grid-container {
+    padding: 10px 0 1px;
+}
+
+.tests-student-mobile-header {
+    background-color: rgba(68, 85, 103, 0.603);
+    /*+box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    -moz-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    -webkit-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    padding-top: 10px;
+}
+
+.tests-table-title h3 {
+    text-decoration: underline double rgba(45, 43, 81, 0.629);
+}
+
+.tests-student-mobile-header h3 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: UnicaOne;
+}
+
+/*Mobile Only View for Tests*/
+.test-grid-mobile {
+    background-color: rgba(68, 85, 103, 0.603);
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.date-of-test {
+    padding-top: 90px;
+    vertical-align: middle;
+    font-size: 19px;
+    font-family: GermaiaOne;
+}
+
+.proficiency-level img {
+    height: 221px;
+    padding: 0;
+}
+
+.instrument-to-test {
+    padding-top: 60px;
+    font-size: 19px;
+}
