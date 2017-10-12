@@ -21,6 +21,7 @@ body {
     background-size: cover;
     background-repeat: repeat;
     height: 100%;
+    max-height: 1000px;
 }
 
 header div.mobile-top-nav.hide-for-medium {
@@ -37,9 +38,9 @@ header div.mobile-top-nav.hide-for-medium {
 }
 
 .music-logo img {
-    padding: 4.25px;
-    height: 60px;
+    height: 53px;
     width: 65px;
+    margin-top: 3px;
 }
 
 .mobile-top-nav button .help {
