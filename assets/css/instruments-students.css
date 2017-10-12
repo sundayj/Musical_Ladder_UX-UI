@@ -39,8 +39,6 @@ div.main-content-mobile {
 }
 
 .welcome-student-mobile {
-    position: fixed;
-    top: 60px;
     width: 100%;
     text-align: center;
     background: url(../img/ladder-active-overlay.png) 0 0 / cover no-repeat;
@@ -60,7 +58,6 @@ div.main-content-mobile {
 }
 
 /*Header for Student Instruments on Mobile*/
-
 div.instruments-student-mobile-header {
     font-weight: 600;
     font-size: 18px;
@@ -91,7 +88,6 @@ div.instruments-student-mobile-header {
 }
 
 /*Main Content for Student Instruments on Mobile*/
-
 div.instruments-student-mobile,
 div.instruments-student-mobile-header {
     text-align: center;
