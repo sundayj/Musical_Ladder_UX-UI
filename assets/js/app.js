@@ -6,6 +6,12 @@ $(document).ready(function () {
         $("#studentview").html(data);
     });
 
+    $("#home-logo").click(function () {
+        $.get("student-views/instruments-students.html", function (data) {
+            $("#studentview").html(data);
+        });
+    });
+
     $("#testbtn").click(function () {
         $.get("student-views/tests-student.html", function (data) {
             $("#studentview").html(data);

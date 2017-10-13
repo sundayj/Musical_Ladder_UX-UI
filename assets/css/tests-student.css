@@ -24,8 +24,8 @@ body {
 
 /*Test Mobile Header for Student*/
 .test-grid-mobile.grid-container {
-    padding: 10px 0 0;
-    height: 541px;
+    padding: 10px 0 200px;
+    height: 100%;
 }
 
 .tests-student-mobile-header {
@@ -56,18 +56,19 @@ body {
 }
 
 .date-of-test {
-    padding-top: 71px;
+    padding-top: 60px;
     vertical-align: middle;
     font-size: 19px;
     font-family: GermaiaOne;
 }
 
 .proficiency-level img {
-    height: 159px;
+    height: 100%;
+    width: 100%;
     padding: 0;
 }
 
 .instrument-to-test {
-    padding-top: 38px;
+    padding-top: 30px;
     font-size: 19px;
 }
