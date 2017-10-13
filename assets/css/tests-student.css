@@ -33,12 +33,13 @@ div.main-content-mobile {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: UnicaOne;
-    padding-bottom: 0px;
+    padding-bottom: 60.25px;
     margin-top: 0;
     padding-top: 0;
 }
 
 /*Test Mobile Header for Student*/
+
 .test-grid-mobile.grid-container {
     padding: 10px 0 1px;
 }
@@ -64,6 +65,7 @@ div.main-content-mobile {
 }
 
 /*Mobile Only View for Tests*/
+
 .test-grid-mobile {
     background-color: rgba(68, 85, 103, 0.603);
     text-align: center;
@@ -71,18 +73,18 @@ div.main-content-mobile {
 }
 
 .date-of-test {
-    padding-top: 90px;
+    padding-top: 71px;
     vertical-align: middle;
     font-size: 19px;
     font-family: GermaiaOne;
 }
 
 .proficiency-level img {
-    height: 221px;
+    height: 159px;
     padding: 0;
 }
 
 .instrument-to-test {
-    padding-top: 60px;
+    padding-top: 38px;
     font-size: 19px;
 }

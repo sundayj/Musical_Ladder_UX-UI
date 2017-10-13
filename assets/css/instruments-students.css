@@ -33,7 +33,7 @@ div.main-content-mobile {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: UnicaOne;
-    padding-bottom: 70.25px;
+    padding-bottom: 60.25px;
     margin-top: 0;
     padding-top: 0;
 }
@@ -58,6 +58,7 @@ div.main-content-mobile {
 }
 
 /*Header for Student Instruments on Mobile*/
+
 div.instruments-student-mobile-header {
     font-weight: 600;
     font-size: 18px;
@@ -88,6 +89,7 @@ div.instruments-student-mobile-header {
 }
 
 /*Main Content for Student Instruments on Mobile*/
+
 div.instruments-student-mobile,
 div.instruments-student-mobile-header {
     text-align: center;
