@@ -30,9 +30,37 @@ $(document).ready(function () {
         });
     });
 
-    //    $("#notificationbtn").click(function(){
-    //        
-    //    });
+    $("#completedBtn").click(function () {
+        $("#completed").show();
+        $("#upcoming").hide();
+        $("#completedBtn").css({
+            "color": "navy",
+            "box-shadow": "inset 0 0 75px white"
+        });
+        $("#upcomingBtn").css({
+            "color": "#5B5BFF",
+            "box-shadow": "none"
+        });
+    });
+    $("#upcomingBtn").click(function () {
+        $("#upcoming").show();
+        $("#completed").hide();
+        $("#upcomingBtn").css({
+            "color": "navy",
+            "box-shadow": "inset 0 0 75px white"
+        });
+        $("#completedBtn").css({
+            "color": "#5B5BFF",
+            "box-shadow": "none"
+        });
+    });
+
+    $(".help").click(function () {
+        $(".help-overlay").show();
+    });
+    $(".close-help").click(function () {
+        $(".help-overlay").hide();
+    });
 
 
 

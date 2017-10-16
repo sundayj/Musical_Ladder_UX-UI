@@ -106,7 +106,7 @@ div.instruments-student-mobile:last-of-type {
     -khtml-border-radius: 50px;
     border-radius: 50px;
     text-shadow: 0 0 14px #FFFC59;
-    padding: 10px;
+    padding: 14px;
 }
 
 .current-teacher-instrument span {
@@ -118,7 +118,7 @@ div.instruments-student-mobile:last-of-type {
     padding-top: 15px;
 }*/
 .next-level-date {
-    padding-top: 15%;
+    padding-top: 13%;
     vertical-align: middle;
     font-size: 19px;
     text-shadow: 0px 1px 3px #F8FEB9;

@@ -1,14 +1,26 @@
-@font-face {
-    font-family: SedgewickAve;
-    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
+.notes-avatar {
+    /*+border-radius: 50px;*/
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -khtml-border-radius: 50px;
+    border-radius: 50px;
+    margin-top: 13px;
 }
 
-@font-face {
-    font-family: GermaniaOne;
-    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
+DIV.message-container:first-of-type {
+    margin-top: 26px;
 }
 
-@font-face {
-    font-family: UnicaOne;
-    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
+.message-container {
+    margin-bottom: 20px;
+    background-color: rgba(0, 178, 217, 0.440);
+    border: 1px solid #2D01CB;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+DIV.message-container:last-of-type {
+    margin-bottom: 100px;
 }
