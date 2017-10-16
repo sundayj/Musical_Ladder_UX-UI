@@ -13,28 +13,25 @@
     src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
 }
 
-html,
-body {
-    padding-top: 0;
-    margin-top: 0;
-    height: 100%;
-    color: white;
-    padding-bottom: 0px;
-}
-
 /*Test Mobile Header for Student*/
 .test-grid-mobile.grid-container {
-    padding: 10px 0 200px;
+    padding: 10px 0 0;
     height: 100%;
 }
 
 .tests-student-mobile-header {
-    background-color: rgba(68, 85, 103, 0.603);
+    /*background-color: rgba(68, 85, 103, 0.603);*/
+    background: url(../images/);
+    background: url(../img/ladder-active-overlay2.png) 0 0 / cover no-repeat;
     /*+box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
     -moz-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
     -webkit-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
     box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
     padding-top: 10px;
+    /*+box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*/
+    -moz-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    -webkit-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
 }
 
 .tests-table-title h3 {
@@ -43,23 +40,24 @@ body {
 
 .tests-student-mobile-header h3 {
     text-align: center;
-    font-size: 22px;
     font-weight: 900;
-    font-family: UnicaOne;
+    font-weight: bold;
+    font-size: 27px;
+    font-family: SedgewickAve;
+    color: #1616B0;
+    text-shadow: 0 0 15px #FFFFFF;
+    padding: 0px;
 }
 
 /*Mobile Only View for Tests*/
 .test-grid-mobile {
-    background-color: rgba(68, 85, 103, 0.603);
+    /*background-color: rgba(68, 85, 103, 0.603);*/
     text-align: center;
     margin-bottom: 18px;
 }
 
-.date-of-test {
-    padding-top: 60px;
-    vertical-align: middle;
-    font-size: 19px;
-    font-family: GermaiaOne;
+.test-grid-mobile:last-of-type {
+    margin-bottom: 100px;
 }
 
 .proficiency-level img {
@@ -68,7 +66,39 @@ body {
     padding: 0;
 }
 
-.instrument-to-test {
-    padding-top: 30px;
+.instrument-to-test, .date-of-test {
+    /*+box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*/
+    -moz-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    -webkit-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    padding-top: 13%;
+    vertical-align: middle;
     font-size: 19px;
+    text-shadow: 0px 1px 3px #F8FEB9;
+    font-family: GermaiaOne;
+    color: navy;
+    font-weight: bold;
+}
+
+.date-of-test {
+    padding-top: 15%;
+}
+
+.test-grid-mobile p {
+    /*+box-shadow: inset 0 0 41px -2px #D0E2F5;*/
+    -moz-box-shadow: inset 0 0 41px -2px #D0E2F5;
+    -webkit-box-shadow: inset 0 0 41px -2px #D0E2F5;
+    box-shadow: inset 0 0 41px -2px #D0E2F5;
+    /*+border-radius: 50px;*/
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -khtml-border-radius: 50px;
+    border-radius: 50px;
+    text-shadow: 0 0 14px #FFFC59;
+    font-family: UnicaOne;
+    padding: 10px;
+}
+
+.instrument-to-test span {
+    font-size: 15px;
 }

@@ -19,7 +19,6 @@
 }
 
 /*Fixed Header for Mobile. Student.*/
-
 html,
 body {
     background-image: url(../img/header-bg.png);
@@ -29,6 +28,7 @@ body {
     height: 100%;
     max-height: 1000px;
     /*margin-bottom: 30px;*/
+    color: white;
 }
 
 header div.mobile-top-nav.hide-for-medium {
@@ -48,10 +48,10 @@ header div.mobile-top-nav.hide-for-medium {
     height: 53px;
     width: 65px;
     margin-top: 3px;
-    cursor: pointer;
 }
 
-.mobile-top-nav button .help {
+.mobile-top-nav button .help,
+.home-button {
     font-size: 2rem;
     cursor: pointer;
     color: #0C2179;
@@ -59,7 +59,6 @@ header div.mobile-top-nav.hide-for-medium {
 }
 
 /*Fixed Header for medium and large screens. Student.*/
-
 header div.medium-top-nav.show-for-medium {
     background-image: url(../img/header-bg.png);
     background-position: center;
@@ -87,17 +86,15 @@ header div.medium-top-nav.show-for-medium {
 }
 
 /*Mobile Body*/
-
-.welcome-student-mobile {
+/*.welcome-student-mobile {
     width: 100%;
     text-align: center;
     background: url(../img/ladder-active-overlay.png) 0 0 / cover no-repeat;
-    /*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    (*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*)
     -moz-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
     -webkit-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
     box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
-}
-
+}*/
 .view-holder {
     min-height: 521px;
     max-height: 90%;
@@ -109,7 +106,6 @@ header div.medium-top-nav.show-for-medium {
 }
 
 /*Medium and Larger Body*/
-
 div.main-content-medium {
     margin-top: 70px !important;
     /*background-color: #1C4B7E;*/
@@ -145,7 +141,6 @@ div.main-content-medium {
 }
 
 /*Sticky Footer Style for Mobile. Student.*/
-
 .mobile-app-icon-bar {
     display: -webkit-flex;
     display: -ms-flexbox;
