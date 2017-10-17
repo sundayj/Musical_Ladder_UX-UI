@@ -16,6 +16,10 @@
     src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
 }*/
 /*Fixed Header for Mobile. Student.*/
+* {
+    font-family: arial;
+}
+
 html,
 body {
     /*background-image: url(../img/header-bg.png);*/
@@ -56,6 +60,24 @@ header div.mobile-top-nav.hide-for-medium {
     cursor: pointer;
     color: #0C2179;
     margin-top: 10px;
+}
+
+.welcome-student-mobile {
+    width: 100%;
+    text-align: center;
+    background: url(../img/ladder-active@2x.png) 0 0 / cover no-repeat;
+    position: fixed;
+    top: 61px;
+    z-index: 1;
+    height: 60px;
+}
+
+.welcome-student-mobile div h1 {
+    font-weight: bold;
+    font-size: 27px;
+    color: #0C2179;
+    text-shadow: 0 0 78px #FFFFFF;
+    padding: 10.25px;
 }
 
 /*Fixed Header for medium and large screens. Student.*/
@@ -99,10 +121,25 @@ header div.medium-top-nav.show-for-medium {
     min-height: 521px;
     max-height: 90%;
     position: fixed;
-    top: 60px;
+    top: 121px;
     width: 100%;
     overflow: scroll;
     padding-bottom: 0px;
+}
+
+.school-notifications {
+    position: fixed;
+    bottom: 70px;
+    z-index: 1;
+    background-color: #000000;
+    display: none;
+}
+
+p.notification-message {
+    background-color: rgba(217, 0, 0, 0.552);
+    border: 1px solid #FB0000;
+    padding: 10px;
+    margin-bottom: 0;
 }
 
 /*Medium and Larger Body*/

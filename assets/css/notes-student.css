@@ -24,10 +24,43 @@ DIV.message-container:first-of-type {
     text-align: left;
 }
 
+LABEL.open-notes,
+LABEL.close-notes {
+    font-style: italic;
+    color: white;
+    color: #0C2179;
+    font-size: 17px;
+    padding-top: 15%;
+    cursor: pointer;
+}
+
+LABEL.close-notes {
+    display: none;
+}
+
+.notes-acc-dropdown {
+    display: none;
+}
+
+.individ-note {
+    border: 1px solid #2D01CB;
+}
+
+.message {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 DIV.message-container:last-of-type {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .message-from {
     color: white;
+}
+
+.individ-note .fa-paperclip {
+    color: #0C2179;
+    font-size: 25px;
+    cursor: pointer;
 }

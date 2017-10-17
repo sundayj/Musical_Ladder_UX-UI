@@ -9,26 +9,41 @@ $(document).ready(function () {
     $("#home").click(function () {
         $.get("student-views/instruments-students.html", function (data) {
             $("#studentview").html(data);
+            $(".help-overlay").hide();
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Riehle!");
+            $(".school-notifications").hide();
         });
     });
 
     $("#testbtn").click(function () {
         $.get("student-views/tests-student.html", function (data) {
             $("#studentview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Tests");
+            $(".school-notifications").hide();
         });
     });
 
     $("#notebtn").click(function () {
         $.get("student-views/notes-student.html", function (data) {
             $("#studentview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Notes");
+            $(".school-notifications").hide();
         });
     });
 
     $("#eventbtn").click(function () {
         $.get("student-views/events-student.html", function (data) {
             $("#studentview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Events");
+            $(".school-notifications").hide();
         });
     });
+
+    //    Function for the notification message functionality.
+
+        $("#notificationbtn").click(function () {
+            $(".school-notifications").slideToggle();
+        });
 
     $("#completedBtn").click(function () {
         $("#completed").show();
@@ -57,9 +72,18 @@ $(document).ready(function () {
 
     $(".help").click(function () {
         $(".help-overlay").toggle();
+        $(".school-notifications").hide();
     });
     $(".close-help").click(function () {
         $(".help-overlay").hide();
+    });
+
+
+    $(".notes-acc-drop").click(function () {
+        $(this).next(".notes-acc-dropdown").slideToggle();
+        $(this).find(".close-notes").first().toggle();
+        $(this).find(".open-notes").first().toggle();
+        $(".school-notifications").hide();
     });
 
 

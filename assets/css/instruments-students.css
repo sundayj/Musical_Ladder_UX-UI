@@ -6,21 +6,6 @@ div.main-content-mobile {
 /*.instrument-content-mobile {
     (*background-color: rgba(68, 85, 103, 0.603);*)
 }*/
-.welcome-student-mobile {
-    width: 100%;
-    text-align: center;
-    background: url(../img/ladder-active@2x.png) 0 0 / cover no-repeat;
-}
-
-.welcome-student-mobile div h1 {
-    font-weight: bold;
-    font-size: 27px;
-    font-family: SedgewickAve;
-    color: #0C2179;
-    text-shadow: 0 0 78px #FFFFFF;
-    padding: 10.25px;
-}
-
 /*Header for Student Instruments on Mobile*/
 /*div.instruments-student-mobile-header {
     font-weight: 600;
