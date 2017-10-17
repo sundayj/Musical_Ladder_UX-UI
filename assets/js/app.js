@@ -56,7 +56,7 @@ $(document).ready(function () {
     });
 
     $(".help").click(function () {
-        $(".help-overlay").show();
+        $(".help-overlay").toggle();
     });
     $(".close-help").click(function () {
         $(".help-overlay").hide();

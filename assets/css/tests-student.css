@@ -1,18 +1,3 @@
-@font-face {
-    font-family: SedgewickAve;
-    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
-}
-
-@font-face {
-    font-family: GermaniaOne;
-    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: UnicaOne;
-    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
-}
-
 /*Test Mobile Header for Student*/
 .test-grid-mobile.grid-container {
     padding: 10px 0 0;
@@ -21,8 +6,7 @@
 
 .tests-student-mobile-header {
     /*background-color: rgba(68, 85, 103, 0.603);*/
-    background: url(../images/);
-    background: url(../img/ladder-active-overlay2.png) 0 0 / cover no-repeat;
+    background: url(../img/ladder-active@2x.png) 0 0 / cover no-repeat;
     /*+box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
     -moz-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
     -webkit-box-shadow: inset 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
@@ -44,7 +28,7 @@
     font-weight: bold;
     font-size: 27px;
     font-family: SedgewickAve;
-    color: #1616B0;
+    color: #0C2179;
     text-shadow: 0 0 15px #FFFFFF;
     padding: 0px;
 }
@@ -109,17 +93,16 @@
 }
 
 .instrument-to-test, .date-of-test {
-    /*+box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*/
+    /*(*+box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*)
     -moz-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
     -webkit-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
-    box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*/
     padding-top: 9%;
     vertical-align: middle;
     font-size: 19px;
-    text-shadow: 0px 1px 3px #F8FEB9;
     font-family: GermaiaOne;
-    color: navy;
     font-weight: bold;
+    background-color: rgba(99, 188, 229, 0.517);
 }
 
 .date-of-test {
@@ -127,17 +110,16 @@
 }
 
 .test-grid-mobile p {
-    /*+box-shadow: inset 0 0 41px -2px #D0E2F5;*/
+    /*(*+box-shadow: inset 0 0 41px -2px #D0E2F5;*)
     -moz-box-shadow: inset 0 0 41px -2px #D0E2F5;
     -webkit-box-shadow: inset 0 0 41px -2px #D0E2F5;
-    box-shadow: inset 0 0 41px -2px #D0E2F5;
-    /*+border-radius: 50px;*/
+    box-shadow: inset 0 0 41px -2px #D0E2F5;*/
+    /*(*+border-radius: 50px;*)
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     -khtml-border-radius: 50px;
-    border-radius: 50px;
-    text-shadow: 0 0 14px #FFFC59;
-    font-family: UnicaOne;
+    border-radius: 50px;*/
+    /*font-family: UnicaOne;*/
     padding: 10px;
 }
 

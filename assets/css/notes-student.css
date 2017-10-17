@@ -15,12 +15,19 @@ DIV.message-container:first-of-type {
     margin-bottom: 20px;
     background-color: rgba(0, 178, 217, 0.440);
     border: 1px solid #2D01CB;
+    text-align: center;
 }
 
 .message {
     margin-top: 15px;
+    padding: 10px;
+    text-align: left;
 }
 
 DIV.message-container:last-of-type {
     margin-bottom: 100px;
+}
+
+.message-from {
+    color: white;
 }

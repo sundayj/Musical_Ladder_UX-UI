@@ -1,18 +1,3 @@
-@font-face {
-    font-family: SedgewickAve;
-    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
-}
-
-@font-face {
-    font-family: GermaniaOne;
-    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: UnicaOne;
-    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
-}
-
 div.main-content-mobile {
     font-family: UnicaOne;
     /*height: 100%;*/
@@ -24,15 +9,15 @@ div.main-content-mobile {
 .welcome-student-mobile {
     width: 100%;
     text-align: center;
-    background: url(../img/ladder-active-overlay2.png) 0 0 / cover no-repeat;
+    background: url(../img/ladder-active@2x.png) 0 0 / cover no-repeat;
 }
 
 .welcome-student-mobile div h1 {
     font-weight: bold;
     font-size: 27px;
     font-family: SedgewickAve;
-    color: #1616B0;
-    text-shadow: 0 0 15px #FFFFFF;
+    color: #0C2179;
+    text-shadow: 0 0 78px #FFFFFF;
     padding: 10.25px;
 }
 
@@ -43,10 +28,10 @@ div.main-content-mobile {
     background-color: rgba(68, 85, 103, 0.603);
 }*/
 .instruments-student-mobile .current-level {
-    /*+box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
+    /*(*+box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*)
     -moz-box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
     -webkit-box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
-    box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;
+    box-shadow: 0px 0px 50px 14px rgba(29, 26, 75, 0.332) !important;*/
     height: auto;
 }
 
@@ -58,10 +43,10 @@ div.main-content-mobile {
 .instruments-student-mobile-header,
 .current-teacher-instrument,
 .next-level-date {
-    /*+box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*/
+    /*(*+box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*)
     -moz-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
     -webkit-box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
-    box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;
+    box-shadow: inset 0px 0px 50px 14px rgba(255, 255, 255, 0.332) !important;*/
 }
 
 /*.instrument-table-title h3 {
@@ -87,25 +72,25 @@ div.instruments-student-mobile:last-of-type {
 }
 
 .current-teacher-instrument {
-    padding-top: 13%;
+    padding-top: 8%;
     font-size: 19px;
-    color: navy;
     font-weight: bold;
-    text-shadow: 0 0 18px #D1E3F6;
+    /*text-shadow: 0 0 18px #D1E3F6;*/
+    background-color: rgba(99, 188, 229, 0.517);
 }
 
 .current-teacher-instrument p,
 .next-level-date p {
-    /*+box-shadow: inset 0 0 41px -2px #D0E2F5;*/
+    /*(*+box-shadow: inset 0 0 41px -2px #D0E2F5;*)
     -moz-box-shadow: inset 0 0 41px -2px #D0E2F5;
     -webkit-box-shadow: inset 0 0 41px -2px #D0E2F5;
-    box-shadow: inset 0 0 41px -2px #D0E2F5;
-    /*+border-radius: 50px;*/
+    box-shadow: inset 0 0 41px -2px #D0E2F5;*/
+    /*(*+border-radius: 50px;*)
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     -khtml-border-radius: 50px;
-    border-radius: 50px;
-    text-shadow: 0 0 14px #FFFC59;
+    border-radius: 50px;*/
+    /*text-shadow: 0 0 14px #FFFC59;*/
     padding: 14px;
 }
 
@@ -118,24 +103,26 @@ div.instruments-student-mobile:last-of-type {
     padding-top: 15px;
 }*/
 .next-level-date {
-    padding-top: 13%;
     vertical-align: middle;
-    font-size: 19px;
-    text-shadow: 0px 1px 3px #F8FEB9;
+    font-size: 25px;
     font-family: UnicaOne;
-    color: navy;
     width: ;
     font-weight: bold;
+    padding-top: 0;
+}
+
+.next-level-date p {
+    padding-top: 0;
 }
 
 .song-bird {
-    background: url(../img/LV2_Song-Bird-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/LV2_Song-Bird.png) 0 0 / cover no-repeat;
 }
 
 .musician {
-    background: url(../img/LV3_Musician-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/LV3_Musician.png) 0 0 / cover no-repeat;
 }
 
 .bravo {
-    background: url(../img/LV13_Bravo-overlay.png) 0 0 / cover no-repeat;
+    background: url(../img/LV13_Bravo.png) 0 0 / cover no-repeat;
 }
