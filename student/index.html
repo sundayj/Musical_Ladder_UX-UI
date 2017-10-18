@@ -15,37 +15,29 @@
 <body>
 
     <header>
-        <!--Mobile Only Fixed Header-->
-        <div class="mobile-top-nav grid-container full hide-for-medium">
+        <div class="mobile-top-nav grid-container full">
             <div class="grid-x">
-                <div class="small-2 cell"><button><i id="home" class="fa fa-home home-button" aria-hidden="true"></i></button></div>
-                <div class="small-2 small-offset-3 cell">
+                <div class="small-2 cell hide-for-medium"><button><i id="home" class="fa fa-home home-button" aria-hidden="true"></i></button></div>
+                <div class="small-2 small-offset-3 medium-3 medium-offset-0 cell">
                     <span class="music-logo"><img src="assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></span>
                 </div>
-                <div class="small-2 small-offset-3 cell">
+                <div class="welcome-medium hide-for-small-only medium-6">
+                    <h2>Welcome Riehle!</h2>
+                </div>
+                <div class="small-2 small-offset-3 cell hide-for-medium">
                     <button><i class="fa fa-question-circle help" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
-        <div class="welcome-student-mobile grid-x">
+        <div class="welcome-student-mobile grid-x hide-for-medium">
             <div class="small-12 cell">
                 <h1>Welcome Riehle!</h1>
             </div>
         </div>
 
-
-        <!--Tablet and Desktop Fixed Header-->
-        <div class="medium-top-nav grid-container full show-for-medium">
-            <div class="grid-x">
-                <div class="medium-2 medium-offset-5 cell">
-                    <span class="music-logo-medium"><img src="assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></span>
-                </div>
-                <div class="medium-2 medium-offset-3 cell">
-                    <button><i class="fa fa-question-circle help" aria-hidden="true"></i></button>
-                </div>
-            </div>
-        </div>
     </header>
+
+    <!--   Help-Overlay. Not Needed for Medium and larger screens.-->
 
     <div class="help-overlay grid-container full">
         <div class="grid-x">
@@ -105,14 +97,67 @@
         </div>
     </div>
 
+    <!--    End Help Overlay-->
+
     <section>
 
         <!--Main Content Mobile  -->
 
         <div id="studentview" class="view-holder">
-            <!--            <iframe src="student-views/instruments-students.html" frameborder="0" name="iframe_a"></iframe>-->
+
+            <!--Insert Student Mobile View-->
+
         </div>
 
+
+    </section>
+    <section>
+
+        <!--          Medium and Larger Main Content-->
+
+        <div class="hide-for-small-only grid-container full">
+            <div class="grid-x">
+                <div class="medium-student-individual-instrument medium-8 cell">
+                    <div class="medium-instrument-header medium-8 cell">
+                        <h2>Piano <span>with</span> John</h2>
+                    </div>
+                    <div class="tests-and-notes grid-x">
+                        <div class="medium-notes-header medium-6 cell">
+                            <h2>Notes</h2>
+                        </div>
+                        <div class="medium-tests-header medium-6 cell">
+                            <h2>Tests</h2>
+                        </div>
+
+                    </div>
+                    <div class="grid-x">
+                        <div class="medium-tests-container medium-6 cell" id="medium-tests">
+
+                            <!--Insert Tests View Here-->
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="medium-4 cell">
+                    <div class="medium-events-header grid-x">
+                        <div class="cell">
+                            <h2>Events</h2>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="medium-12 cell">
+                            <div class="medium-events-container" id="medium-events">
+
+                                <!--Insert Events View Here-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 

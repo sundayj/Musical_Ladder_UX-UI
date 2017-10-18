@@ -144,6 +144,17 @@ $(document).ready(function () {
     });
 
 
+    $.get("student-views/tests-student.html", function (data) {
+        $("#medium-tests").html(data);
+    });
+    $.get("student-views/notes-student.html", function (data) {
+        $("#medium-notes").html(data);
+    });
+    $.get("student-views/events-student.html", function (data) {
+        $("#medium-events").html(data);
+    });
+
+
 
 
 });
