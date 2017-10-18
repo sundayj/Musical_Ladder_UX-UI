@@ -1,0 +1,56 @@
+body {
+    background: #40B2BF;
+    color: white;
+    text-align: center;
+}
+
+.explanation {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.student-level,
+.parent-level,
+.teacher-level,
+.director-level {
+    height: 150px;
+}
+
+.individual-description {
+    overflow: auto;
+    padding-left: 10px;
+}
+
+.individual-button {
+    padding-top: 6%;
+}
+
+.individual-button button:enabled {
+    color: navy;
+}
+
+.individual-button button:disabled {
+    cursor: default;
+}
+
+.student-level .individual-description p {
+    text-align: left;
+}
+
+/*Delete the next rule once a description is entered!*/
+.parent-level .individual-description,
+.director-level .individual-description,
+.teacher-level .individual-description {
+    padding-top: 6%;
+}
+
+.choose-your-level,
+.individual-button,
+.individual-description {
+    border: 1px solid #4073BE;
+}
+
+.choose-your-level {
+    margin-bottom: 100px;
+}
