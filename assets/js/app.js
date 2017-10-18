@@ -2,9 +2,15 @@ $(document).foundation();
 
 $(document).ready(function () {
 
+
+    //    Initial load of the landing page screen
+
     $.get("student-views/instruments-students.html", function (data) {
         $("#studentview").html(data);
     });
+
+
+    //    Home button functionality
 
     $("#home").click(function () {
         $.get("student-views/instruments-students.html", function (data) {
@@ -14,6 +20,9 @@ $(document).ready(function () {
             $(".school-notifications").hide();
         });
     });
+
+
+    //    Bottom navigation icon functionality.
 
     $("#testbtn").click(function () {
         $.get("student-views/tests-student.html", function (data) {
@@ -41,9 +50,12 @@ $(document).ready(function () {
 
     //    Function for the notification message functionality.
 
-        $("#notificationbtn").click(function () {
-            $(".school-notifications").slideToggle();
-        });
+    $("#notificationbtn").click(function () {
+        $(".school-notifications").slideToggle();
+    });
+
+
+    //    Test Page Functionality
 
     $("#completedBtn").click(function () {
         $("#completed").show();
@@ -70,6 +82,9 @@ $(document).ready(function () {
         });
     });
 
+
+    //    Help button overlay.
+
     $(".help").click(function () {
         $(".help-overlay").toggle();
         $(".school-notifications").hide();
@@ -78,6 +93,7 @@ $(document).ready(function () {
         $(".help-overlay").hide();
     });
 
+    //      For the notes page.
 
     $(".notes-acc-drop").click(function () {
         $(this).next(".notes-acc-dropdown").slideToggle();
@@ -85,6 +101,48 @@ $(document).ready(function () {
         $(this).find(".open-notes").first().toggle();
         $(".school-notifications").hide();
     });
+
+
+    //    For the events page.
+
+    $(".global-btn").click(function () {
+        $(".global-events").show();
+        $(".personal-events").hide();
+        $(".global-btn").css({
+            "color": "navy",
+            "box-shadow": "inset 0 0 75px white"
+        });
+        $(".personal-btn").css({
+            "color": "#5B5BFF",
+            "box-shadow": "none"
+        });
+    });
+
+    $(".personal-btn").click(function () {
+        $(".personal-events").show();
+        $(".global-events").hide();
+        $(".personal-btn").css({
+            "color": "navy",
+            "box-shadow": "inset 0 0 75px white"
+        });
+        $(".global-btn").css({
+            "color": "#5B5BFF",
+            "box-shadow": "none"
+        });
+    });
+    $(".month-acc-drop").click(function () {
+        $(this).next(".month-acc-dropdown").slideToggle();
+        $(this).find(".close-month").first().toggle();
+        $(this).find("label.open-month").first().toggle();
+        $(".school-notifications").hide();
+    });
+    $(".event-title").click(function () {
+        $(this).next(".event-description").slideToggle();
+        $(this).find(".close-details").first().toggle();
+        $(this).find("p.more-details").first().toggle();
+        $(".school-notifications").hide();
+    });
+
 
 
 
