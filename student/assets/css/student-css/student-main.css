@@ -3,21 +3,9 @@
 @import url(events-student.css);
 @import url(notes-student.css);
 
-/*@font-face {
-    font-family: SedgewickAve;
-    src: url(../fonts/fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf);
-}*/
-/*@font-face {
-    font-family: GermaniaOne;
-    src: url(../fonts/fonts/Germania_One/GermaniaOne-Regular.ttf);
-}*/
-/*@font-face {
-    font-family: UnicaOne;
-    src: url(../fonts/fonts/Unica_One/UnicaOne-Regular.ttf);
-}*/
 /*Fixed Header for Mobile. Student.*/
 * {
-    font-family: arial;
+    font-family: arial, helvetica;
 }
 
 html,
@@ -38,7 +26,7 @@ header div.mobile-top-nav {
     background-image: url(../../img/header-bg.png);
     background-position: center;
     background-size: cover;
-    background-repeat: repeat no-repeat;
+    background-repeat: no-repeat;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -84,7 +72,7 @@ header div.mobile-top-nav {
 header div.medium-top-nav.show-for-medium {
     background-image: url(../../img/header-bg.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: repeat no-repeat;
     position: fixed;
     top: 0px;
@@ -108,15 +96,6 @@ header div.medium-top-nav.show-for-medium {
 }
 
 /*Mobile Body*/
-/*.welcome-student-mobile {
-    width: 100%;
-    text-align: center;
-    background: url(../..img/ladder-active-overlay.png) 0 0 / cover no-repeat;
-    (*+box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;*)
-    -moz-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
-    -webkit-box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
-    box-shadow: 0px -54px 50px 14px rgba(29, 26, 75, 0.332) !important;
-}*/
 .view-holder {
     min-height: 521px;
     max-height: 90%;
@@ -271,41 +250,103 @@ div.main-content-medium {
 
 @media screen and (min-width: 40em) {
     header div.mobile-top-nav {
-        height: 95px;
+        height: 75px;
+        z-index: 0;
     }
     
     .music-logo img {
-        height: auto;
-        width: 100px;
+        height: 65px;
+        width: auto;
         margin-top: 5px;
         margin-bottom: 5px;
     }
     
     .welcome-medium {
-        padding-top: 16px;
+        padding-top: 9px;
+    }
+    
+    .medium-header-backfiller {
+        background-color: rgba(101, 189, 229, 0.517);
+    }
+    
+    .colorful-ladder-header {
+        width: 100%;
+        max-height: 100px;
+        position: fixed;
+        top: 75px;
+    }
+    
+    .colorful-ladder-header img {
+        height: auto;
+        width: 100%;
+        opacity: 1;
     }
     
     section div.hide-for-small-only {
         position: fixed;
-        top: 95px;
+        top: 176px;
         width: 100%;
         height: 100%;
     }
     
-    .medium-instrument-header span {
-        font-style: italic;
+    .medium-individual-instrument-container {
+        height: 1000px;
+        padding-bottom: 200px;
+        overflow: scroll;
+    }
+    
+    .separator {
+        border: 2px solid #606AFC;
+    }
+    
+    .instruments-student-mobile.instruments-student-medium {
+        padding-bottom: 0px !important;
+        padding: 0;
+    }
+    
+    .current-teacher-instrument {
+        padding-top: 15px;
+    }
+    
+    .current-teacher-instrument p,
+    .next-level-date p,
+    .date-of-test p,
+    .instrument-to-test p {
         font-size: 20px;
     }
     
-    .medium-student-individual-instrument {
-        height: 100%;
+    .song-bird {
+        background: none 0 0 / auto no-repeat #D5E516;
     }
     
-    .medium-instrument-header,
-    .medium-events-header {
-        background-color: rgba(99, 188, 229, 0.517);
-        text-align: center;
-        border: 1px solid navy;
+    .musician {
+        background: none 0 0 / auto no-repeat #E3D30E;
+    }
+    
+    .bravo {
+        background: none 0 0 / auto no-repeat #5357A2;
+    }
+    
+    .instruments-student-medium .current-level {
+        background-color: #A2DC1F;
+    }
+    
+    .next-level-date p {
+        padding: 0;
+    }
+    
+    .medium-instument-open {
+        display: none;
+        height: 400px;
+        overflow: hidden;
+    }
+    
+    .message-container {
+        margin-right: 5px;
+    }
+    
+    div.message-container:first-of-type {
+        margin-top: 1px;
     }
     
     .medium-instrument-header h2,
@@ -313,20 +354,62 @@ div.main-content-medium {
     .medium-notes-header h2,
     .medium-tests-header h2 {
         margin-bottom: 0;
-    }
-    
-    .medium-student-individual-instrument .tests-and-notes {
-        background: url(../../img/ladder-active@2x.png) 0 0 / cover no-repeat;
+        color: navy;
         text-align: center;
     }
     
     .medium-student-individual-instrument {
-        height: 1000px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     
-    #medium-tests,
-    #medium-notes,
-    #medium-events {
-        height: 100%;
+    .medium-student-individual-instrument-container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
+    
+    .medium-tests-container {
+        padding-right: 5px;
+        overflow: scroll;
+        padding-left: 5px;
+        height: 500px;
+    }
+    
+    .medium-notes-container {
+        padding-left: 5px;
+        height: 500px;
+        overflow: scroll;
+    }
+    
+    .main-medium-events-container {
+        padding-right: 10px;
+        padding-bottom: 100px;
+        overflow: scroll;
+    }
+    
+    #medium-events {
+        padding-bottom: 100%;
+        height: 1000px;
+        overflow: scroll;
+    }
+    
+    p.month-name,
+    p.event-time,
+    p.event-name {
+        font-size: 20px;
+    }
+    
+    .personal-events {
+        padding-bottom: 0;
+    }
+    
+    .global-events {
+        display: block;
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
 }

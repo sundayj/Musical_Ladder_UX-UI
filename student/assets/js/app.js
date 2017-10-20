@@ -142,6 +142,13 @@ $(document).ready(function () {
         $(this).find("p.more-details").first().toggle();
         $(".school-notifications").hide();
     });
+    $(".medium-instrument-acc").click(function () {
+        $(this).next(".medium-instument-open").slideToggle();
+        $(this).find("label.see-more").first().toggle();
+        $(this).find("label.see-less").first().toggle();
+        $(".school-notifications").hide();
+    });
+
 
 
     $.get("student-views/tests-student.html", function (data) {
