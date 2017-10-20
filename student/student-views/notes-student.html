@@ -7,7 +7,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/62_user.jpg" alt="Avatar">
                     <label class="message-from">John / Piano</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
             </div>
             <div class="notes-acc-dropdown">
@@ -33,7 +33,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/19_student.jpg" alt="Avatar">
                     <label class="message-from">Juliet / Cello</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
 
             </div>
@@ -86,7 +86,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/10_user.jpg" alt="Avatar">
                     <label class="message-from">George / President</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
 
             </div>
@@ -113,7 +113,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/1_user.jpg" alt="Avatar">
                     <label class="message-from">Lindsey / Violin</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
 
             </div>
@@ -141,9 +141,16 @@
     $(document).ready(function() {
 
         $(".notes-acc-drop").click(function() {
-            $(this).next(".notes-acc-dropdown").slideToggle();
-            $(this).find(".close-notes").first().toggle();
-            $(this).find(".open-notes").first().toggle();
+            $(".notes-acc-dropdown").not($(this).next(".notes-acc-dropdown")).slideUp();
+            if ($(".notes-acc-dropdown:hidden")) {
+                $(".open-notes").show();
+            }
+            if ($(this).next(".notes-acc-dropdown:hidden")) {
+                $(this).next(".notes-acc-dropdown").slideDown();
+                //                $(this).find(".close-notes").first().toggle();
+                $(this).find(".open-notes").first().hide();
+
+            }
         });
 
     });

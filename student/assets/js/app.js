@@ -96,11 +96,25 @@ $(document).ready(function () {
     //      For the notes page.
 
     $(".notes-acc-drop").click(function () {
-        $(this).next(".notes-acc-dropdown").slideToggle();
-        $(this).find(".close-notes").first().toggle();
-        $(this).find(".open-notes").first().toggle();
-        $(".school-notifications").hide();
+        $(".notes-acc-dropdown").not($(this).next(".notes-acc-dropdown")).slideUp();
+        if ($(".notes-acc-dropdown:hidden")) {
+            $(".open-notes").show();
+        }
+        if ($(this).next(".notes-acc-dropdown:hidden")) {
+            $(this).next(".notes-acc-dropdown").slideDown();
+            //                $(this).find(".close-notes").first().toggle();
+            $(this).find(".open-notes").first().hide();
+
+        }
     });
+
+    //    $(".notes-acc-drop").click(function () {
+    //        $(".notes-acc-dropdown").hide().slideUp();
+    //        $(this).next(".notes-acc-dropdown").slideToggle();
+    //        $(this).find(".close-notes").first().toggle();
+    //        $(this).find(".open-notes").first().toggle();
+    //        $(".school-notifications").hide();
+    //    });
 
 
     //    For the events page.
@@ -142,12 +156,29 @@ $(document).ready(function () {
         $(this).find("p.more-details").first().toggle();
         $(".school-notifications").hide();
     });
+
+    //    For Medium and Large Main Screen
+
+    $(".medium-intrument-open:first").show();
+    $(".medium-intrument-open").not($(".medium-intrument-open:first:visible")).hide();
     $(".medium-instrument-acc").click(function () {
-        $(this).next(".medium-instument-open").slideToggle();
-        $(this).find("label.see-more").first().toggle();
-        $(this).find("label.see-less").first().toggle();
-        $(".school-notifications").hide();
+        $(".medium-intrument-open").not($(this).next(".medium-intrument-open")).slideUp();
+        if ($(".medium-intrument-open:hidden")) {
+            $("label.see-more").show();
+        }
+        if ($(this).next(".medium-intrument-open:hidden")) {
+            $(this).next(".medium-intrument-open").slideDown();
+            $(this).find("label.see-more").first().hide();
+
+        }
     });
+
+    //    $(".medium-instrument-acc").click(function () {
+    //        $(this).next(".medium-intrument-open").slideToggle();
+    //        $(this).find("label.see-more").first().toggle();
+    //        $(this).find("label.see-less").first().toggle();
+    //        $(".school-notifications").hide();
+    //    });
 
 
 

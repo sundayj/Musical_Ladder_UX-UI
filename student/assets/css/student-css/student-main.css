@@ -10,16 +10,8 @@
 
 html,
 body {
-    /*background-image: url(../../img/header-bg.png);*/
-    /*background-position: center;*/
-    /*background-attachment: fixed;*/
-    /*background-size: cover;*/
-    /*background-repeat: repeat;*/
     height: 100%;
-    max-height: 1000px;
-    /*margin-bottom: 30px;*/
     color: white;
-    /*background-color: #2E94C3;*/
 }
 
 header div.mobile-top-nav {
@@ -289,6 +281,11 @@ div.main-content-medium {
         height: 100%;
     }
     
+    div.hide-for-small-only.grid-container {
+        height: 90%;
+        overflow: scroll;
+    }
+    
     .medium-individual-instrument-container {
         height: 1000px;
         padding-bottom: 200px;
@@ -304,14 +301,23 @@ div.main-content-medium {
         padding: 0;
     }
     
+    .medium-instrument-header {
+        height: 90px;
+    }
+    
     .current-teacher-instrument {
-        padding-top: 15px;
+        padding-top: 22px;
     }
     
     .current-teacher-instrument p,
     .next-level-date p,
     .date-of-test p,
     .instrument-to-test p {
+        font-size: 20px;
+    }
+    
+    .instruments-student-medium .current-level span {
+        width: auto;
         font-size: 20px;
     }
     
@@ -329,10 +335,27 @@ div.main-content-medium {
     
     .instruments-student-medium .current-level {
         background-color: #A2DC1F;
+        text-align: left;
+        padding-top: 9px;
+        font-weight: bold;
+    }
+    
+    .current-level.song-bird {
+        background: none 0 0 / auto no-repeat #D5E516;
+    }
+    
+    .current-level.prima {
+        background-color: #571A7E;
+    }
+    
+    img.medium-current-level-icon {
+        height: 70px;
+        width: auto;
     }
     
     .next-level-date p {
-        padding: 0;
+        padding: 11px 0 0;
+        margin: 0;
     }
     
     .medium-instument-open {
