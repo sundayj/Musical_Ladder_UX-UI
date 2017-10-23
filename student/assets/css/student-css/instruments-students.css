@@ -3,6 +3,38 @@ div.main-content-mobile {
     /*height: 100%;*/
 }
 
+.notes-from-director {
+    height: 130px;
+    overflow: scroll;
+}
+
+.individual-note-from-director {
+    height: 123px;
+    margin-bottom: 10px;
+}
+
+div.indiv-note-dircont {
+    background-color: rgba(217, 0, 0, 0.440);
+    border: 1px solid #EB01C3;
+    padding: 10px;
+    color: #AB0000;
+    height: 125px;
+    overflow: scroll;
+}
+
+.individual-note-from-director {
+    padding: 0px 10px 0;
+}
+
+.from-director h2 {
+    margin-bottom: 0;
+    color: navy;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bold;
+}
+
 /*Header for Student Instruments on Mobile*/
 .instruments-student-mobile .current-level {
     height: auto;
@@ -44,11 +76,12 @@ div.instruments-student-mobile:last-of-type {
 
 .current-teacher-instrument p.instrument-teacher {
     font-size: 1em;
+    height: 60px;
+    margin: 0px 0px 4px 0px;
 }
 
 .current-teacher-instrument p.click-open-medium-teachinst {
     font-size: 0.6em;
-    margin-top: -13px;
 }
 
 .next-level-date p {
