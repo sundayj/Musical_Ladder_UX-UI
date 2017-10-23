@@ -10,7 +10,7 @@ div.main-content-mobile {
 }
 
 .instruments-student-mobile img {
-    height: auto;
+    height: 133px;
     width: auto;
 }
 
@@ -31,20 +31,29 @@ div.instruments-student-mobile:last-of-type {
 }
 
 .current-teacher-instrument {
-    padding-top: 8%;
     font-size: 19px;
+    height: 133px;
+    padding-top: 15px;
     font-weight: bold;
     background-color: rgba(99, 188, 229, 0.517);
 }
 
-.current-teacher-instrument p,
-.next-level-date p {
-    font-size: 100%;
-    padding-top: 3%;
-}
-
 .current-teacher-instrument span {
     font-size: 15px;
+}
+
+.current-teacher-instrument p.instrument-teacher {
+    font-size: 1em;
+}
+
+.current-teacher-instrument p.click-open-medium-teachinst {
+    font-size: 0.6em;
+    margin-top: -13px;
+}
+
+.next-level-date p {
+    font-size: 1em;
+    width: 98px;
 }
 
 .next-level-date {
@@ -54,6 +63,7 @@ div.instruments-student-mobile:last-of-type {
     width: ;
     font-weight: bold;
     padding-top: 0;
+    height: 133px;
 }
 
 .song-bird {

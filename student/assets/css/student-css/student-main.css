@@ -6,6 +6,7 @@
 /*Fixed Header for Mobile. Student.*/
 * {
     font-family: arial, helvetica;
+    font-size: 100%;
 }
 
 html,
@@ -269,7 +270,6 @@ div.main-content-medium {
     }
     
     .colorful-ladder-header img {
-        height: auto;
         width: 100%;
         opacity: 1;
     }
@@ -296,6 +296,12 @@ div.main-content-medium {
         border: 2px solid #606AFC;
     }
     
+    .medium-intrument-open {
+        height: 300px;
+        overflow: scroll;
+        resize: vertical;
+    }
+    
     .instruments-student-mobile.instruments-student-medium {
         padding-bottom: 0px !important;
         padding: 0;
@@ -305,20 +311,8 @@ div.main-content-medium {
         height: 90px;
     }
     
-    .current-teacher-instrument {
-        padding-top: 22px;
-    }
-    
-    .current-teacher-instrument p,
-    .next-level-date p,
-    .date-of-test p,
-    .instrument-to-test p {
-        font-size: 20px;
-    }
-    
-    .instruments-student-medium .current-level span {
-        width: auto;
-        font-size: 20px;
+    .apprentice {
+        background: none 0 0 / auto no-repeat #8FBF22;
     }
     
     .song-bird {
@@ -329,39 +323,135 @@ div.main-content-medium {
         background: none 0 0 / auto no-repeat #E3D30E;
     }
     
+    .rockstar {
+        background: none 0 0 / auto no-repeat #E3A428;
+    }
+    
+    .allegro {
+        background: none 0 0 / auto no-repeat #D8812A;
+    }
+    
+    .vivace {
+        background: none 0 0 / auto no-repeat #DA6729;
+    }
+    
+    .prodigy {
+        background: none 0 0 / auto no-repeat #D15815;
+    }
+    
+    .maestro {
+        background: none 0 0 / auto no-repeat #B22B31;
+    }
+    
+    .master {
+        background: none 0 0 / auto no-repeat #7C192A;
+    }
+    
+    .superior {
+        background: none 0 0 / auto no-repeat #9D3962;
+    }
+    
+    .champion {
+        background: none 0 0 / auto no-repeat #9D3396;
+    }
+    
+    .superstar {
+        background: none 0 0 / auto no-repeat #76349F;
+    }
+    
+    .prima {
+        background: none 0 0 / auto no-repeat #581B7E;
+    }
+    
     .bravo {
         background: none 0 0 / auto no-repeat #5357A2;
     }
     
+    .adept {
+        background: none 0 0 / auto no-repeat #434796;
+    }
+    
+    .marvel {
+        background: none 0 0 / auto no-repeat #202474;
+    }
+    
+    .ace {
+        background: none 0 0 / auto no-repeat #204A74;
+    }
+    
+    .artist {
+        background: none 0 0 / auto no-repeat #226B71;
+    }
+    
     .instruments-student-medium .current-level {
         background-color: #A2DC1F;
-        text-align: left;
-        padding-top: 9px;
+        text-align: center;
         font-weight: bold;
     }
     
-    .current-level.song-bird {
-        background: none 0 0 / auto no-repeat #D5E516;
+    div.next-level-date {
+        height: 90px;
     }
     
-    .current-level.prima {
-        background-color: #571A7E;
+    .current-level p {
+        margin-top: 33px;
+        font-size: 0.9em;
+        margin-right: 5px;
+        margin-left: 53px;
     }
     
-    img.medium-current-level-icon {
-        height: 70px;
+    img.medium-current-level-icon,
+    img.medium-next-level-icon {
+        height: 65px;
         width: auto;
     }
     
-    .next-level-date p {
-        padding: 11px 0 0;
-        margin: 0;
+    div.medium-music-notes {
+        /*+placement: float-left;*/
+        float: left;
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 46px;
+        padding-top: 12px;
+        padding-bottom: 5px;
     }
     
-    .medium-instument-open {
-        display: none;
-        height: 400px;
-        overflow: hidden;
+    div.current-teacher-instrument {
+        font-size: 1.2em;
+        height: 90px;
+        padding: 3px 0 0;
+    }
+    
+    .next-level-date p {
+        margin: 0 0 0 44px;
+        padding-top: 18px;
+        height: 89px;
+        font-size: 0.6em;
+    }
+    
+    div.test-grid-mobile {
+        height: 85px;
+    }
+    
+    .proficiency-level img {
+        height: 100%;
+        width: 109px;
+        padding: 0;
+    }
+    
+    .instrument-to-test,
+    .date-of-test {
+        padding-top: 14px;
+        vertical-align: middle;
+        font-size: 0.8em;
+        font-weight: bold;
+        background-color: rgba(99, 188, 229, 0.517);
+    }
+    
+    .instrument-to-test span {
+        font-size: 0.8em;
     }
     
     .message-container {
@@ -372,13 +462,20 @@ div.main-content-medium {
         margin-top: 1px;
     }
     
+    .date-of-note {
+        margin-left: 69%;
+    }
+    
     .medium-instrument-header h2,
     .medium-events-header h2,
     .medium-notes-header h2,
-    .medium-tests-header h2 {
+    .medium-tests-header h2,
+    .from-director h2 {
         margin-bottom: 0;
         color: navy;
         text-align: center;
+        margin-right: auto;
+        margin-left: auto;
     }
     
     .medium-student-individual-instrument {
@@ -412,16 +509,54 @@ div.main-content-medium {
         overflow: scroll;
     }
     
+    .notes-from-director {
+        height: 200px;
+        overflow: scroll;
+    }
+    
+    .individual-note-from-director {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    div.indiv-note-dircont {
+        background-color: rgba(217, 0, 0, 0.440);
+        border: 1px solid #EB01C3;
+        padding: 10px;
+        color: #AB0000;
+        height: 125px;
+        overflow: scroll;
+    }
+    
     #medium-events {
         padding-bottom: 100%;
         height: 1000px;
         overflow: scroll;
     }
     
-    p.month-name,
-    p.event-time,
+    p.month-name {
+        font-size: 1em;
+    }
+    
+    p.event-time {
+        font-size: 1em;
+    }
+    
     p.event-name {
-        font-size: 20px;
+        font-size: 0.8em;
+        margin-left: -95%;
+    }
+    
+    div.more-details {
+        padding: 0px 0 0;
+        margin: 0;
+    }
+    
+    p.more-details {
+        font-size: 0.5em;
+        text-align: center;
+        padding: 0px 0 0;
+        margin-top: 21px;
     }
     
     .personal-events {
@@ -433,6 +568,111 @@ div.main-content-medium {
     }
 }
 
+@media screen and (min-width: 50em) {
+    .current-level p {
+        margin-top: 26px;
+        font-size: 1.4em;
+    }
+    
+    div.test-grid-mobile {
+        height: 107px;
+    }
+    
+    div.current-teacher-instrument {
+        font-size: 1.3em;
+        padding: 0;
+    }
+    
+    .next-level-date p {
+        padding-top: 14px;
+        font-size: 0.8em;
+        height: 89px;
+        width: 128px;
+    }
+    
+    .instrument-to-test,
+    .date-of-test {
+        padding-top: 14px;
+        vertical-align: middle;
+        font-size: 1em;
+        font-weight: bold;
+        background-color: rgba(99, 188, 229, 0.517);
+    }
+    
+    p.month-name {
+        font-size: 1.2em;
+    }
+    
+    p.event-name {
+        font-size: 1em;
+        margin-left: -100%;
+    }
+    
+    div.more-details {
+        padding: 0px 0 0;
+        margin: 0;
+    }
+    
+    p.more-details {
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0px 0 0;
+        margin-top: 20px;
+    }
+}
+
 /* Large and up */
 @media screen and (min-width: 64em) {
+    .current-level p {
+        margin-top: 21px;
+        font-size: 1.8em;
+    }
+    
+    div.current-teacher-instrument {
+        font-size: 1.3em;
+        padding: 0;
+    }
+    
+    .next-level-date p {
+        margin: 0 0 0 55px;
+        padding-top: 4px;
+        font-size: 1em;
+        height: 89px;
+        width: 169px;
+    }
+    
+    div.medium-music-notes {
+        /*+placement: float-left;*/
+        float: left;
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 46px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    img.medium-current-level-icon,
+    img.medium-next-level-icon {
+        height: 92%;
+        width: auto;
+    }
+    
+    div.test-grid-mobile {
+        height: 140px;
+    }
+    
+    .instrument-to-test,
+    .date-of-test {
+        padding-top: 23px;
+        vertical-align: middle;
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: rgba(99, 188, 229, 0.517);
+    }
+    
+    p.month-name {
+        font-size: 1.7em;
+    }
 }

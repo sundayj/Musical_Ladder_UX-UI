@@ -161,14 +161,15 @@ $(document).ready(function () {
 
     $(".medium-intrument-open:first").show();
     $(".medium-intrument-open").not($(".medium-intrument-open:first:visible")).hide();
+    $("p.click-open-medium-teachinst:first").hide();
     $(".medium-instrument-acc").click(function () {
         $(".medium-intrument-open").not($(this).next(".medium-intrument-open")).slideUp();
         if ($(".medium-intrument-open:hidden")) {
-            $("label.see-more").show();
+            $("p.click-open-medium-teachinst").show();
         }
         if ($(this).next(".medium-intrument-open:hidden")) {
             $(this).next(".medium-intrument-open").slideDown();
-            $(this).find("label.see-more").first().hide();
+            $(this).find("p.click-open-medium-teachinst").first().hide();
 
         }
     });
