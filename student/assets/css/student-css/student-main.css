@@ -518,6 +518,11 @@ div.main-content-medium {
     .individual-note-from-director {
         height: auto;
         margin-bottom: 10px;
+        width: 382px;
+    }
+    
+    .notes-from-director {
+        width: 356px;
     }
     
     div.indiv-note-dircont {
