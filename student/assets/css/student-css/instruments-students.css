@@ -20,6 +20,14 @@ div.indiv-note-dircont {
     color: #AB0000;
     height: 125px;
     overflow: scroll;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+}
+
+.notes-from-director {
+    margin: auto;
+    width: 411px;
 }
 
 .individual-note-from-director {
