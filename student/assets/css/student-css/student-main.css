@@ -297,7 +297,7 @@ div.main-content-medium {
         border: 2px solid #606AFC;
     }
     
-    .medium-intrument-open {
+    .medium-instrument-open {
         height: 300px;
         overflow: scroll;
         resize: vertical;
@@ -422,9 +422,12 @@ div.main-content-medium {
     div.current-teacher-instrument {
         font-size: 1.2em;
         height: 90px;
-        padding: 3px 0 0;
+        padding-top: 3px;
     }
     
+    /*.align-teacher-instrument-medium {
+        padding-top: 13px;
+    }*/
     .next-level-date p {
         margin: 0 0 0 44px;
         padding-top: 18px;
@@ -470,8 +473,7 @@ div.main-content-medium {
     .medium-instrument-header h2,
     .medium-events-header h2,
     .medium-notes-header h2,
-    .medium-tests-header h2,
-    .from-director h2 {
+    .medium-tests-header h2 {
         margin-bottom: 0;
         color: navy;
         text-align: center;
@@ -510,32 +512,8 @@ div.main-content-medium {
         overflow: scroll;
     }
     
-    .notes-from-director {
-        height: 200px;
-        overflow: scroll;
-    }
-    
-    .individual-note-from-director {
-        height: auto;
-        margin-bottom: 10px;
-        width: 382px;
-    }
-    
-    .notes-from-director {
-        width: 356px;
-    }
-    
-    div.indiv-note-dircont {
-        background-color: rgba(217, 0, 0, 0.440);
-        border: 1px solid #EB01C3;
-        padding: 10px;
-        color: #AB0000;
-        height: 125px;
-        overflow: scroll;
-    }
-    
     #medium-events {
-        padding-bottom: 100%;
+        padding-bottom: 200px;
         height: 1000px;
         overflow: scroll;
     }
@@ -589,6 +567,9 @@ div.main-content-medium {
         padding: 0;
     }
     
+    /*.align-teacher-instument-medium {
+        padding-top: 10px;
+    }*/
     .next-level-date p {
         padding-top: 14px;
         font-size: 0.8em;

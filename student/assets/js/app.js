@@ -158,24 +158,61 @@ $(document).ready(function () {
     });
 
     //    For Medium and Large Main Screen
-
-    $(".medium-intrument-open:first").show();
-    $(".medium-intrument-open").not($(".medium-intrument-open:first:visible")).hide();
+    //On load, open the first div with class "medium-instrument-open".
+    $(".medium-instrument-open:first").show();
+    //    On load, also hide ever other div with class "medium-instrument-open" and hide the open "button" of the first visible div.
+    $(".medium-instrument-open").not($(".medium-instrument-open:first:visible")).hide();
     $("p.click-open-medium-teachinst:first").hide();
+    //    Since the "button" is hidden, re-align the teacher/instrument title based on the window size.
+    function checkSize() {
+        if ($("DIV.current-teacher-instrument:first").css("padding-top") === "3px") {
+            $("DIV.current-teacher-instrument:first").css("padding-top", "13px");
+        }
+        if ($("DIV.current-teacher-instrument:first").css("padding-top") === "0px") {
+            $("DIV.current-teacher-instrument:first").css("padding-top", "10px");
+        }
+    }
+    checkSize();
+    $(window).resize(checkSize);
+
+
     $(".medium-instrument-acc").click(function () {
-        $(".medium-intrument-open").not($(this).next(".medium-intrument-open")).slideUp();
-        if ($(".medium-intrument-open:hidden")) {
+        //        On click, every div with class "medium-instrument-open," except the one under the clicked div, slides-up to hide.
+        $(".medium-instrument-open").not($(this).next(".medium-instrument-open")).slideUp();
+        //        If div with class "medium-instrument-open" is hidden, then show the open "button".
+        if ($(".medium-instrument-open:hidden")) {
             $("p.click-open-medium-teachinst").show();
         }
-        if ($(this).next(".medium-intrument-open:hidden")) {
-            $(this).next(".medium-intrument-open").slideDown();
-            $(this).find("p.click-open-medium-teachinst").first().hide();
+        //        If the clicked div has a hidden div below it with class "medium-instrument-open", then show it, hide the open "button," and fix the padding of the title to realign it based on the window size.
 
+        if ($(this).next(".medium-instrument-open:hidden")) {
+            if ($(this).find("DIV.current-teacher-instrument").first().css("padding-top") === "3px") {
+                if ($("DIV.current-teacher-instrument").css("padding-top", "13px")) {
+                    $("DIV.current-teacher-instrument").css("padding-top", "3px");
+                }
+                $(this).find("DIV.current-teacher-instrument").first().css("padding-top", "13px");
+            }
+            if ($(this).find("DIV.current-teacher-instrument").first().css("padding-top") === "0px") {
+                if ($("DIV.current-teacher-instrument").css("padding-top", "10px")) {
+                    $("DIV.current-teacher-instrument").css("padding-top", "0px");
+                }
+                $(this).find("DIV.current-teacher-instrument").first().css("padding-top", "10px");
+            }
+            $(this).next(".medium-instrument-open").slideDown();
+            $(this).find("p.click-open-medium-teachinst").first().hide();
+        }
+
+        if ($("DIV.current-teacher-instrument").not($(this).find("DIV.current-teacher-instrument").first()).css("padding-top") === "13px") {
+            $("DIV.current-teacher-instrument").not($(this).find("DIV.current-teacher-instrument").first()).css("padding-top", "3px");
+        }
+        if ($("DIV.current-teacher-instrument").not($(this).find("DIV.current-teacher-instrument").first()).css("padding-top") === "10px") {
+            $("DIV.current-teacher-instrument").not($(this).find("DIV.current-teacher-instrument").first()).css("padding-top", "0px");
         }
     });
 
+
     //    $(".medium-instrument-acc").click(function () {
-    //        $(this).next(".medium-intrument-open").slideToggle();
+    //        $(this).next(".medium-instrument-open").slideToggle();
     //        $(this).find("label.see-more").first().toggle();
     //        $(this).find("label.see-less").first().toggle();
     //        $(".school-notifications").hide();
