@@ -185,7 +185,7 @@ div.main-content-medium {
 }
 
 .help-overlay {
-    position: absolute;
+    position: fixed;
     text-align: center;
     overflow-y: auto;
     width: 100%;
@@ -197,7 +197,15 @@ div.main-content-medium {
     padding-bottom: 100px;
 }
 
-.help-overlay p:first-of-type {
+span.school-name {
+    font-weight: bold;
+}
+
+p.faq {
+    font-weight: bold;
+}
+
+.help-overlay p {
     margin-top: 20px;
     font-size: 30px;
 }
@@ -230,6 +238,8 @@ div.main-content-medium {
 
 .school-icon {
     padding-top: 0;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .school-info {
@@ -256,6 +266,62 @@ div.main-content-medium {
     
     .welcome-medium {
         padding-top: 9px;
+    }
+    
+    .mobile-top-nav button .help,
+    .home-button {
+        font-size: 2.2rem;
+        cursor: pointer;
+        color: #0C2179;
+        margin-top: 21px;
+    }
+    
+    .help-overlay {
+        top: 75px;
+    }
+    
+    .school-icon {
+        font-size: 1.5em;
+    }
+    
+    p.faq-how-to {
+        font-size: 1em;
+    }
+    
+    div.indiv-question {
+        background-color: #378EFF;
+        /*+border-radius: 55px;*/
+        -moz-border-radius: 55px;
+        -webkit-border-radius: 55px;
+        -khtml-border-radius: 55px;
+        border-radius: 55px;
+        padding: 0px 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    
+    div.indiv-question p:first-of-type {
+        margin: 0;
+        padding-right: 11px;
+        padding-left: 11px;
+        padding-top: 0px;
+    }
+    
+    p.see-answer {
+        font-size: 0.9em;
+        font-style: italic;
+        padding: 0px;
+        margin: 0;
+    }
+    
+    .help-question-acc-open {
+        display: none;
+    }
+    
+    div.help-question-acc-open p {
+        font-size: 1.2em;
+        text-align: left;
+        text-indent: 50px;
     }
     
     .medium-header-backfiller {
@@ -297,7 +363,7 @@ div.main-content-medium {
         border: 2px solid #606AFC;
     }
     
-    .medium-instrument-open {
+    .medium-intrument-open {
         height: 300px;
         overflow: scroll;
         resize: vertical;
@@ -425,9 +491,6 @@ div.main-content-medium {
         padding-top: 3px;
     }
     
-    /*.align-teacher-instrument-medium {
-        padding-top: 13px;
-    }*/
     .next-level-date p {
         margin: 0 0 0 44px;
         padding-top: 18px;
@@ -567,9 +630,6 @@ div.main-content-medium {
         padding: 0;
     }
     
-    /*.align-teacher-instument-medium {
-        padding-top: 10px;
-    }*/
     .next-level-date p {
         padding-top: 14px;
         font-size: 0.8em;

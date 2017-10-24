@@ -93,6 +93,18 @@ $(document).ready(function () {
         $(".help-overlay").hide();
     });
 
+    $(".help-question-acc").click(function () {
+        $(".help-question-acc-open").not($(this).next(".help-question-acc-open")).slideUp();
+        if ($(".help-question-acc-open:hidden")) {
+            $(".see-answer").show();
+        }
+        if ($(this).next(".help-question-acc-open:hidden")) {
+            $(this).next(".help-question-acc-open").slideDown();
+            $(this).find(".see-answer").first().hide();
+
+        }
+    });
+
     //      For the notes page.
 
     $(".notes-acc-drop").click(function () {
