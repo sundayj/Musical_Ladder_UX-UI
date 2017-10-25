@@ -106,6 +106,10 @@ DIV.more-details {
     background-color: rgba(0, 178, 217, 0.509);
 }
 
-.event-description P {
+P.event-location {
+    font-size: 0.7em;
+}
+
+.event-description P:last-of-type {
     font-size: 16px;
 }
