@@ -103,7 +103,6 @@ div.hamburger-menu {
 }
 
 .home-screen:hover,
-.parent-children:hover,
 .indiv-child-choose:hover {
     background-color: #59A0C5;
     cursor: pointer;
