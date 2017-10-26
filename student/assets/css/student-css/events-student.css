@@ -179,3 +179,9 @@ DIV.more-details {
         font-size: 1em;
     }
 }
+
+.music-event-icon .fa-music,
+.globe-icon .fa-globe {
+    color: #0C2179;
+    font-size: 25px;
+}

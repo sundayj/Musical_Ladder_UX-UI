@@ -18,7 +18,8 @@
     color: #5B5BFF;
 }
 
-#upcomingBtn, #completedBtn {
+#upcomingBtn,
+#completedBtn {
     margin-bottom: 1px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -59,7 +60,8 @@
     padding: 0;
 }
 
-.instrument-to-test, .date-of-test {
+.instrument-to-test,
+.date-of-test {
     padding-top: 6%;
     vertical-align: middle;
     font-size: 20px;
@@ -70,4 +72,65 @@
 
 .instrument-to-test span {
     font-size: 13px;
+}
+
+/*For Medium screen sizes and higher*/
+
+@media screen and (min-width: 40em) {
+    div.test-grid-mobile {
+        height: 85px;
+    }
+
+    .proficiency-level img {
+        height: 100%;
+        width: 109px;
+        padding: 0;
+    }
+
+    .instrument-to-test,
+    .date-of-test {
+        padding-top: 14px;
+        vertical-align: middle;
+        font-size: 0.8em;
+        font-weight: bold;
+        background-color: rgba(99, 188, 229, 0.517);
+    }
+
+    .instrument-to-test span {
+        font-size: 0.8em;
+    }
+}
+
+/*For large screens and higher*/
+
+@media screen and (min-width: 50em) {
+    div.test-grid-mobile {
+        height: 107px;
+    }
+    .instrument-to-test,
+    .date-of-test {
+        padding-top: 14px;
+        vertical-align: middle;
+        font-size: 1em;
+        font-weight: bold;
+        background-color: rgba(99, 188, 229, 0.517);
+    }
+}
+
+/* x-Large and up */
+
+@media screen and (min-width: 64em) {
+    div.test-grid-mobile {
+        height: 140px;
+    }
+
+    .instrument-to-test,
+    .date-of-test {
+        padding-top: 23px;
+        vertical-align: middle;
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: rgba(99, 188, 229, 0.517);
+    }
+
 }

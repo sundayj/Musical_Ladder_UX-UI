@@ -8,6 +8,7 @@
 * {
     font-family: arial, helvetica;
     font-size: 100%;
+    
 }
 
 html,
@@ -149,12 +150,16 @@ header div.medium-top-nav.show-for-medium {
 
 /*Mobile Body*/
 .view-holder {
+    /*
     min-height: 521px;
     max-height: 90%;
+*/
     position: fixed;
     top: 121px;
     width: 100%;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+
     padding-bottom: 0px;
 }
 
@@ -243,10 +248,14 @@ div.main-content-medium {
     color: #0C2179;
 }
 
+
+/*Help overlay styles*/
+
 .help-overlay {
     position: fixed;
     text-align: center;
     overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
     top: 61px;
@@ -310,6 +319,9 @@ p.faq {
     font-size: 20px;
 }
 
+
+/*For Medium screen sizes and higher*/
+
 @media screen and (min-width: 40em) {
     header div.mobile-top-nav {
         height: 75px;
@@ -334,7 +346,8 @@ p.faq {
         color: #0C2179;
         margin-top: 21px;
     }
-    
+
+    /*    Help Overlay Styles*/
     .help-overlay {
         top: 75px;
     }
@@ -383,6 +396,7 @@ p.faq {
         text-indent: 50px;
     }
     
+    /*End styles for Overlay*/
     .medium-header-backfiller {
         background-color: rgba(101, 189, 229, 0.517);
     }
@@ -399,7 +413,8 @@ p.faq {
         opacity: 1;
         height: 63px;
     }
-    
+
+    /*    styles for main content*/
     section div.hide-for-small-only {
         position: fixed;
         top: 141px;
@@ -408,14 +423,18 @@ p.faq {
     }
     
     div.hide-for-small-only.grid-container {
-        height: 90%;
-        overflow: scroll;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
-    
+
+
+    /*    styles for left side of screen*/
     .medium-individual-instrument-container {
-        height: 1000px;
+        height: 100%;
         padding-bottom: 200px;
-        overflow: scroll;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .separator {
@@ -424,7 +443,8 @@ p.faq {
     
     .medium-intrument-open {
         height: 300px;
-        overflow: scroll;
+        overflow-y: auto;
+        overflow-x: hidden;
         resize: vertical;
     }
     
@@ -436,7 +456,9 @@ p.faq {
     .medium-instrument-header {
         height: 90px;
     }
-    
+
+
+    /*    styles for the individual ladder levels*/
     .apprentice {
         background: none 0 0 / auto no-repeat #8FBF22;
     }
@@ -508,7 +530,8 @@ p.faq {
     .artist {
         background: none 0 0 / auto no-repeat #226B71;
     }
-    
+
+    /*    Styles for Instrument-Teacher Headers*/
     .instruments-student-medium .current-level {
         background-color: #A2DC1F;
         text-align: center;
@@ -617,30 +640,42 @@ p.faq {
     
     .medium-tests-container {
         padding-right: 5px;
-        overflow: scroll;
+        /*
+        overflow-y: auto;
+        overflow-x: hidden;
+*/
         padding-left: 5px;
-        height: 500px;
+        height: 100%;
     }
     
     .medium-notes-container {
         padding-left: 5px;
-        height: 500px;
-        overflow: scroll;
+        height: 100%;
+        /*
+        overflow-y: auto;
+        overflow-x: hidden;
+*/
     }
     
     .main-medium-events-container {
         padding-right: 10px;
         padding-bottom: 100px;
-        overflow: scroll;
+        padding-left: 10px;
+        /*
+        overflow-y: auto;
+        overflow-x: hidden;
+*/
     }
     
     #medium-events {
         padding-bottom: 200px;
-        height: 1000px;
-        overflow: scroll;
+        height: 100%;
+        /*
+        overflow-y: auto;
+        overflow-x: hidden;
+*/
     }
-    
-    p.month-name {
+     p.month-name {
         font-size: 1em;
     }
     
@@ -675,6 +710,41 @@ p.faq {
         display: block;
     }
 }
+
+    div.more-details {
+        padding: 0px 0 0;
+        margin: 0;
+    }
+    
+    p.more-details {
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0px 0 0;
+    }
+    
+    p.close-details {
+        font-size: 0.8em;
+    }
+    
+    .personal-events {
+        padding-bottom: 0;
+    }
+    
+.person-event-title h1,
+.global-event-title h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: navy;
+    text-align: center;
+    font-size: 1.8em;
+}
+    .global-events {
+        display: block;
+    }
+}
+
+/*For large screens and higher*/
+
 
 @media screen and (min-width: 50em) {
     .current-level p {
@@ -721,7 +791,8 @@ p.faq {
     }
 }
 
-/* Large and up */
+/* x-Large and up */
+
 @media screen and (min-width: 64em) {
     .current-level p {
         margin-top: 21px;

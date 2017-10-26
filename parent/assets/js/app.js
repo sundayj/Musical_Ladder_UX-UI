@@ -36,6 +36,8 @@ $(document).ready(function () {
             $("#studentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Tests");
             $(".school-notifications").hide();
+                        $(".hamburger-menu").hide();
+
         });
     });
 
@@ -44,6 +46,8 @@ $(document).ready(function () {
             $("#studentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Notes");
             $(".school-notifications").hide();
+                        $(".hamburger-menu").hide();
+
         });
     });
 
@@ -52,6 +56,8 @@ $(document).ready(function () {
             $("#studentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Events");
             $(".school-notifications").hide();
+                        $(".hamburger-menu").hide();
+
         });
     });
 
@@ -59,6 +65,8 @@ $(document).ready(function () {
 
     $("#notificationbtn").click(function () {
         $(".school-notifications").slideToggle();
+                    $(".hamburger-menu").hide();
+
     });
 
 
