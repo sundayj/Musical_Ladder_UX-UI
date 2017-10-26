@@ -4,7 +4,6 @@ div.main-content-mobile {
 }
 
 /*Header for Student Instruments on Mobile*/
-
 .instruments-student-mobile .current-level {
     height: auto;
     text-align: right;
@@ -16,7 +15,6 @@ div.main-content-mobile {
 }
 
 /*Main Content for Student Instruments on Mobile*/
-
 div.instruments-student-mobile,
 div.instruments-student-mobile-header {
     text-align: center;
@@ -40,6 +38,11 @@ div.instruments-student-mobile:last-of-type {
     background-color: rgba(99, 188, 229, 0.517);
 }
 
+/*.current-teacher-instrument p,
+.next-level-date p {
+    font-size: 100%;
+    padding-top: 3%;
+}*/
 .current-teacher-instrument span {
     font-size: 15px;
 }

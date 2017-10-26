@@ -11,11 +11,15 @@
     margin: 0;
     padding-top: 0px;
 }
-.parent-children h1 {
+.parent-children-title h1 {
     text-align: center;
     color: navy;
     font-weight: bold;
 }
 div.instruments-student-mobile:last-of-type {
     padding-bottom: 50px;
+}
+
+.parent-children-title {
+    text-align: center;
 }

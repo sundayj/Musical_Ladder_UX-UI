@@ -106,10 +106,82 @@ DIV.more-details {
     background-color: rgba(0, 178, 217, 0.509);
 }
 
-P.event-location {
-    font-size: 0.7em;
+.event-description P {
+    font-size: 16px;
 }
 
-.event-description P:last-of-type {
-    font-size: 16px;
+
+/*For Medium screen sizes and higher*/
+
+@media screen and (min-width: 40em) {
+    p.month-name {
+        font-size: 1em;
+    }
+
+    p.event-time {
+        font-size: 1em;
+    }
+
+    p.event-name {
+        font-size: 0.8em;
+    }
+
+    div.more-details {
+        padding: 0px 0 0;
+        margin: 0;
+    }
+
+    p.more-details {
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0px 0 0;
+    }
+
+    p.close-details {
+        font-size: 0.8em;
+    }
+
+    .personal-events {
+        padding-bottom: 0;
+    }
+
+    .global-events {
+        display: block;
+    }
+}
+
+/*For large screens and higher*/
+
+@media screen and (min-width: 50em) {
+    p.month-name {
+        font-size: 1.2em;
+    }
+
+    p.event-name {
+        font-size: 1em;
+    }
+
+    div.more-details {
+        padding: 0px 0 0;
+        margin: 0;
+    }
+
+}
+
+/* x-Large and up */
+
+@media screen and (min-width: 64em) {
+    p.month-name {
+        font-size: 1.7em;
+    }
+
+    p.more-details {
+        font-size: 1em;
+    }
+}
+
+.music-event-icon .fa-music,
+.globe-icon .fa-globe {
+    color: #0C2179;
+    font-size: 25px;
 }
