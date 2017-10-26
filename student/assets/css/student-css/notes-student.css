@@ -64,3 +64,21 @@ DIV.message-container:last-of-type {
     font-size: 25px;
     cursor: pointer;
 }
+
+
+/*For Medium screen sizes and higher*/
+
+@media screen and (min-width: 40em) {
+    .message-container {
+        margin-right: 5px;
+    }
+
+    div.message-container:first-of-type {
+        margin-top: 1px;
+    }
+
+    .date-of-note {
+        margin-left: 69%;
+    }
+
+}

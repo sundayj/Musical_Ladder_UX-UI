@@ -7,7 +7,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/62_user.jpg" alt="Avatar">
                     <label class="message-from">John / Piano</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
             </div>
             <div class="notes-acc-dropdown">
@@ -19,7 +19,7 @@
                     </div>
                     <div class="grid-x">
                         <div class="small-3"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
-                        <div class="small-3 small-offset-9 cell">
+                        <div class="date-of-note small-3 small-offset-9 cell">
                             <span>4/6/17</span>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/19_student.jpg" alt="Avatar">
                     <label class="message-from">Juliet / Cello</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
 
             </div>
@@ -41,12 +41,12 @@
                 <div class="individ-note">
                     <div class="grid-x">
                         <div class="small-12 cell message">
-                            <p>Hello Riehle! Don't forget to bring your sheet music tomorrow.</p>
+                            <p>Hello Jennifer! Don't forget to bring your sheet music tomorrow.</p>
                         </div>
                     </div>
                     <div class="grid-x">
                         <div class="small-3"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
-                        <div class="small-3 small-offset-9 cell">
+                        <div class="date-of-note small-3 small-offset-9 cell">
                             <span>10/5/17</span>
                         </div>
                     </div>
@@ -54,12 +54,12 @@
                 <div class="individ-note">
                     <div class="grid-x">
                         <div class="small-12 cell message">
-                            <p>Hello Riehle! You did great on your test today!</p>
+                            <p>Hello Jennifer! You did great on your test today!</p>
                         </div>
                     </div>
                     <div class="grid-x">
                         <div class="small-3"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
-                        <div class="small-3 small-offset-9 cell">
+                        <div class="date-of-note small-3 small-offset-9 cell">
                             <span>9/8/17</span>
                         </div>
                     </div>
@@ -67,12 +67,12 @@
                 <div class="individ-note">
                     <div class="grid-x">
                         <div class="small-12 cell message">
-                            <p>Hi Riehle! You were meant to play the piano!</p>
+                            <p>Hi Jennifer! You were meant to play the piano!</p>
                         </div>
                     </div>
                     <div class="grid-x">
                         <div class="small-3"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
-                        <div class="small-3 small-offset-9 cell">
+                        <div class="date-of-note small-3 small-offset-9 cell">
                             <span>8/7/17</span>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/10_user.jpg" alt="Avatar">
                     <label class="message-from">George / President</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
 
             </div>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="grid-x">
                         <div class="small-3"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
-                        <div class="small-3 small-offset-9 cell">
+                        <div class="date-of-note small-3 small-offset-9 cell">
                             <span>1/4/18</span>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                     <img class="notes-avatar" src="assets/img/avatars-temporary/1_user.jpg" alt="Avatar">
                     <label class="message-from">Lindsey / Violin</label>
                 </div>
-                <div class="small-6 cell"><label class="open-notes">Open Notes</label>
+                <div class="small-6 cell"><label class="open-notes">Open Note</label>
                     <label class="close-notes">Close Notes</label></div>
 
             </div>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="grid-x">
                         <div class="small-3"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
-                        <div class="small-3 small-offset-9 cell">
+                        <div class="date-of-note small-3 small-offset-9 cell">
                             <span>3/8/18</span>
                         </div>
                     </div>
@@ -141,9 +141,16 @@
     $(document).ready(function() {
 
         $(".notes-acc-drop").click(function() {
-            $(this).next(".notes-acc-dropdown").slideToggle();
-            $(this).find(".close-notes").first().toggle();
-            $(this).find(".open-notes").first().toggle();
+            $(".notes-acc-dropdown").not($(this).next(".notes-acc-dropdown")).slideUp();
+            if ($(".notes-acc-dropdown:hidden")) {
+                $(".open-notes").show();
+            }
+            if ($(this).next(".notes-acc-dropdown:hidden")) {
+                $(this).next(".notes-acc-dropdown").slideDown();
+                //                $(this).find(".close-notes").first().toggle();
+                $(this).find(".open-notes").first().hide();
+
+            }
         });
 
     });

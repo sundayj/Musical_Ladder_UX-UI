@@ -1,0 +1,21 @@
+.individual-child-name, .parent-classes {
+    text-align: center;
+    color: navy;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.individual-child:last-of-type {
+    padding-bottom: 200px;
+}
+.individual-child-name p, .parent-classes p {
+    margin: 0;
+    padding-top: 0px;
+}
+.parent-children h1 {
+    text-align: center;
+    color: navy;
+    font-weight: bold;
+}
+div.instruments-student-mobile:last-of-type {
+    padding-bottom: 50px;
+}
