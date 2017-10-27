@@ -34,15 +34,14 @@ body {
     cursor: default;
 }
 
-.student-level .individual-description p {
-    text-align: left;
-}
-
 /*Delete the next rule once a description is entered!*/
+.student-level .individual-description,
 .parent-level .individual-description,
 .director-level .individual-description,
 .teacher-level .individual-description {
-    padding-top: 6%;
+    padding-top: 6px;
+    text-align: left;
+    text-indent: 50px;
 }
 
 .choose-your-level,
@@ -53,4 +52,8 @@ body {
 
 .choose-your-level {
     margin-bottom: 100px;
+}
+
+.directions {
+    text-indent: 49px;
 }
