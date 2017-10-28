@@ -4,9 +4,18 @@ $(document).ready(function () {
 
 
     //    Initial load of the landing page screen
+
+    //For Teacher
+    $.get("all-students-teacher.html", function (data) {
+        $("#teacherview").html(data);
+        $("#testbtn").attr("disabled", true);
+        $("#notebtn").attr("disabled", true);
+        $("#eventbtn").attr("disabled", true);
+    });
+
     // For Parent
-    $.get("instruments-parent.html", function (data) {
-        $("#studentview").html(data);
+    $.get("all-students-parent.html", function (data) {
+        $("#parentview").html(data);
         $("#testbtn").attr("disabled", true);
         $("#notebtn").attr("disabled", true);
         $("#eventbtn").attr("disabled", true);
@@ -18,42 +27,49 @@ $(document).ready(function () {
     });
 
 
-    //    Home button functionality
-    //    For Student
-    $("#home").click(function () {
-        $.get("instruments-students.html", function (data) {
-            $("#studentview").html(data);
-            $(".help-overlay").hide();
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Riehle!");
-            $(".school-notifications").hide();
-        });
-    });
-
-
-    //For Parent
     //  Hamburger overlay functionality
 
     $("i.hamburger").click(function () {
         $(".hamburger-menu").slideToggle();
     });
 
+    //    Home button functionality
+
     $("#home").click(function () {
-        $.get("instruments-parent.html", function (data) {
-            $("#studentview").html(data);
-            $(".help-overlay").hide();
+        //For Parent
+        $.get("all-students-parent.html", function (data) {
+            $("#parentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Jennifer!");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
             $("#testbtn").attr("disabled", true);
             $("#notebtn").attr("disabled", true);
             $("#eventbtn").attr("disabled", true);
         });
+        //For Teacher
+        $.get("all-students-teacher.html", function (data) {
+            $("#teacherview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Teacher!");
+            $("#testbtn").attr("disabled", true);
+            $("#notebtn").attr("disabled", true);
+            $("#eventbtn").attr("disabled", true);
+        });
+        //    For Student
+        $.get("instruments-students.html", function (data) {
+            $("#studentview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Riehle!");
+        });
+        $(".help-overlay").hide();
+        $(".school-notifications").hide();
+        $(".hamburger-menu").hide();
     });
 
-    // When student is chosen from the parent screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
+
+
+
+    // When student is chosen from the parent or teacher screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
     $("#student-2").click(function () {
         $.get("../student-views/instruments-students.html", function (data) {
-            $("#studentview").html(data);
+            $("#parentview").html(data);
+            $("#teacherview").html(data);
         });
         $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Classes");
         $("#testbtn").attr("disabled", false);
@@ -64,7 +80,7 @@ $(document).ready(function () {
 
     $("#testbtn").click(function () {
         $.get("../student-views/tests-student.html", function (data) {
-            $("#studentview").html(data);
+            $("#parentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Tests");
             $(".school-notifications").hide();
             $(".hamburger-menu").hide();
@@ -74,7 +90,7 @@ $(document).ready(function () {
 
     $("#notebtn").click(function () {
         $.get("../student-views/notes-student.html", function (data) {
-            $("#studentview").html(data);
+            $("#parentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Notes");
             $(".school-notifications").hide();
             $(".hamburger-menu").hide();
@@ -84,7 +100,7 @@ $(document).ready(function () {
 
     $("#eventbtn").click(function () {
         $.get("../student-views/events-student.html", function (data) {
-            $("#studentview").html(data);
+            $("#parentview").html(data);
             $("div.welcome-student-mobile > div.small-12.cell > h1").html("Events");
             $(".school-notifications").hide();
             $(".hamburger-menu").hide();

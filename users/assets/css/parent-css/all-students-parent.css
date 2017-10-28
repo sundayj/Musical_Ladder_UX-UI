@@ -11,7 +11,7 @@
     margin: 0;
     padding-top: 0px;
 }
-.parent-children-title h1 {
+.parent-children-title h1, .parent-classes h1 {
     text-align: center;
     color: navy;
     font-weight: bold;
