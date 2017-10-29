@@ -18,12 +18,14 @@ body {
 }
 
 .individual-description {
-    overflow: auto;
+    overflow: scroll;
     padding-left: 10px;
+    padding-right: 10px;
+    height: 150px;
 }
 
 .individual-button {
-    padding-top: 6%;
+    padding-top: 39px;
 }
 
 .individual-button button:enabled {
@@ -44,7 +46,6 @@ body {
     text-indent: 50px;
 }
 
-.choose-your-level,
 .individual-button,
 .individual-description {
     border: 1px solid #4073BE;
@@ -56,4 +57,6 @@ body {
 
 .directions {
     text-indent: 49px;
+    padding-left: 15px;
+    padding-right: 15px;
 }

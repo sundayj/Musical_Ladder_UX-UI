@@ -95,9 +95,9 @@ header div.medium-top-nav.show-for-medium {
     position: fixed;
     top: 121px;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
-    /*    padding-bottom: 200px;*/
+    padding-bottom: 200px;
 }
 
 .school-notifications {
@@ -171,17 +171,20 @@ div.main-content-medium {
     max-height: 70px;
 }
 
-.mobile-app-icon-bar button {
-    padding: 1.25rem;
-    cursor: pointer;
-}
-
 .mobile-app-icon-bar button svg,
 .mobile-app-icon-bar button i,
 .mobile-app-icon-bar button img {
     font-size: 2rem;
     max-height: 2rem;
     max-width: 2rem;
+}
+
+.mobile-app-icon-bar button {
+    padding: 1.25rem;
+}
+
+.mobile-app-icon-bar button:enabled {
+    cursor: pointer;
     color: #0C2179;
 }
 
@@ -257,31 +260,36 @@ p.faq {
 /*For Medium screen sizes and higher*/
 @media screen and (min-width: 40em) {
     /* Turn on custom 8px wide scrollbar */
-    ::-webkit-scrollbar {
+    ::-webkit-scrollbar,
+    ::-moz-scrollbar {
         width: 8px;
         /* 1px wider than Lion. */
         /* This is more usable for users trying to click it. */
         background-color: rgba(0, 0, 0, 0);
         -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
     }
     
     /* hover effect for both scrollbar area, and scrollbar 'thumb' */
-    ::-webkit-scrollbar:hover {
+    ::-webkit-scrollbar:hover,
+    ::-moz-scrollbar:hover {
         background-color: rgba(0, 0, 0, 0.09);
     }
     
     /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-    ::-webkit-scrollbar-thumb:vertical {
+    ::-webkit-scrollbar-thumb:vertical, ::-moz-scrollbar-thumb:vertical {
         /* This is the EXACT color of Mac OS scrollbars. 
                Yes, I pulled out digital color meter */
         background: rgba(0, 0, 0, 0.5);
         -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
     }
     
-    ::-webkit-scrollbar-thumb:vertical:active {
+    ::-webkit-scrollbar-thumb:vertical:active, ::-moz-scrollbar-thumb:vertical:active {
         background: rgba(0, 0, 0, 0.61);
         /* Some darker color when you click it */
         -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
     }
     
     header div.mobile-top-nav {
@@ -399,6 +407,7 @@ p.faq {
     
     .separator {
         border: 2px solid #606AFC;
+        padding-right: 1px;
     }
     
     .medium-intrument-open {
@@ -679,15 +688,40 @@ p.faq {
     .global-events {
         display: block;
     }
-    
-    .upcoming-title h1,
-    .completed-title h1 {
-        margin-top: 20px;
-        margin-bottom: 7px;
-        color: navy;
-        text-align: center;
-        font-size: 1.8em;
-    }
+}
+
+div.more-details {
+    padding: 0px 0 0;
+    margin: 0;
+}
+
+p.more-details {
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0px 0 0;
+}
+
+p.close-details {
+    font-size: 0.8em;
+}
+
+.personal-events {
+    padding-bottom: 0;
+}
+
+.upcoming-title h1,
+.completed-title h1,
+.person-event-title h1,
+.global-event-title h1 {
+    margin-top: 20px;
+    margin-bottom: 7px;
+    color: navy;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.global-events {
+    display: block;
 }
 
 /*For large screens and higher*/
@@ -778,6 +812,12 @@ p.faq {
         width: 46px;
         padding-top: 12px;
         padding-bottom: 12px;
+    }
+    
+    img.medium-current-level-icon,
+    img.medium-next-level-icon {
+        height: 65px;
+        width: auto;
     }
     
     div.test-grid-mobile {

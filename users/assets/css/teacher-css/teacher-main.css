@@ -158,9 +158,9 @@ header div.medium-top-nav.show-for-medium {
     position: fixed;
     top: 121px;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
-    /*    padding-bottom: 200px;*/
+    padding-bottom: 200px;
 }
 
 .school-notifications {
@@ -258,7 +258,7 @@ div.main-content-medium {
 .help-overlay {
     position: fixed;
     text-align: center;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
@@ -327,31 +327,38 @@ p.faq {
 
 @media screen and (min-width: 40em) {
     /* Turn on custom 8px wide scrollbar */
-    ::-webkit-scrollbar {
+    ::-webkit-scrollbar,
+    ::-moz-scrollbar {
         width: 8px;
         /* 1px wider than Lion. */
         /* This is more usable for users trying to click it. */
         background-color: rgba(0, 0, 0, 0);
         -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
     }
 
     /* hover effect for both scrollbar area, and scrollbar 'thumb' */
-    ::-webkit-scrollbar:hover {
+    ::-webkit-scrollbar:hover,
+    ::-moz-scrollbar:hover {
         background-color: rgba(0, 0, 0, 0.09);
     }
 
     /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-    ::-webkit-scrollbar-thumb:vertical {
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-moz-scrollbar-thumb:vertical {
         /* This is the EXACT color of Mac OS scrollbars. 
                Yes, I pulled out digital color meter */
         background: rgba(0, 0, 0, 0.5);
         -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
     }
 
-    ::-webkit-scrollbar-thumb:vertical:active {
+    ::-webkit-scrollbar-thumb:vertical:active,
+    ::-moz-scrollbar-thumb:vertical:active {
         background: rgba(0, 0, 0, 0.61);
         /* Some darker color when you click it */
         -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
     }
 
     header div.mobile-top-nav {
@@ -455,7 +462,7 @@ p.faq {
 
     div.hide-for-small-only.grid-container {
         height: 100%;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
     }
 
@@ -463,7 +470,7 @@ p.faq {
     .medium-individual-instrument-container {
         height: 100%;
         padding-bottom: 200px;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
     }
 
@@ -474,7 +481,7 @@ p.faq {
 
     .medium-intrument-open {
         height: 300px;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         resize: vertical;
         padding-bottom: 30px;
@@ -671,7 +678,7 @@ p.faq {
     .medium-tests-container {
         padding-right: 5px;
         /*
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         */
         padding-left: 5px;
@@ -682,7 +689,7 @@ p.faq {
         padding-left: 5px;
         height: 100%;
         /*
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         */
         padding-right: 5px;
@@ -698,7 +705,7 @@ p.faq {
         padding-bottom: 100px;
         padding-left: 10px;
         /*
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         */
     }
@@ -711,7 +718,7 @@ p.faq {
         padding-bottom: 200px;
         height: 100%;
         /*
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         */
     }
@@ -880,7 +887,7 @@ p.close-details {
 
     img.medium-current-level-icon,
     img.medium-next-level-icon {
-        height: 92%;
+        height: 65px;
         width: auto;
     }
 

@@ -1,8 +1,3 @@
-div.main-content-mobile {
-    font-family: UnicaOne;
-    /*height: 100%;*/
-}
-
 /*Header for Student Instruments on Mobile*/
 .instruments-student-mobile .current-level {
     height: auto;
@@ -15,11 +10,24 @@ div.main-content-mobile {
 }
 
 /*Main Content for Student Instruments on Mobile*/
+.main-content-mobile {
+    min-height: 521px;
+    max-height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.instrument-content-mobile {
+    min-height: 521px;
+    max-height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 div.instruments-student-mobile,
 div.instruments-student-mobile-header {
     text-align: center;
     padding: 9.25px;
-    /*background-color: rgba(68, 85, 103, 0.603);*/
 }
 
 div.instruments-student-mobile {
@@ -38,11 +46,6 @@ div.instruments-student-mobile:last-of-type {
     background-color: rgba(99, 188, 229, 0.517);
 }
 
-/*.current-teacher-instrument p,
-.next-level-date p {
-    font-size: 100%;
-    padding-top: 3%;
-}*/
 .current-teacher-instrument span {
     font-size: 15px;
 }
