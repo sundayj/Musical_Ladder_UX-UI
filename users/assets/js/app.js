@@ -29,9 +29,23 @@ $(document).ready(function () {
 
     //  Hamburger overlay functionality
 
-    $("i.hamburger").click(function () {
+    $("i.hamburger").click(function (e) {
         $(".hamburger-menu").slideToggle();
+        e.stopPropagation();
     });
+
+    $("body").click(function () {
+        $(".hamburger-menu").slideUp();
+    });
+
+    $(".hamburger-menu").click(function (e) {
+        e.stopPropagation();
+    });
+    //    $("i.hamburger").click(function () {
+    //        $(".hamburger-menu").slideToggle();
+    //    });
+
+
 
     //    Home button functionality
 
@@ -66,6 +80,28 @@ $(document).ready(function () {
 
 
     // When student is chosen from the parent or teacher screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
+    $("#student-0").click(function () {
+        $.get("../student-views/instruments-students-copy0.html", function (data) {
+            $("#teacherview").html(data);
+        });
+        $("div.welcome-student-mobile > div.small-12.cell > h1").html("Your Classes, John.");
+        $("#testbtn").attr("disabled", false);
+        $("#notebtn").attr("disabled", false);
+        $("#eventbtn").attr("disabled", false);
+        $(".hamburger-menu").hide();
+    });
+
+    $("#student-1").click(function () {
+        $.get("../student-views/instruments-students-copy1.html", function (data) {
+            $("#parentview").html(data);
+        });
+        $("div.welcome-student-mobile > div.small-12.cell > h1").html("Your Classes, Jennifer");
+        $("#testbtn").attr("disabled", false);
+        $("#notebtn").attr("disabled", false);
+        $("#eventbtn").attr("disabled", false);
+        $(".hamburger-menu").hide();
+    });
+
     $("#student-2").click(function () {
         $.get("../student-views/instruments-students.html", function (data) {
             $("#parentview").html(data);
@@ -78,10 +114,12 @@ $(document).ready(function () {
         $(".hamburger-menu").hide();
     });
 
+
     $("#testbtn").click(function () {
         $.get("../student-views/tests-student.html", function (data) {
             $("#parentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Tests");
+            $("#teacherview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Tests");
             $(".school-notifications").hide();
             $(".hamburger-menu").hide();
 
@@ -91,7 +129,8 @@ $(document).ready(function () {
     $("#notebtn").click(function () {
         $.get("../student-views/notes-student.html", function (data) {
             $("#parentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Notes");
+            $("#teacherview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Notes");
             $(".school-notifications").hide();
             $(".hamburger-menu").hide();
 
@@ -101,7 +140,8 @@ $(document).ready(function () {
     $("#eventbtn").click(function () {
         $.get("../student-views/events-student.html", function (data) {
             $("#parentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Events");
+            $("#teacherview").html(data);
+            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Events");
             $(".school-notifications").hide();
             $(".hamburger-menu").hide();
 
@@ -336,6 +376,120 @@ $(document).ready(function () {
     $.get("events-student.html", function (data) {
         $("#medium-events").html(data);
     });
+
+    //#0 General Functionality
+
+    //#1 Student
+
+    //#2 Parent
+
+    //#3 Teacher
+
+    //#4 Director
+
+    $(".actions").mouseenter(function () {
+        $(this).next(".dropdown").slideDown();
+    });
+
+    $(".actions").mouseleave(function () {
+        $(this).next(".dropdown").slideUp();
+    });
+
+    $(".dropdown").mouseenter(function () {
+        $(this).show();
+        $(this).prev(".actions").css("background-color", "#A8D1E6");
+
+
+    });
+
+    $(".dropdown").mouseleave(function () {
+        $(this).slideUp();
+        $(this).prev(".actions").css("background-color", "white");
+    });
+
+    //    //    Search Tab Functions
+    //
+    //    $(".nav-bar div p").click(function () {
+    //        if ($(this).css("background-color", "#A8D1E6")) {
+    //            $(".nav-bar div p").not(this).css("background-color", "white");
+    //        }
+    //    });
+    //
+    //    $("#search-all").click(function () {
+    //        $.get("search-all.html", function (data) {
+    //            $("#search-director-main").html(data);
+    //        });
+    //    });
+    //
+    //    $("#search-users").click(function () {
+    //        $.get("search-users.html", function (data) {
+    //            $("#search-director-main").html(data);
+    //        });
+    //    });
+    //
+    //    $("#search-notes").click(function () {
+    //        $.get("search-notes.html", function (data) {
+    //            $("#search-director-main").html(data);
+    //        });
+    //    });
+    //
+    //    $("#search-events").click(function () {
+    //        $.get("search-events.html", function (data) {
+    //            $("#search-director-main").html(data);
+    //        });
+    //    });
+    //
+    //    $("#search-schools").click(function () {
+    //        $.get("search-schools.html", function (data) {
+    //            $("#search-director-main").html(data);
+    //        });
+    //    });
+    //
+    //
+    //
+    //    //    Search functionality
+    //    $(".search-button button").click(function () {
+    //        if ($("#search-all p").css("background-color") === "#A8D1E6") {
+    //            if ($("#filter-student input:checked")) {
+    //                $.get("search-users.html div.student-instance", function (data) {
+    //                    $("#search-director-main").html(data);
+    //                });
+    //            }
+    //            if ($("#filter-teacher input:checked")) {
+    //                $.get("search-users.html div.teacher-instance", function (data) {
+    //                    $("#search-director-main").html(data);
+    //                });
+    //            }
+    //            if ($("#filter-parent input:checked")) {
+    //                $.get("search-users.html div.parent-instance", function (data) {
+    //                    $("#search-director-main").html(data);
+    //                });
+    //            }
+    //        }
+    //
+    //        if ($("#search-users p").css("background-color") === "#A8D1E6") {
+    //            if ($("#filter-student input:checked")) {
+    //                $.get("search-users.html div.student-instance", function (data) {
+    //                    $("#search-director-main").html(data);
+    //                });
+    //            }
+    //            if ($("#filter-teacher input:checked")) {
+    //                $.get("search-users.html div.teacher-instance", function (data) {
+    //                    $("#search-director-main").html(data);
+    //                });
+    //            }
+    //            if ($("#filter-parent input:checked")) {
+    //                $.get("search-users.html div.parent-instance", function (data) {
+    //                    $("#search-director-main").html(data);
+    //                });
+    //            }
+    //        }
+    //
+    //    });
+    //
+    //
+    //
+
 
 
 

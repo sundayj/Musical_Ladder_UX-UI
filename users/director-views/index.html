@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1, minimum scale=1, user-scalable=no, maximum-scale=1" />
+    <meta name="description" content="Website designed for the Musical Ladder System, through Severien, by Justin Sunday. Copyright 2017">
+    <title>Musical Ladder | Director</title>
+    <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/foundation.css">
+    <link rel="stylesheet" href="../assets/fullcalendar-3.6.2/fullcalendar.css" />
+    <link rel="stylesheet" href="../assets/css/director-css/director-main.css">
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/fullcalendar-3.6.2/lib/moment.min.js"></script>
+    <script src="../assets/fullcalendar-3.6.2/fullcalendar.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // page is now ready, initialize the calendar...
+
+            $("#calendar").fullCalendar({
+                // put your options and callbacks here
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="mobile-top-nav grid-container full">
+            <div class="grid-x">
+                <div class="small-2 cell hide-for-medium"><button><i id="home" class="fa fa-home home-button" aria-hidden="true"></i></button></div>
+                <div class="small-2 small-offset-3 medium-3 medium-offset-0 cell">
+                    <span class="music-logo"><a href="index.html"><img id="home-logo" src="../assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></a></span>
+                </div>
+                <div class="welcome-medium hide-for-small-only medium-6">
+                    <h2>Welcome Riehle!</h2>
+                </div>
+                <div class="small-2 small-offset-3 medium-offset-1 cell">
+                    <button><i class="fa fa-question-circle help" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="director-main-content">
+        <div class="grid-container full">
+            <div class="grid-x nav-bar">
+                <div class="small-12 medium-2 medium-offset-1 cell">
+                    <div class="actions grid-x">
+                        <div class="small-12 cell">
+                            <p>Students</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x dropdown">
+                        <div class="small-12 cell">
+                            <p>See All</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Add</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-12 medium-2 cell">
+                    <div class="actions grid-x">
+                        <div class="small-12 cell">
+                            <p>Parents</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x dropdown">
+                        <div class="small-12 cell">
+                            <p>See All</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Add</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-12 medium-2 cell">
+                    <div class="actions grid-x">
+                        <div class="small-12 cell">
+                            <p>Teachers</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x dropdown">
+                        <div class="small-12 cell">
+                            <p>See All</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Add</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-12 medium-2 cell">
+                    <div class="grid-x actions ">
+                        <div class="small-12 cell">
+                            <p>Locations</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x dropdown">
+                        <div class="small-12 cell">
+                            <p>See All</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Add</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-12 medium-2 cell">
+                    <div class="grid-x actions ">
+                        <div class="small-12 cell">
+                            <p>Events</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x dropdown">
+                        <div class="small-12 cell">
+                            <p>See All</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Add</p>
+                        </div>
+                        <div class="small-12 cell">
+                            <p>Edit</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid-x calendar-and-search">
+                <div class="small-12 medium-6 cell">
+                    <div class="grid-x search-bar">
+                        <div class="small-12 large-4 large-offset-4 cell search-input">
+                            <input type="text" placeholder="Search Students, Teachers, and Parents">
+                        </div>
+                    </div>
+
+                    <div id="search-director-results" class="grid-x search-results-holder">
+
+                        <!--Insert Results Here-->
+                    </div>
+
+
+                </div>
+                <div class="small-12 medium-6 cell calendar-container" id="calendar"></div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="../assets/js/vendor/what-input.js"></script>
+<script src="../assets/js/vendor/foundation.js"></script>
+<script src="../assets/js/app.js"></script>
+
+</html>

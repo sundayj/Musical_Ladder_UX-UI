@@ -146,3 +146,7 @@ div.instruments-student-mobile:last-of-type {
 .artist {
     background: url(../../img/LV18_Artist.png) 0 0 / contain no-repeat;
 }
+
+.trophy {
+    background: url(../../img/music-trophy.png) 0 0 / contain no-repeat;
+}

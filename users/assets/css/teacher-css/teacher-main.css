@@ -294,7 +294,7 @@ p.faq {
 }
 
 .icon-help {
-    padding-top: 11%;
+    padding-top: 28px;
 }
 
 .icon-help i {
@@ -476,7 +476,6 @@ p.faq {
 
     .separator {
         border: 2px solid #606AFC;
-        padding-right: 1px;
     }
 
     .medium-intrument-open {

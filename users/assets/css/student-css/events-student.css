@@ -30,9 +30,9 @@
 }
 
 .global-events,
-LABEL.close-month,
+label.close-month,
 .month-acc-dropdown,
-P.close-details {
+p.close-details {
     display: none;
 }
 
@@ -48,23 +48,23 @@ P.close-details {
     margin-top: 20px;
 }
 
-DIV.month-name {
+div.month-name {
     text-align: center;
 }
 
-P.month-name {
+p.month-name {
     font-size: 25px;
     font-weight: bold;
 }
 
-LABEL.open-month,
-LABEL.close-month {
+label.open-month,
+label.close-month {
     font-style: italic;
     color: white;
     color: #0C2179;
     font-size: 17px;
-    padding-top: 7%;
     cursor: pointer;
+    padding-top: 7px;
 }
 
 .individual-events {
@@ -75,22 +75,22 @@ LABEL.close-month {
     background-color: rgba(0, 178, 217, 0.198);
 }
 
-DIV.event-time {
+div.event-time {
     text-align: right;
     padding-right: 10px;
 }
 
-DIV.individual-event-day {
+div.individual-event-day {
     background-color: rgba(0, 178, 217, 0.509);
 }
 
-P.date-number,
-P.event-name,
-P.event-time {
+p.date-number,
+p.event-name,
+p.event-time {
     margin-bottom: 0;
 }
 
-DIV.more-details {
+div.more-details {
     font-size: 15px;
     font-style: italic;
     color: white;
@@ -106,75 +106,70 @@ DIV.more-details {
     background-color: rgba(0, 178, 217, 0.509);
 }
 
-.event-description P {
+.event-description p {
     font-size: 16px;
 }
 
-
 /*For Medium screen sizes and higher*/
-
 @media screen and (min-width: 40em) {
     p.month-name {
         font-size: 1em;
     }
-
+    
     p.event-time {
         font-size: 1em;
     }
-
+    
     p.event-name {
         font-size: 0.8em;
     }
-
+    
     div.more-details {
         padding: 0px 0 0;
         margin: 0;
     }
-
+    
     p.more-details {
         font-size: 0.8em;
         text-align: center;
         padding: 0px 0 0;
     }
-
+    
     p.close-details {
         font-size: 0.8em;
     }
-
+    
     .personal-events {
         padding-bottom: 0;
     }
-
+    
     .global-events {
         display: block;
     }
 }
 
 /*For large screens and higher*/
-
 @media screen and (min-width: 50em) {
     p.month-name {
         font-size: 1.2em;
     }
-
+    
     p.event-name {
         font-size: 1em;
     }
-
+    
     div.more-details {
         padding: 0px 0 0;
         margin: 0;
     }
-
 }
 
 /* x-Large and up */
-
 @media screen and (min-width: 64em) {
     p.month-name {
         font-size: 1.7em;
     }
-
+    
     p.more-details {
         font-size: 1em;
     }
