@@ -99,6 +99,9 @@ header div.medium-top-nav.show-for-medium {
     top: 121px;
     width: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
     overflow-x: hidden;
     padding-bottom: 200px;
 }

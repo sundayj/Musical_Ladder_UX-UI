@@ -1,4 +1,5 @@
 /*Header for Student Instruments on Mobile*/
+
 .instruments-student-mobile .current-level {
     height: auto;
     text-align: right;
@@ -10,10 +11,14 @@
 }
 
 /*Main Content for Student Instruments on Mobile*/
+
 .main-content-mobile {
     min-height: 521px;
     max-height: 90%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
     overflow-x: hidden;
 }
 
@@ -21,6 +26,9 @@
     min-height: 521px;
     max-height: 90%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
     overflow-x: hidden;
 }
 

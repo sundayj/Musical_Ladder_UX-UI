@@ -2,32 +2,70 @@ $(document).foundation();
 
 $(document).ready(function () {
 
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
 
-    //    Initial load of the landing page screen
 
-    //For Teacher
-    $.get("all-students-teacher.html", function (data) {
-        $("#teacherview").html(data);
-        $("#testbtn").attr("disabled", true);
-        $("#notebtn").attr("disabled", true);
-        $("#eventbtn").attr("disabled", true);
+    //  Table of Contents
+
+
+
+
+    //  #0 General Functionality
+    //      Functionality for generating individual pages
+    //      Hamburger overlay functionality
+    //      Home button functionality
+    //      Function for the notification message functionality.
+    //      Test Page Functionality
+    //      Help button overlay.
+    //      For the notes page.
+    //      For the events page.
+    //      For Medium and Large Main Screen
+
+
+    //  #1 Student
+    //      Initial load of the landing page screen for student
+    //      Bottom navigation icon functionality
+
+    //  #2 Parent
+    //      Initial load of the landing page screen for parent
+
+    //  #3 Teacher
+    //      Initial load of the landing page screen for teacher
+
+    //  #4 Parent and Teacher
+    //      When student is chosen
+
+    //  #5 Director
+    //      Main nav functionality
+
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+
+
+    //  #0 General Functionality
+
+    //      Functionality for generating individual pages
+
+    $.get("tests-student.html", function (data) {
+        $("#medium-tests").html(data);
+    });
+    $.get("notes-student.html", function (data) {
+        $("#medium-notes").html(data);
+    });
+    $.get("events-student.html", function (data) {
+        $("#medium-events").html(data);
     });
 
-    // For Parent
-    $.get("all-students-parent.html", function (data) {
-        $("#parentview").html(data);
-        $("#testbtn").attr("disabled", true);
-        $("#notebtn").attr("disabled", true);
-        $("#eventbtn").attr("disabled", true);
-    });
-
-    //For Student
-    $.get("instruments-students.html", function (data) {
-        $("#studentview").html(data);
-    });
-
-
-    //  Hamburger overlay functionality
+    //      Hamburger overlay functionality
 
     $("i.hamburger").click(function (e) {
         $(".hamburger-menu").slideToggle();
@@ -41,19 +79,14 @@ $(document).ready(function () {
     $(".hamburger-menu").click(function (e) {
         e.stopPropagation();
     });
-    //    $("i.hamburger").click(function () {
-    //        $(".hamburger-menu").slideToggle();
-    //    });
 
-
-
-    //    Home button functionality
+    //      Home button functionality
 
     $("#home").click(function () {
         //For Parent
         $.get("all-students-parent.html", function (data) {
             $("#parentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Jennifer!");
+            $("div.welcome-medium h2").html("Welcome Jennifer!");
             $("#testbtn").attr("disabled", true);
             $("#notebtn").attr("disabled", true);
             $("#eventbtn").attr("disabled", true);
@@ -61,7 +94,7 @@ $(document).ready(function () {
         //For Teacher
         $.get("all-students-teacher.html", function (data) {
             $("#teacherview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Teacher!");
+            $("div.welcome-medium h2").html("Welcome Teacher!");
             $("#testbtn").attr("disabled", true);
             $("#notebtn").attr("disabled", true);
             $("#eventbtn").attr("disabled", true);
@@ -69,119 +102,14 @@ $(document).ready(function () {
         //    For Student
         $.get("instruments-students.html", function (data) {
             $("#studentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Welcome Riehle!");
+            $("div.welcome-medium h2").html("Welcome Riehle!");
         });
         $(".help-overlay").hide();
         $(".school-notifications").hide();
         $(".hamburger-menu").hide();
     });
 
-
-
-
-    // When student is chosen from the parent or teacher screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
-    $("#student-0").click(function () {
-        $.get("../student-views/instruments-students-copy0.html", function (data) {
-            $("#teacherview").html(data);
-        });
-        $("div.welcome-student-mobile > div.small-12.cell > h1").html("Your Classes, John.");
-        $("#testbtn").attr("disabled", false);
-        $("#notebtn").attr("disabled", false);
-        $("#eventbtn").attr("disabled", false);
-        $(".hamburger-menu").hide();
-    });
-
-    $("#student-1").click(function () {
-        $.get("../student-views/instruments-students-copy1.html", function (data) {
-            $("#parentview").html(data);
-        });
-        $("div.welcome-student-mobile > div.small-12.cell > h1").html("Your Classes, Jennifer");
-        $("#testbtn").attr("disabled", false);
-        $("#notebtn").attr("disabled", false);
-        $("#eventbtn").attr("disabled", false);
-        $(".hamburger-menu").hide();
-    });
-
-    $("#student-2").click(function () {
-        $.get("../student-views/instruments-students.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-        });
-        $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Classes");
-        $("#testbtn").attr("disabled", false);
-        $("#notebtn").attr("disabled", false);
-        $("#eventbtn").attr("disabled", false);
-        $(".hamburger-menu").hide();
-    });
-
-
-    $("#testbtn").click(function () {
-        $.get("../student-views/tests-student.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Tests");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
-
-    $("#notebtn").click(function () {
-        $.get("../student-views/notes-student.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Notes");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
-
-    $("#eventbtn").click(function () {
-        $.get("../student-views/events-student.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Riehle's Events");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
-
-
-    //    Bottom navigation icon functionality for students.
-
-    $("#testbtn").click(function () {
-        $.get("tests-student.html", function (data) {
-            $("#studentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Tests");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
-
-    $("#notebtn").click(function () {
-        $.get("notes-student.html", function (data) {
-            $("#studentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Notes");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
-
-    $("#eventbtn").click(function () {
-        $.get("events-student.html", function (data) {
-            $("#studentview").html(data);
-            $("div.welcome-student-mobile > div.small-12.cell > h1").html("Events");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
-
-    //    Function for the notification message functionality.
+    //      Function for the notification message functionality.
 
     $("#notificationbtn").click(function () {
         $(".school-notifications").slideToggle();
@@ -190,7 +118,7 @@ $(document).ready(function () {
     });
 
 
-    //    Test Page Functionality
+    //      Test Page Functionality
 
     $("#completedBtn").click(function () {
         $("#completed").show();
@@ -218,7 +146,7 @@ $(document).ready(function () {
     });
 
 
-    //    Help button overlay.
+    //      Help button overlay.
 
     $(".help").click(function () {
         $(".help-overlay").slideToggle();
@@ -264,7 +192,7 @@ $(document).ready(function () {
     //    });
 
 
-    //    For the events page.
+    //      For the events page.
 
     $(".global-btn").click(function () {
         $(".global-events").show();
@@ -304,7 +232,9 @@ $(document).ready(function () {
         $(".school-notifications").hide();
     });
 
-    //    For Medium and Large Main Screen
+
+
+    //      For Medium and Large Main Screen
     //On load, open the first div with class "medium-instrument-open".
     $(".medium-instrument-open:first").show();
     //    On load, also hide ever other div with class "medium-instrument-open" and hide the open "button" of the first visible div.
@@ -358,137 +288,228 @@ $(document).ready(function () {
     });
 
 
-    //    $(".medium-instrument-acc").click(function () {
-    //        $(this).next(".medium-instrument-open").slideToggle();
-    //        $(this).find("label.see-more").first().toggle();
-    //        $(this).find("label.see-less").first().toggle();
-    //        $(".school-notifications").hide();
-    //    });
 
 
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
 
-    $.get("tests-student.html", function (data) {
-        $("#medium-tests").html(data);
-    });
-    $.get("notes-student.html", function (data) {
-        $("#medium-notes").html(data);
-    });
-    $.get("events-student.html", function (data) {
-        $("#medium-events").html(data);
-    });
+    //  #1 Student
 
-    //#0 General Functionality
-
-    //#1 Student
-
-    //#2 Parent
-
-    //#3 Teacher
-
-    //#4 Director
-
-    $(".actions").mouseenter(function () {
-        $(this).next(".dropdown").slideDown();
+    //      Initial load of the landing page screen for student
+    $.get("instruments-students.html", function (data) {
+        $("#studentview").html(data);
     });
 
-    $(".actions").mouseleave(function () {
-        $(this).next(".dropdown").slideUp();
+    //      Bottom navigation icon functionality
+
+    if ($("#studentview")) {
+        $("#testbtn").click(function () {
+            $.get("tests-student.html", function (data) {
+                $("#studentview").html(data);
+                $("div.welcome-medium h2").html("Tests");
+                $(".school-notifications").hide();
+                $(".hamburger-menu").hide();
+
+            });
+        });
+
+        $("#notebtn").click(function () {
+            $.get("notes-student.html", function (data) {
+                $("#studentview").html(data);
+                $("div.welcome-medium h2").html("Notes");
+                $(".school-notifications").hide();
+                $(".hamburger-menu").hide();
+
+            });
+        });
+
+        $("#eventbtn").click(function () {
+            $.get("events-student.html", function (data) {
+                $("#studentview").html(data);
+                $("div.welcome-medium h2").html("Events");
+                $(".school-notifications").hide();
+                $(".hamburger-menu").hide();
+
+            });
+        });
+    }
+
+
+
+
+
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //  #2 Parent
+
+    //      Initial load of the landing page screen for parent
+    $.get("all-students-parent.html", function (data) {
+        $("#parentview").html(data);
+        $("#testbtn").attr("disabled", true);
+        $("#notebtn").attr("disabled", true);
+        $("#eventbtn").attr("disabled", true);
     });
 
-    $(".dropdown").mouseenter(function () {
-        $(this).show();
-        $(this).prev(".actions").css("background-color", "#A8D1E6");
 
 
+
+
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //  #3 Teacher
+
+    //      Initial load of the landing page screen for teacher
+    $.get("all-students-teacher.html", function (data) {
+        $("#teacherview").html(data);
+        $("#testbtn").attr("disabled", true);
+        $("#notebtn").attr("disabled", true);
+        $("#eventbtn").attr("disabled", true);
     });
 
-    $(".dropdown").mouseleave(function () {
-        $(this).slideUp();
-        $(this).prev(".actions").css("background-color", "white");
+
+
+
+
+
+
+
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //  #4 Parent and Teacher
+
+    //      When student is chosen from the parent or teacher screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
+    $("#student-0").click(function () {
+        $.get("../student-views/instruments-students-copy0.html", function (data) {
+            $("#teacherview").html(data);
+        });
+        $("div.welcome-medium h2").html("John | Classes");
+        $("#testbtn").attr("disabled", false);
+        $("#notebtn").attr("disabled", false);
+        $("#eventbtn").attr("disabled", false);
+        $(".hamburger-menu").hide();
     });
 
-    //    //    Search Tab Functions
-    //
-    //    $(".nav-bar div p").click(function () {
-    //        if ($(this).css("background-color", "#A8D1E6")) {
-    //            $(".nav-bar div p").not(this).css("background-color", "white");
-    //        }
-    //    });
-    //
-    //    $("#search-all").click(function () {
-    //        $.get("search-all.html", function (data) {
-    //            $("#search-director-main").html(data);
-    //        });
-    //    });
-    //
-    //    $("#search-users").click(function () {
-    //        $.get("search-users.html", function (data) {
-    //            $("#search-director-main").html(data);
-    //        });
-    //    });
-    //
-    //    $("#search-notes").click(function () {
-    //        $.get("search-notes.html", function (data) {
-    //            $("#search-director-main").html(data);
-    //        });
-    //    });
-    //
-    //    $("#search-events").click(function () {
-    //        $.get("search-events.html", function (data) {
-    //            $("#search-director-main").html(data);
-    //        });
-    //    });
-    //
-    //    $("#search-schools").click(function () {
-    //        $.get("search-schools.html", function (data) {
-    //            $("#search-director-main").html(data);
-    //        });
-    //    });
-    //
-    //
-    //
-    //    //    Search functionality
-    //    $(".search-button button").click(function () {
-    //        if ($("#search-all p").css("background-color") === "#A8D1E6") {
-    //            if ($("#filter-student input:checked")) {
-    //                $.get("search-users.html div.student-instance", function (data) {
-    //                    $("#search-director-main").html(data);
-    //                });
-    //            }
-    //            if ($("#filter-teacher input:checked")) {
-    //                $.get("search-users.html div.teacher-instance", function (data) {
-    //                    $("#search-director-main").html(data);
-    //                });
-    //            }
-    //            if ($("#filter-parent input:checked")) {
-    //                $.get("search-users.html div.parent-instance", function (data) {
-    //                    $("#search-director-main").html(data);
-    //                });
-    //            }
-    //        }
-    //
-    //        if ($("#search-users p").css("background-color") === "#A8D1E6") {
-    //            if ($("#filter-student input:checked")) {
-    //                $.get("search-users.html div.student-instance", function (data) {
-    //                    $("#search-director-main").html(data);
-    //                });
-    //            }
-    //            if ($("#filter-teacher input:checked")) {
-    //                $.get("search-users.html div.teacher-instance", function (data) {
-    //                    $("#search-director-main").html(data);
-    //                });
-    //            }
-    //            if ($("#filter-parent input:checked")) {
-    //                $.get("search-users.html div.parent-instance", function (data) {
-    //                    $("#search-director-main").html(data);
-    //                });
-    //            }
-    //        }
-    //
-    //    });
-    //
-    //
-    //
+    $("#student-1").click(function () {
+        $.get("../student-views/instruments-students-copy1.html", function (data) {
+            $("#parentview").html(data);
+            $("#teacherview").html(data);
+        });
+        $("div.welcome-medium h2").html("Jennifer | Classes");
+        $("#testbtn").attr("disabled", false);
+        $("#notebtn").attr("disabled", false);
+        $("#eventbtn").attr("disabled", false);
+        $(".hamburger-menu").hide();
+    });
+
+    $("#student-2").click(function () {
+        $.get("../student-views/instruments-students.html", function (data) {
+            $("#parentview").html(data);
+            $("#teacherview").html(data);
+        });
+        $("div.welcome-medium h2").html("Riehle | Classes");
+        $("#testbtn").attr("disabled", false);
+        $("#notebtn").attr("disabled", false);
+        $("#eventbtn").attr("disabled", false);
+        $(".hamburger-menu").hide();
+    });
+
+
+    $("#testbtn").click(function () {
+        $.get("../student-views/tests-student.html", function (data) {
+            $("#parentview").html(data);
+            $("#teacherview").html(data);
+            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Tests");
+            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Tests");
+            $("div.welcome-medium h2:contains('John')").html("John | Tests");
+            $(".school-notifications").hide();
+            $(".hamburger-menu").hide();
+
+        });
+    });
+
+    $("#notebtn").click(function () {
+        $.get("../student-views/notes-student.html", function (data) {
+            $("#parentview").html(data);
+            $("#teacherview").html(data);
+            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Notes");
+            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Notes");
+            $("div.welcome-medium h2:contains('John')").html("John | Notes");
+            $(".school-notifications").hide();
+            $(".hamburger-menu").hide();
+
+        });
+    });
+
+    $("#eventbtn").click(function () {
+        $.get("../student-views/events-student.html", function (data) {
+            $("#parentview").html(data);
+            $("#teacherview").html(data);
+            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Events");
+            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Events");
+            $("div.welcome-medium h2:contains('John')").html("John | Events");
+            $(".school-notifications").hide();
+            $(".hamburger-menu").hide();
+
+        });
+    });
+
+
+
+
+
+
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //  #5 Director
+
+    //      Main nav functionality
+    $(".options").hover(function () {
+        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
+        $(this).children(".dropdown").toggle();
+    });
+    $(".options").click(function () {
+        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
+        $(this).children(".dropdown").toggle();
+    });
+
+
+
+
 
 
 

@@ -5,6 +5,7 @@
 @import url(all-students-parent.css);
 
 /*Fixed Header for Mobile. Student.*/
+
 * {
     font-family: arial, helvetica;
     font-size: 100%;
@@ -58,12 +59,33 @@ header div.mobile-top-nav {
 .welcome-student-mobile div h1 {
     font-weight: bold;
     font-size: 27px;
-    color: #0C2179;
-    text-shadow: 0 0 78px #FFFFFF;
+    color: white;
+    text-shadow: 0 0 4px #9C7676;
     padding: 10.25px;
 }
 
+.welcome-medium {
+    padding-top: 13px;
+}
+
+.colorful-ladder-header {
+    width: 100%;
+    position: fixed;
+    top: 61px;
+}
+
+.welcome-medium h2 {
+    font-weight: bold;
+}
+
+.colorful-ladder-header img {
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+}
+
 /*Hamburger Overlay*/
+
 div.hamburger-menu {
     position: fixed;
     top: 61px;
@@ -121,6 +143,7 @@ div.hamburger-menu {
 }
 
 /*Fixed Header for medium and large screens. Student.*/
+
 header div.medium-top-nav.show-for-medium {
     background-image: url(../../img/header-bg.png);
     background-position: center;
@@ -148,6 +171,7 @@ header div.medium-top-nav.show-for-medium {
 }
 
 /*Mobile Body*/
+
 .view-holder {
     min-height: 521px;
     max-height: 90%;
@@ -155,8 +179,12 @@ header div.medium-top-nav.show-for-medium {
     top: 121px;
     width: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
     overflow-x: hidden;
     padding-bottom: 200px;
+    padding-top: 20px;
 }
 
 .school-notifications {
@@ -175,6 +203,7 @@ p.notification-message {
 }
 
 /*Medium and Larger Body*/
+
 div.main-content-medium {
     margin-top: 70px !important;
     /*background-color: #1C4B7E;*/
@@ -210,6 +239,7 @@ div.main-content-medium {
 }
 
 /*Sticky Footer Style for Mobile. Student.*/
+
 .mobile-app-icon-bar {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -248,10 +278,14 @@ div.main-content-medium {
 }
 
 /*Help overlay styles*/
+
 .help-overlay {
     position: fixed;
     text-align: center;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
@@ -317,6 +351,7 @@ p.faq {
 }
 
 /*For Medium screen sizes and higher*/
+
 @media screen and (min-width: 40em) {
     /* Turn on custom 8px wide scrollbar */
     ::-webkit-scrollbar,
@@ -328,45 +363,47 @@ p.faq {
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
     }
-    
+
     /* hover effect for both scrollbar area, and scrollbar 'thumb' */
     ::-webkit-scrollbar:hover,
     ::-moz-scrollbar:hover {
         background-color: rgba(0, 0, 0, 0.09);
     }
-    
+
     /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-    ::-webkit-scrollbar-thumb:vertical, ::-moz-scrollbar-thumb:vertical {
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-moz-scrollbar-thumb:vertical {
         /* This is the EXACT color of Mac OS scrollbars. 
                Yes, I pulled out digital color meter */
         background: rgba(0, 0, 0, 0.5);
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
     }
-    
-    ::-webkit-scrollbar-thumb:vertical:active, ::-moz-scrollbar-thumb:vertical:active {
+
+    ::-webkit-scrollbar-thumb:vertical:active,
+    ::-moz-scrollbar-thumb:vertical:active {
         background: rgba(0, 0, 0, 0.61);
         /* Some darker color when you click it */
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
     }
-    
+
     header div.mobile-top-nav {
         height: 75px;
         z-index: 0;
     }
-    
+
     .music-logo img {
         height: 65px;
         width: auto;
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    
+
     .welcome-medium {
         padding-top: 9px;
     }
-    
+
     .mobile-top-nav button .help,
     .home-button {
         font-size: 2.2rem;
@@ -374,20 +411,20 @@ p.faq {
         color: #0C2179;
         margin-top: 21px;
     }
-    
+
     /*    Help Overlay Styles*/
     .help-overlay {
         top: 75px;
     }
-    
+
     .school-icon {
         font-size: 1.5em;
     }
-    
+
     p.faq-how-to {
         font-size: 1em;
     }
-    
+
     div.indiv-question {
         background-color: #378EFF;
         /*+border-radius: 55px;*/
@@ -399,49 +436,44 @@ p.faq {
         margin-bottom: 10px;
         cursor: pointer;
     }
-    
+
     div.indiv-question p:first-of-type {
         margin: 0;
         padding-right: 11px;
         padding-left: 11px;
         padding-top: 0px;
     }
-    
+
     p.see-answer {
         font-size: 0.9em;
         font-style: italic;
         padding: 0px;
         margin: 0;
     }
-    
+
     .help-question-acc-open {
         display: none;
     }
-    
+
     div.help-question-acc-open p {
         font-size: 1.2em;
         text-align: left;
         text-indent: 50px;
     }
-    
+
     /*End styles for Overlay*/
-    .medium-header-backfiller {
-        background-color: rgba(101, 189, 229, 0.517);
-    }
-    
     .colorful-ladder-header {
         width: 100%;
         max-height: 100px;
         position: fixed;
         top: 75px;
     }
-    
+
     .colorful-ladder-header img {
         width: 100%;
-        opacity: 1;
         height: 63px;
     }
-    
+
     /*    styles for main content*/
     section div.hide-for-small-only {
         position: fixed;
@@ -449,139 +481,148 @@ p.faq {
         width: 100%;
         height: 100%;
     }
-    
+
     div.hide-for-small-only.grid-container {
         height: 100%;
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        -moz-overflow-scrolling: touch;
+        -ms-overflow-scrolling: touch;
         overflow-x: hidden;
     }
-    
+
     /*    styles for left side of screen*/
     .medium-individual-instrument-container {
         height: 100%;
         padding-bottom: 200px;
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        -moz-overflow-scrolling: touch;
+        -ms-overflow-scrolling: touch;
         overflow-x: hidden;
     }
-    
+
     .separator {
         border: 2px solid #606AFC;
     }
-    
+
     .medium-intrument-open {
         height: 300px;
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        -moz-overflow-scrolling: touch;
+        -ms-overflow-scrolling: touch;
         overflow-x: hidden;
         resize: vertical;
         padding-bottom: 30px;
     }
-    
+
     .instruments-student-mobile.instruments-student-medium {
         padding-bottom: 0px !important;
         padding: 0;
     }
-    
+
     .medium-instrument-header {
         height: 90px;
     }
-    
+
     /*    styles for the individual ladder levels*/
     .apprentice {
         background: none 0 0 / auto no-repeat #8FBF22;
     }
-    
+
     .song-bird {
         background: none 0 0 / auto no-repeat #D5E516;
     }
-    
+
     .musician {
         background: none 0 0 / auto no-repeat #E3D30E;
     }
-    
+
     .rockstar {
         background: none 0 0 / auto no-repeat #E3A428;
     }
-    
+
     .allegro {
         background: none 0 0 / auto no-repeat #D8812A;
     }
-    
+
     .vivace {
         background: none 0 0 / auto no-repeat #DA6729;
     }
-    
+
     .prodigy {
         background: none 0 0 / auto no-repeat #D15815;
     }
-    
+
     .maestro {
         background: none 0 0 / auto no-repeat #B22B31;
     }
-    
+
     .master {
         background: none 0 0 / auto no-repeat #7C192A;
     }
-    
+
     .superior {
         background: none 0 0 / auto no-repeat #9D3962;
     }
-    
+
     .champion {
         background: none 0 0 / auto no-repeat #9D3396;
     }
-    
+
     .superstar {
         background: none 0 0 / auto no-repeat #76349F;
     }
-    
+
     .prima {
         background: none 0 0 / auto no-repeat #581B7E;
     }
-    
+
     .bravo {
         background: none 0 0 / auto no-repeat #5357A2;
     }
-    
+
     .adept {
         background: none 0 0 / auto no-repeat #434796;
     }
-    
+
     .marvel {
         background: none 0 0 / auto no-repeat #202474;
     }
-    
+
     .ace {
         background: none 0 0 / auto no-repeat #204A74;
     }
-    
+
     .artist {
         background: none 0 0 / auto no-repeat #226B71;
     }
-    
+
     /*    Styles for Instrument-Teacher Headers*/
     .instruments-student-medium .current-level {
         background-color: #A2DC1F;
         text-align: center;
         font-weight: bold;
     }
-    
+
     div.next-level-date {
         height: 90px;
     }
-    
+
     .current-level p {
         margin-top: 33px;
         font-size: 0.9em;
         margin-right: 5px;
         margin-left: 53px;
     }
-    
+
     img.medium-current-level-icon,
     img.medium-next-level-icon {
         height: 65px;
         width: auto;
     }
-    
+
     div.medium-music-notes {
         /*+placement: float-left;*/
         float: left;
@@ -593,30 +634,30 @@ p.faq {
         padding-top: 12px;
         padding-bottom: 5px;
     }
-    
+
     div.current-teacher-instrument {
         font-size: 1.2em;
         height: 90px;
         padding-top: 3px;
     }
-    
+
     .next-level-date p {
         margin: 0 0 0 44px;
         padding-top: 18px;
         height: 89px;
         font-size: 0.6em;
     }
-    
+
     div.test-grid-mobile {
         height: 85px;
     }
-    
+
     .proficiency-level img {
         height: 100%;
         width: 109px;
         padding: 0;
     }
-    
+
     .instrument-to-test,
     .date-of-test {
         padding-top: 14px;
@@ -624,23 +665,23 @@ p.faq {
         font-weight: bold;
         background-color: rgba(99, 188, 229, 0.517);
     }
-    
+
     .instrument-to-test span {
         font-size: 0.8em;
     }
-    
+
     .message-container {
         margin-right: 5px;
     }
-    
+
     div.message-container:first-of-type {
         margin-top: 1px;
     }
-    
+
     .date-of-note {
         margin-left: 69%;
     }
-    
+
     .medium-instrument-header h2,
     .medium-events-header h2,
     .medium-notes-header h2,
@@ -651,98 +692,98 @@ p.faq {
         margin-right: auto;
         margin-left: auto;
     }
-    
+
     .medium-student-individual-instrument {
         margin-top: 10px;
         margin-bottom: 20px;
         padding-right: 10px;
         padding-left: 10px;
     }
-    
+
     .medium-student-individual-instrument-container {
         padding-left: 10px;
         padding-right: 10px;
     }
-    
+
     .medium-tests-container {
         padding-right: 5px;
         /*
-        overflow-y: scroll;
+        overflow-y: scroll;    -webkit-overflow-scrolling: touch;     -moz-overflow-scrolling: touch;     -ms-overflow-scrolling: touch;
         overflow-x: hidden;
         */
         padding-left: 5px;
         height: 100%;
     }
-    
+
     .medium-notes-container {
         padding-left: 5px;
         height: 100%;
         /*
-        overflow-y: scroll;
+        overflow-y: scroll;    -webkit-overflow-scrolling: touch;     -moz-overflow-scrolling: touch;     -ms-overflow-scrolling: touch;
         overflow-x: hidden;
         */
         padding-right: 5px;
     }
-    
+
     .medium-notes-container .individ-note {
         margin-bottom: 20px;
         background-color: rgba(0, 178, 217, 0.440);
     }
-    
+
     .main-medium-events-container {
         padding-right: 10px;
         padding-bottom: 100px;
         padding-left: 10px;
         /*
-        overflow-y: scroll;
+        overflow-y: scroll;    -webkit-overflow-scrolling: touch;     -moz-overflow-scrolling: touch;     -ms-overflow-scrolling: touch;
         overflow-x: hidden;
         */
     }
-    
+
     .attachment-icon {
         text-align: center;
     }
-    
+
     #medium-events {
         padding-bottom: 200px;
         height: 100%;
         /*
-        overflow-y: scroll;
+        overflow-y: scroll;    -webkit-overflow-scrolling: touch;     -moz-overflow-scrolling: touch;     -ms-overflow-scrolling: touch;
         overflow-x: hidden;
         */
     }
-    
+
     p.month-name {
         font-size: 1em;
     }
-    
+
     p.event-time {
         font-size: 1em;
     }
-    
+
     p.event-name {
         font-size: 0.8em;
     }
-    
+
     div.more-details {
         padding: 0px 0 0;
         margin: 0;
     }
-    
+
     p.more-details {
         font-size: 0.8em;
         text-align: center;
         padding: 0px 0 0;
     }
-    
+
     p.close-details {
         font-size: 0.8em;
     }
-    
+
     .personal-events {
         padding-bottom: 0;
     }
-    
+
     .global-events {
         display: block;
     }
@@ -783,28 +824,29 @@ p.close-details {
 }
 
 /*For large screens and higher*/
+
 @media screen and (min-width: 50em) {
     .current-level p {
         margin-top: 26px;
         font-size: 1.4em;
     }
-    
+
     div.test-grid-mobile {
         height: 107px;
     }
-    
+
     div.current-teacher-instrument {
         font-size: 1.3em;
         padding: 0;
     }
-    
+
     .next-level-date p {
         padding-top: 14px;
         font-size: 0.8em;
         height: 89px;
         width: 128px;
     }
-    
+
     .instrument-to-test,
     .date-of-test {
         padding-top: 26px;
@@ -812,15 +854,15 @@ p.close-details {
         font-weight: bold;
         background-color: rgba(99, 188, 229, 0.517);
     }
-    
+
     p.month-name {
         font-size: 1.2em;
     }
-    
+
     p.event-name {
         font-size: 1em;
     }
-    
+
     div.more-details {
         padding: 0px 0 0;
         margin: 0;
@@ -828,30 +870,31 @@ p.close-details {
 }
 
 /* x-Large and up */
+
 @media screen and (min-width: 64em) {
     .current-level p {
         margin-top: 21px;
         font-size: 1.8em;
     }
-    
+
     .colorful-ladder-header img {
         width: 100%;
         opacity: 1;
         height: 85px;
     }
-    
+
     section div.hide-for-small-only {
         position: fixed;
         top: 160px;
         width: 100%;
         height: 100%;
     }
-    
+
     div.current-teacher-instrument {
         font-size: 1.3em;
         padding: 0;
     }
-    
+
     .next-level-date p {
         margin: 0 0 0 55px;
         padding-top: 4px;
@@ -859,7 +902,7 @@ p.close-details {
         height: 89px;
         width: 169px;
     }
-    
+
     div.medium-music-notes {
         /*+placement: float-left;*/
         float: left;
@@ -871,17 +914,17 @@ p.close-details {
         padding-top: 12px;
         padding-bottom: 12px;
     }
-    
+
     img.medium-current-level-icon,
     img.medium-next-level-icon {
         height: 65px;
         width: auto;
     }
-    
+
     div.test-grid-mobile {
         height: 140px;
     }
-    
+
     .instrument-to-test,
     .date-of-test {
         padding-top: 24px;
@@ -889,11 +932,11 @@ p.close-details {
         font-weight: bold;
         background-color: rgba(99, 188, 229, 0.517);
     }
-    
+
     p.month-name {
         font-size: 1.7em;
     }
-    
+
     p.more-details {
         font-size: 1em;
     }
