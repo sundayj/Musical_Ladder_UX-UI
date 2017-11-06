@@ -67,17 +67,24 @@ $(document).ready(function () {
 
     //      Hamburger overlay functionality
 
-    $("i.hamburger").on("tap", function (e) {
+
+
+    $("i.hamburger").click(function (e) {
         $(".hamburger-menu").slideToggle();
         e.stopPropagation();
     });
 
-    $("body").on("tap", function () {
+    $("body").click(function () {
         $(".hamburger-menu").slideUp();
     });
 
-    $(".hamburger-menu").on("tap", function (e) {
+    $(".hamburger-menu").click(function (e) {
         e.stopPropagation();
+    });
+    $("i.hamburger").on("tap", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(".hamburger-menu").slideToggle();
     });
 
     //      Home button functionality
