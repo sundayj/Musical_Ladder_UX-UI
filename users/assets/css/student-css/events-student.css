@@ -45,7 +45,7 @@ p.close-details {
 }
 
 .individual-month:first-of-type {
-    margin-top: 20px;
+    margin-top: -19px;
 }
 
 div.month-name {
