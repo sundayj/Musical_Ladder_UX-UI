@@ -1,0 +1,121 @@
+<div class="grid-container hide-for-medium full">
+    <div class="notes-container grid-x">
+
+
+        <div class="individ-note talk-bubble bubble">
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell">
+                    <label class="message-from">Juliet / Cello</label>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell message">
+                    <p>Hello Jennifer! Don't forget to bring your sheet music tomorrow.</p>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-4 small-offset-2"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
+                <div class="date-of-note small-3 small-offset-2 cell">
+                    <span>10/5/17</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="individ-note talk-bubble bubble">
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell">
+                    <label class="message-from">Juliet / Cello</label>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell message">
+                    <p>Hello Jennifer! You did great on your test today!</p>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-4 small-offset-2"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
+                <div class="date-of-note small-3 small-offset-2 cell">
+                    <span>9/8/17</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="individ-note talk-bubble bubble">
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell">
+                    <label class="message-from">John / Piano</label>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell message">
+                    <p>Listen to this song for inspiration for your next project.</p>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-4 small-offset-2"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
+                <div class="date-of-note small-3 small-offset-2 cell">
+                    <span>8/1/17</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="individ-note talk-bubble bubble">
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell">
+                    <label class="message-from">Juliet / Cello</label>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell message">
+                    <p>Hi Jennifer! You were meant to play the piano!</p>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-4 small-offset-2"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
+                <div class="date-of-note small-3 small-offset-2 cell">
+                    <span>8/7/17</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="individ-note talk-bubble bubble">
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell">
+                    <label class="message-from">John / Piano</label>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-10 small-offset-1 cell message">
+                    <p>Listen to this song for inspiration for your next project.</p>
+                </div>
+            </div>
+            <div class="grid-x">
+                <div class="small-4 small-offset-2"><i class="fa fa-paperclip" aria-hidden="true"></i></div>
+                <div class="date-of-note small-3 small-offset-2 cell">
+                    <span>4/6/17</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+
+        $(".notes-acc-drop").click(function() {
+            $(".notes-acc-dropdown").not($(this).next(".notes-acc-dropdown")).slideUp();
+            if ($(".notes-acc-dropdown:hidden")) {
+                $(".open-notes").show();
+            }
+            if ($(this).next(".notes-acc-dropdown:hidden")) {
+                $(this).next(".notes-acc-dropdown").slideDown();
+                //                $(this).find(".close-notes").first().toggle();
+                $(this).find(".open-notes").first().hide();
+
+            }
+        });
+
+    });
+
+</script>

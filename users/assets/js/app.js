@@ -53,17 +53,17 @@ $(document).ready(function () {
 
     //  #0 General Functionality
 
-    //      Functionality for generating individual pages
+    //      Functionality for generating individual pages for medium view (not used for now)
 
-    $.get("tests-student.html", function (data) {
-        $("#medium-tests").html(data);
-    });
-    $.get("notes-student.html", function (data) {
-        $("#medium-notes").html(data);
-    });
-    $.get("events-student.html", function (data) {
-        $("#medium-events").html(data);
-    });
+    //    $.get("tests-student.html", function (data) {
+    //        $("#medium-tests").html(data);
+    //    });
+    //    $.get("notes-student.html", function (data) {
+    //        $("#medium-notes").html(data);
+    //    });
+    //    $.get("events-student.html", function (data) {
+    //        $("#medium-events").html(data);
+    //    });
 
     //      Hamburger overlay functionality
 
@@ -117,6 +117,19 @@ $(document).ready(function () {
 
     });
 
+    //      Static functions for indivual test, note, and event buttons.
+
+    //          Tests, Notes, and Events
+    function tneBtnFunction(location, name) {
+        $.get(location, function (data) {
+            $("#parentview").html(data);
+            $("div.welcome-medium h2").html(name);
+        });
+        $(".school-notifications").hide();
+        $(".hamburger-menu").hide();
+    }
+
+
 
     //      Test Page Functionality
 
@@ -125,11 +138,15 @@ $(document).ready(function () {
         $("#upcoming").hide();
         $("#completedBtn").css({
             "color": "navy",
-            "box-shadow": "inset 0 0 75px white"
+            "box-shadow": "inset 0 0 75px white",
+            "background-color": "#00B0FF",
+            "text-shadow": "0 0 4px white"
         });
         $("#upcomingBtn").css({
-            "color": "#5B5BFF",
-            "box-shadow": "none"
+            "color": "gray",
+            "box-shadow": "none",
+            "background-color": "transparent",
+            "text-shadow": "none"
         });
     });
     $("#upcomingBtn").click(function () {
@@ -137,11 +154,16 @@ $(document).ready(function () {
         $("#completed").hide();
         $("#upcomingBtn").css({
             "color": "navy",
-            "box-shadow": "inset 0 0 75px white"
+            "box-shadow": "inset 0 0 75px white",
+            "background-color": "#00B0FF",
+            "text-shadow": "0 0 4px white"
+
         });
         $("#completedBtn").css({
-            "color": "#5B5BFF",
-            "box-shadow": "none"
+            "color": "gray",
+            "box-shadow": "none",
+            "background-color": "transparent",
+            "text-shadow": "none"
         });
     });
 
@@ -194,37 +216,39 @@ $(document).ready(function () {
 
     //      For the events page.
 
-    $(".global-btn").click(function () {
-        $(".global-events").show();
-        $(".personal-events").hide();
-        $(".global-btn").css({
-            "color": "navy",
-            "box-shadow": "inset 0 0 75px white"
-        });
-        $(".personal-btn").css({
-            "color": "#5B5BFF",
-            "box-shadow": "none"
-        });
-    });
+    //    $(".global-btn").click(function () {
+    //        $(".global-events").show();
+    //        $(".personal-events").hide();
+    //        $(".global-btn").css({
+    //            "color": "navy",
+    //            "box-shadow": "inset 0 0 75px white"
+    //        });
+    //        $(".personal-btn").css({
+    //            "color": "#5B5BFF",
+    //            "box-shadow": "none"
+    //        });
+    //    });
 
-    $(".personal-btn").click(function () {
-        $(".personal-events").show();
-        $(".global-events").hide();
-        $(".personal-btn").css({
-            "color": "navy",
-            "box-shadow": "inset 0 0 75px white"
-        });
-        $(".global-btn").css({
-            "color": "#5B5BFF",
-            "box-shadow": "none"
-        });
-    });
-    $(".month-acc-drop").click(function () {
-        $(this).next(".month-acc-dropdown").slideToggle();
-        $(this).find(".close-month").first().toggle();
-        $(this).find("label.open-month").first().toggle();
-        $(".school-notifications").hide();
-    });
+    //    $(".personal-btn").click(function () {
+    //        $(".personal-events").show();
+    //        $(".global-events").hide();
+    //        $(".personal-btn").css({
+    //            "color": "navy",
+    //            "box-shadow": "inset 0 0 75px white"
+    //        });
+    //        $(".global-btn").css({
+    //            "color": "#5B5BFF",
+    //            "box-shadow": "none"
+    //        });
+    //    });
+
+
+    //    $(".month-acc-drop").click(function () {
+    //        $(this).next(".month-acc-dropdown").slideToggle();
+    //        $(this).find(".close-month").first().toggle();
+    //        $(this).find("label.open-month").first().toggle();
+    //        $(".school-notifications").hide();
+    //    });
     $(".event-title").click(function () {
         $(this).next(".event-description").slideToggle();
         $(this).find(".close-details").first().toggle();
@@ -407,25 +431,52 @@ $(document).ready(function () {
 
     //      When student is chosen from the parent or teacher screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
     $("#student-0").click(function () {
-        $.get("../student-views/instruments-students-copy0.html", function (data) {
+        $.get("../student-views/instruments-johnstudent.html", function (data) {
             $("#teacherview").html(data);
         });
         $("div.welcome-medium h2").html("John | Classes");
         $("#testbtn").attr("disabled", false);
+        $("#testbtn").click(function () {
+            tneBtnFunction("../student-views/tests-student.html", "John | Tests");
+        });
+
         $("#notebtn").attr("disabled", false);
+        $("#notebtn").click(function () {
+            tneBtnFunction("../student-views/notes-student.html", "John | Notes");
+        });
+
         $("#eventbtn").attr("disabled", false);
+        $("#eventbtn").click(function () {
+            tneBtnFunction("../student-views/events-student.html", "John | Events");
+        });
+
         $(".hamburger-menu").hide();
     });
 
+
+
+
     $("#student-1").click(function () {
-        $.get("../student-views/instruments-students-copy1.html", function (data) {
+        $.get("../student-views/instruments-jenstudent.html", function (data) {
             $("#parentview").html(data);
             $("#teacherview").html(data);
         });
         $("div.welcome-medium h2").html("Jennifer | Classes");
         $("#testbtn").attr("disabled", false);
+        $("#testbtn").click(function () {
+            tneBtnFunction("../student-views/tests-jenstudent.html", "Jennifer | Tests");
+        });
+
         $("#notebtn").attr("disabled", false);
+        $("#notebtn").click(function () {
+            tneBtnFunction("../student-views/notes-jenstudent.html", "Jennifer | Notes");
+        });
+
         $("#eventbtn").attr("disabled", false);
+        $("#eventbtn").click(function () {
+            tneBtnFunction("../student-views/events-student.html", "Jennifer | Events");
+        });
+
         $(".hamburger-menu").hide();
     });
 
@@ -436,50 +487,76 @@ $(document).ready(function () {
         });
         $("div.welcome-medium h2").html("Riehle | Classes");
         $("#testbtn").attr("disabled", false);
+        $("#testbtn").click(function () {
+            tneBtnFunction("../student-views/tests-student.html", "Riehle | Tests");
+        });
+
         $("#notebtn").attr("disabled", false);
+        $("#notebtn").click(function () {
+            tneBtnFunction("../student-views/notes-student.html", "Riehle | Notes");
+        });
+
         $("#eventbtn").attr("disabled", false);
+        $("#eventbtn").click(function () {
+            tneBtnFunction("../student-views/events-student.html", "Riehle | Events");
+        });
         $(".hamburger-menu").hide();
     });
 
 
-    $("#testbtn").click(function () {
-        $.get("../student-views/tests-student.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Tests");
-            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Tests");
-            $("div.welcome-medium h2:contains('John')").html("John | Tests");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
 
-        });
-    });
 
-    $("#notebtn").click(function () {
-        $.get("../student-views/notes-student.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Notes");
-            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Notes");
-            $("div.welcome-medium h2:contains('John')").html("John | Notes");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
+    //    $("#testbtn").click(function () {
+    //        $.get("../student-views/tests-student.html", function (data) {
+    //            $("#parentview").html(data);
+    //            $("#teacherview").html(data);
+    //            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Tests");
+    //            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Tests");
+    //            $("div.welcome-medium h2:contains('John')").html("John | Tests");
+    //            $(".school-notifications").hide();
+    //            $(".hamburger-menu").hide();
+    //
+    //        });
+    //    });
 
-        });
-    });
-
-    $("#eventbtn").click(function () {
-        $.get("../student-views/events-student.html", function (data) {
-            $("#parentview").html(data);
-            $("#teacherview").html(data);
-            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Events");
-            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Events");
-            $("div.welcome-medium h2:contains('John')").html("John | Events");
-            $(".school-notifications").hide();
-            $(".hamburger-menu").hide();
-
-        });
-    });
+    //    $("#notebtn").click(function () {
+    //        if ($("div.welcome-medium h2:contains('Jennifer')")) {
+    //            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Notes").get("../student-views/notes-jenstudent.html", function (data) {
+    //                $("#parentview").html(data);
+    //                $("#teacherview").html(data);
+    //            });
+    //        }
+    //        if ($("div.welcome-medium h2:contains('Riehle')")) {
+    //            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Notes");
+    //
+    //            $.get("../student-views/notes-student.html", function (data) {
+    //                $("#parentview").html(data);
+    //                $("#teacherview").html(data);
+    //            });
+    //        }
+    //        if ($("div.welcome-medium h2:contains('John')")) {
+    //            $("div.welcome-medium h2:contains('John')").html("John | Notes");
+    //            $.get("../student-views/notes-student.html", function (data) {
+    //                $("#parentview").html(data);
+    //                $("#teacherview").html(data);
+    //            });
+    //        }
+    //        $(".school-notifications").hide();
+    //        $(".hamburger-menu").hide();
+    //    });
+    //
+    //    $("#eventbtn").click(function () {
+    //        $.get("../student-views/events-student.html", function (data) {
+    //            $("#parentview").html(data);
+    //            $("#teacherview").html(data);
+    //            $("div.welcome-medium h2:contains('Riehle')").html("Riehle | Events");
+    //            $("div.welcome-medium h2:contains('Jennifer')").html("Jennifer | Events");
+    //            $("div.welcome-medium h2:contains('John')").html("John | Events");
+    //            $(".school-notifications").hide();
+    //            $(".hamburger-menu").hide();
+    //
+    //        });
+    //    });
 
 
 

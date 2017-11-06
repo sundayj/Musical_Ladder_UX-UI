@@ -35,11 +35,54 @@ LABEL.close-notes {
 
 .individ-note {
     border: 1px solid #2D01CB;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
 }
 
-.message {
-    padding-left: 10%;
-    padding-right: 10%;
+.individ-note:first-of-type {
+    margin-top: 0px;
+}
+
+.individ-note:last-of-type {
+    margin-bottom: 200px;
+}
+
+.talk-bubble {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    background-color: #AEDDF2;
+}
+
+.bubble:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 37px;
+    right: auto;
+    top: auto;
+    bottom: -24px;
+    border: 12px solid;
+    border-color: #2D01CB transparent transparent #2D01CB;
+}
+
+.bubble:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    right: auto;
+    top: auto;
+    bottom: -21px;
+    border: 11px solid;
+    border-color: #AEDDF2 transparent transparent #AEDDF2;
 }
 
 DIV.message-container:last-of-type {
@@ -47,7 +90,7 @@ DIV.message-container:last-of-type {
 }
 
 .message-from {
-    color: white;
+    color: navy;
     font-size: 1.3em;
     padding-top: 7px;
     text-align: center;
@@ -57,9 +100,6 @@ DIV.message-container:last-of-type {
     color: #0C2179;
     font-size: 25px;
     cursor: pointer;
-}
-
-.indiv-answer SPAN.fa-paperclip {
 }
 
 /*For Medium screen sizes and higher*/

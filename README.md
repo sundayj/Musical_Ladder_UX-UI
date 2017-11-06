@@ -13,6 +13,8 @@ This folder holds all of the stylesheets for each indivual view. The files in ea
 ~  /Musical_Ladder_UX-UI/users/assets/js:
 This folder contains the vendor folder, which conatins the js necessary for foundations. The app.js file contains all of the javascript used for all of the views, mostly jQuery. However, it is important to note that editing the js in this file will not neccessarily effect the individual views. For student notes, tests, and events, the js that effects them indivually is written inline in their respective files since those files are generated after the user interacts with a button.
 
+Navigating through the main js file is super easy! Look through the table of contents at the top and simply copy the line of the subject of your interest into "find," then go to the next instance.
+
 ~  Musical_Ladder_UX-UI/users/parent-views || student-views || teacher-views:
 The student-views folder contains all of the html files needed for tests, notes, and events. All three views have their own individual index files, that are the same for the most part. This will not be necessary for the final build. They each also contain one extra files which serves as the view intially loaded to the index page.
 
