@@ -67,16 +67,16 @@ $(document).ready(function () {
 
     //      Hamburger overlay functionality
 
-    $("i.hamburger").click(function (e) {
+    $("i.hamburger").on("tap", function (e) {
         $(".hamburger-menu").slideToggle();
         e.stopPropagation();
     });
 
-    $("body").click(function () {
+    $("body").on("tap", function () {
         $(".hamburger-menu").slideUp();
     });
 
-    $(".hamburger-menu").click(function (e) {
+    $(".hamburger-menu").on("tap", function (e) {
         e.stopPropagation();
     });
 
