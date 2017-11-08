@@ -1,0 +1,87 @@
+BODY
+{
+	/*background: url(users/assets/img/mllogin-background_v1.svg) 50% 50% / cover no-repeat fixed #007EFD;*/
+	background: url(users/assets/img/Artboard-1.svg) 50% 50% / cover no-repeat fixed #D5E1ED;
+	font-family: arial;
+	font-size: 14px;
+}
+.center
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.login-container .logo-holder
+{
+	position: relative;
+	top: -35px;
+	z-index: 1;
+	text-align: center;
+}
+.login-container .logo-holder IMG
+{
+	height: 70px;
+}
+.login-container
+{
+	background-color: white;
+	height: auto;
+	width: 239px;
+	/*+box-shadow: 0px 11px 15px 6px rgba(0, 0, 0, 0.376);*/
+	-moz-box-shadow: 0px 11px 15px 6px rgba(0, 0, 0, 0.376);
+	-webkit-box-shadow: 0px 11px 15px 6px rgba(0, 0, 0, 0.376);
+	box-shadow: 0px 11px 15px 6px rgba(0, 0, 0, 0.376);
+	padding-bottom: 40px;
+}
+.username-input-holder, .password-input-holder
+{
+	border-bottom: 2px solid rgba(0, 0, 0, 0.239);
+}
+.login-container I
+{
+	color: rgba(0, 0, 0, 0.239);
+	margin-top: 20px;
+	font-size: 19px;
+}
+.login-container INPUT
+{
+	border: none;
+	/*+box-shadow: none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin-bottom: 0;
+	height: 27px;
+	margin-top: 14px;
+}
+.login-container INPUT:focus
+{
+	border: none;
+	/*+box-shadow: none;*/
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.forgot-password
+{
+	margin-top: 6px;
+	text-align: right;
+}
+.forgot-password A
+{
+	color: rgba(0, 0, 0, 0.376);
+	font-size: 10px;
+}
+.sign-in BUTTON
+{
+	width: 100%;
+	padding: 8px;
+	margin-top: 16px;
+	background-color: #234674;
+	color: white;
+	/*+box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.376);*/
+	-moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.376);
+	-webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.376);
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.376);
+}

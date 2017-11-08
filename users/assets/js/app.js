@@ -39,6 +39,9 @@ $(document).ready(function () {
 
     //  #5 Director
     //      Main nav functionality
+    //      Search Filter Functionality
+
+    //  #6 Unused, old functions.
 
     //---------------------------------------------------------
     //---------------------------------------------------------
@@ -53,21 +56,9 @@ $(document).ready(function () {
 
     //  #0 General Functionality
 
-    //      Functionality for generating individual pages for medium view (not used for now)
 
-    //    $.get("tests-student.html", function (data) {
-    //        $("#medium-tests").html(data);
-    //    });
-    //    $.get("notes-student.html", function (data) {
-    //        $("#medium-notes").html(data);
-    //    });
-    //    $.get("events-student.html", function (data) {
-    //        $("#medium-events").html(data);
-    //    });
 
     //      Hamburger overlay functionality
-
-
 
     $("i.hamburger").click(function (e) {
         $(".hamburger-menu").slideToggle();
@@ -135,7 +126,6 @@ $(document).ready(function () {
         $(".school-notifications").hide();
         $(".hamburger-menu").hide();
     }
-
 
 
     //      Test Page Functionality
@@ -212,58 +202,15 @@ $(document).ready(function () {
         }
     });
 
-    //    $(".notes-acc-drop").click(function () {
-    //        $(".notes-acc-dropdown").hide().slideUp();
-    //        $(this).next(".notes-acc-dropdown").slideToggle();
-    //        $(this).find(".close-notes").first().toggle();
-    //        $(this).find(".open-notes").first().toggle();
-    //        $(".school-notifications").hide();
-    //    });
-
-
     //      For the events page.
 
-    //    $(".global-btn").click(function () {
-    //        $(".global-events").show();
-    //        $(".personal-events").hide();
-    //        $(".global-btn").css({
-    //            "color": "navy",
-    //            "box-shadow": "inset 0 0 75px white"
-    //        });
-    //        $(".personal-btn").css({
-    //            "color": "#5B5BFF",
-    //            "box-shadow": "none"
-    //        });
-    //    });
 
-    //    $(".personal-btn").click(function () {
-    //        $(".personal-events").show();
-    //        $(".global-events").hide();
-    //        $(".personal-btn").css({
-    //            "color": "navy",
-    //            "box-shadow": "inset 0 0 75px white"
-    //        });
-    //        $(".global-btn").css({
-    //            "color": "#5B5BFF",
-    //            "box-shadow": "none"
-    //        });
-    //    });
-
-
-    //    $(".month-acc-drop").click(function () {
-    //        $(this).next(".month-acc-dropdown").slideToggle();
-    //        $(this).find(".close-month").first().toggle();
-    //        $(this).find("label.open-month").first().toggle();
-    //        $(".school-notifications").hide();
-    //    });
     $(".event-title").click(function () {
         $(this).next(".event-description").slideToggle();
         $(this).find(".close-details").first().toggle();
         $(this).find("p.more-details").first().toggle();
         $(".school-notifications").hide();
     });
-
-
 
     //      For Medium and Large Main Screen
     //On load, open the first div with class "medium-instrument-open".
@@ -282,7 +229,6 @@ $(document).ready(function () {
     }
     checkSize();
     $(window).resize(checkSize);
-
 
     $(".medium-instrument-acc").click(function () {
         //        On click, every div with class "medium-instrument-open," except the one under the clicked div, slides-up to hide.
@@ -372,10 +318,6 @@ $(document).ready(function () {
         });
     }
 
-
-
-
-
     //---------------------------------------------------------
     //---------------------------------------------------------
     //---------------------------------------------------------
@@ -394,10 +336,6 @@ $(document).ready(function () {
         $("#notebtn").attr("disabled", true);
         $("#eventbtn").attr("disabled", true);
     });
-
-
-
-
 
     //---------------------------------------------------------
     //---------------------------------------------------------
@@ -418,22 +356,17 @@ $(document).ready(function () {
         $("#eventbtn").attr("disabled", true);
     });
 
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
 
 
-
-
-
-
-
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
     //  #4 Parent and Teacher
 
     //      When student is chosen from the parent or teacher screen, load student-instrument into view, and replace disabled buttons with working buttons linked to that students notes, tests, and events, respectively.
@@ -459,8 +392,6 @@ $(document).ready(function () {
 
         $(".hamburger-menu").hide();
     });
-
-
 
 
     $("#student-1").click(function () {
@@ -510,9 +441,89 @@ $(document).ready(function () {
         $(".hamburger-menu").hide();
     });
 
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //---------------------------------------------------------
+    //  #5 Director
+
+    //      Main nav functionality
+    $(".options").hover(function () {
+        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
+        $(this).children(".dropdown").toggle();
+    });
+    $(".options").click(function () {
+        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
+        $(this).children(".dropdown").toggle();
+    });
+
+    //      Search Filter Functionality
 
 
 
+
+
+
+    //  #6 Unused, old functions.
+
+    //  Functions commented out when better solutions were found. Collected here in case we need to go back to them.
+
+    //      Functionality for generating individual pages for medium view (not used for now)
+
+    //    $.get("tests-student.html", function (data) {
+    //        $("#medium-tests").html(data);
+    //    });
+    //    $.get("notes-student.html", function (data) {
+    //        $("#medium-notes").html(data);
+    //    });
+    //    $.get("events-student.html", function (data) {
+    //        $("#medium-events").html(data);
+    //    });
+    //    $(".notes-acc-drop").click(function () {
+    //        $(".notes-acc-dropdown").hide().slideUp();
+    //        $(this).next(".notes-acc-dropdown").slideToggle();
+    //        $(this).find(".close-notes").first().toggle();
+    //        $(this).find(".open-notes").first().toggle();
+    //        $(".school-notifications").hide();
+    //    });
+    //    $(".global-btn").click(function () {
+    //        $(".global-events").show();
+    //        $(".personal-events").hide();
+    //        $(".global-btn").css({
+    //            "color": "navy",
+    //            "box-shadow": "inset 0 0 75px white"
+    //        });
+    //        $(".personal-btn").css({
+    //            "color": "#5B5BFF",
+    //            "box-shadow": "none"
+    //        });
+    //    });
+
+    //    $(".personal-btn").click(function () {
+    //        $(".personal-events").show();
+    //        $(".global-events").hide();
+    //        $(".personal-btn").css({
+    //            "color": "navy",
+    //            "box-shadow": "inset 0 0 75px white"
+    //        });
+    //        $(".global-btn").css({
+    //            "color": "#5B5BFF",
+    //            "box-shadow": "none"
+    //        });
+    //    });
+
+
+    //    $(".month-acc-drop").click(function () {
+    //        $(this).next(".month-acc-dropdown").slideToggle();
+    //        $(this).find(".close-month").first().toggle();
+    //        $(this).find("label.open-month").first().toggle();
+    //        $(".school-notifications").hide();
+    //    });
     //    $("#testbtn").click(function () {
     //        $.get("../student-views/tests-student.html", function (data) {
     //            $("#parentview").html(data);
@@ -564,32 +575,6 @@ $(document).ready(function () {
     //
     //        });
     //    });
-
-
-
-
-
-
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //---------------------------------------------------------
-    //  #5 Director
-
-    //      Main nav functionality
-    $(".options").hover(function () {
-        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
-        $(this).children(".dropdown").toggle();
-    });
-    $(".options").click(function () {
-        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
-        $(this).children(".dropdown").toggle();
-    });
 
 
 
