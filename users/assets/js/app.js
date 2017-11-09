@@ -467,6 +467,46 @@ $(document).ready(function () {
 
 
 
+    $("#check-parents").click(function () {
+        $(".parents-all").toggle();
+
+    });
+
+    $("#check-teachers").click(function () {
+        $(".teachers-all").toggle();
+
+    });
+
+
+    $("#check-students").click(function () {
+        $(".students-all").toggle();
+
+    });
+
+    $("input#main-filter").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#search-director-results li.individual-user").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        if ($("input#check-parents:checked")) {
+            $("#parent-results li.individual-user").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        } else if ($("input#check-teachers:checked")) {
+            $("#teacher-results li.individual-user").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        } else if ($("input#check-student:checked")) {
+            $("#students-results li.individual-user").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        }
+
+    });
+
+
+
+
 
 
     //  #6 Unused, old functions.
@@ -574,6 +614,11 @@ $(document).ready(function () {
     //            $(".hamburger-menu").hide();
     //
     //        });
+    //    });
+
+    //    $("input.search-filter").click(function () {
+    //        $(".search-filter").not(this).toggleClass("search-filter-visible");
+    //        $(this).next("label").toggleClass("search-filter-visible");
     //    });
 
 
