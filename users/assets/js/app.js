@@ -56,7 +56,9 @@ $(document).ready(function () {
 
     //  #0 General Functionality
 
-
+    //      Finding height of the window, then setting it to the height of the body.
+    var setHeight = $(window).height();
+    $("body").height(setHeight);
 
     //      Hamburger overlay functionality
 

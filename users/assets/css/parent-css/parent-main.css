@@ -17,6 +17,11 @@ body {
     color: white;
 }
 
+::-webkit-scrollbar:hover,
+::-moz-scrollbar:hover {
+    visibility: hidden;
+}
+
 header div.mobile-top-nav {
     background-image: url(../../img/header-bg.png);
     background-position: center;

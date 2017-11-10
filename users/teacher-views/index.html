@@ -14,7 +14,7 @@
 
 <body>
 
-    <header>
+    <header class="hide-for-medium">
         <div class="mobile-top-nav grid-container full">
             <div class="grid-x">
                 <div class="small-2 cell hide-for-medium"><button><i class="hamburger fa fa-bars" aria-hidden="true"></i></button></div>
@@ -320,9 +320,31 @@
     </section>
     <section>
 
-        <!--          Medium and Larger Main Content-->
+
 
         <div class="hide-for-small-only grid-container full">
+            <div class="grid-x">
+                <div class="small-12 cell">
+                    <style>
+                        /* For Dev only. Temporary.*/
+
+                        .please-mobile {
+                            color: black;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+
+                    </style>
+                    <p class="please-mobile">Please view in mobile. Unavailable for larger screens at this time. Thank you!</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--          Medium and Larger Main Content-->
+
+        <div class="hide-for-small-only grid-container full hide-for-medium">
             <div class="grid-x">
                 <div class="medium-individual-instrument-container medium-8 cell">
                     <div class="medium-student-individual-instrument medium-8 cell">
@@ -543,7 +565,7 @@
 
 
     <script src="../assets/js/vendor/jquery.js"></script>
-<script src="../assets/js/vendor/jquery.mobile.custom.min.js"></script>
+    <script src="../assets/js/vendor/jquery.mobile.custom.min.js"></script>
     <script src="../assets/js/vendor/what-input.js"></script>
     <script src="../assets/js/vendor/foundation.js"></script>
     <script src="../assets/js/app.js"></script>

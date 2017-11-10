@@ -14,7 +14,7 @@
 
 <body>
 
-    <header>
+    <header class=" hide-for-medium">
         <div class="mobile-top-nav grid-container full">
             <div class="grid-x">
                 <div class="small-2 cell hide-for-medium"><button><i id="home" class="fa fa-home home-button" aria-hidden="true"></i></button></div>
@@ -42,7 +42,7 @@
 
     <!--   Help-Overlay. Not Needed for Medium and larger screens.-->
 
-    <div class="help-overlay grid-container full">
+    <div class="help-overlay grid-container full hide-for-medium">
         <div class="grid-x">
             <div class="small-3 small-offset-9 cell close-help"><i class="fa fa-window-close-o" aria-hidden="true"></i></div>
         </div>
@@ -250,6 +250,28 @@
         <!--          Medium and Larger Main Content-->
 
         <div class="hide-for-small-only grid-container full">
+            <div class="grid-x">
+                <div class="small-12 cell">
+                    <style>
+                        /* For Dev only. Temporary.*/
+
+                        .please-mobile {
+                            color: black;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+
+                    </style>
+                    <p class="please-mobile">Please view in mobile. Unavailable for larger screens at this time. Thank you!</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="hide-for-small hide-for-medium grid-container full">
             <div class="grid-x">
                 <div class="medium-individual-instrument-container medium-8 cell">
                     <div class="medium-student-individual-instrument medium-8 cell">
