@@ -123,7 +123,9 @@ $(document).ready(function () {
     function tneBtnFunction(location, name) {
         $.get(location, function (data) {
             $("#parentview").html(data);
+            $("#teacherview").html(data);
             $("div.welcome-medium h2").html(name);
+            $(".welcome-student-mobile h1").html(name);
         });
         $(".school-notifications").hide();
         $(".hamburger-menu").hide();
@@ -376,7 +378,7 @@ $(document).ready(function () {
         $.get("../student-views/instruments-johnstudent.html", function (data) {
             $("#teacherview").html(data);
         });
-        $("div.welcome-medium h2").html("John | Classes");
+        $("div.welcome-student-mobile h1").html("John | Classes");
         $("#testbtn").attr("disabled", false);
         $("#testbtn").click(function () {
             tneBtnFunction("../student-views/tests-student.html", "John | Tests");
@@ -402,6 +404,7 @@ $(document).ready(function () {
             $("#teacherview").html(data);
         });
         $("div.welcome-medium h2").html("Jennifer | Classes");
+        $(".welcome-student-mobile h1").html("Jennifer | Classes");
         $("#testbtn").attr("disabled", false);
         $("#testbtn").click(function () {
             tneBtnFunction("../student-views/tests-jenstudent.html", "Jennifer | Tests");
@@ -426,6 +429,7 @@ $(document).ready(function () {
             $("#teacherview").html(data);
         });
         $("div.welcome-medium h2").html("Riehle | Classes");
+        $(".welcome-student-mobile h1").html("Riehle | Classes");
         $("#testbtn").attr("disabled", false);
         $("#testbtn").click(function () {
             tneBtnFunction("../student-views/tests-student.html", "Riehle | Tests");
