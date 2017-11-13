@@ -7,7 +7,6 @@
 html,
 body {
     height: 100%;
-    color: white;
 }
 
 header div.mobile-top-nav {
@@ -22,6 +21,10 @@ header div.mobile-top-nav {
     height: 61px;
     width: 100%;
     text-align: center;
+}
+
+.welcome-medium h2 {
+    color: white;
 }
 
 .music-logo img {
@@ -180,6 +183,11 @@ section#director-main-content {
     padding: 10px;
 }
 
+.coming-soon p {
+    color: rgba(128, 128, 128, 0.607);
+    cursor: auto;
+}
+
 .search-bar {
     padding-top: 6px;
     padding-bottom: 6px;
@@ -192,6 +200,10 @@ section#director-main-content {
 
 .search-input input {
     margin-bottom: 0;
+}
+
+.search-filter {
+    color: navy;
 }
 
 /*.search-filter-visible
@@ -209,6 +221,7 @@ section#director-main-content {
     margin-top: 15px;
 }
 
+/*user-student widget styles*/
 /*For Medium screen sizes and higher*/
 @media screen and (min-width: 40em) {
     /* Turn on custom 8px wide scrollbar */
@@ -364,4 +377,160 @@ section#director-main-content {
     div.student-list {
         margin-top: 40px;
     }
+}
+
+.panel-heading {
+    text-align: center;
+    background-color: #1A6BB0;
+    /*+box-shadow: 0px 3px 6px 1px #8F8E8E;*/
+    -moz-box-shadow: 0px 3px 6px 1px #8F8E8E;
+    -webkit-box-shadow: 0px 3px 6px 1px #8F8E8E;
+    box-shadow: 0px 3px 6px 1px #8F8E8E;
+    margin-top: 20px;
+}
+
+.panel-heading .student-name {
+    padding-top: 28px;
+    color: white;
+}
+
+.instructor-class-container {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.indiv-instruct-class .teacher,
+.indiv-instruct-class .instrument {
+    background-color: white;
+    color: navy;
+}
+
+.instructor-class-container span {
+    font-size: 12px;
+}
+
+.indiv-instruct-class {
+    border: 1px solid navy;
+    margin-right: 4px;
+}
+
+.director-student-actions {
+    padding-top: 4px;
+}
+
+.open-student-view {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.indiv-dir-act-icons.open-student-view .dir-act-icons {
+    padding: 5px 7px;
+    background-color: #165A93;
+    font-size: 25px;
+    color: white;
+}
+
+.indiv-dir-act-icons.delete-student .dir-act-icons,
+.indiv-dir-act-icons.edit-student .dir-act-icons {
+    padding: 5px 7px;
+    background-color: #165A93;
+    font-size: 20px;
+    color: white;
+}
+
+.indiv-dir-act-icons.edit-student .dir-act-icons {
+    padding: 5px 3px 5px 7px;
+}
+
+.panel-body {
+    /*display: none;*/
+}
+
+.panel-body-heading {
+    text-align: center;
+}
+
+.panel-body-heading .student-name {
+    padding-top: 28px;
+}
+
+.panel-body-heading .edit-student .dir-act-icons,
+.panel-body-heading .open-student-view .dir-act-icons {
+    border: 1px solid navy;
+    background-color: white;
+    color: navy;
+}
+
+/*    styles for the individual ladder levels*/
+.apprentice {
+    background: none 0 0 / auto no-repeat #8FBF22;
+}
+
+.song-bird {
+    background: none 0 0 / auto no-repeat #D5E516;
+}
+
+.musician {
+    background: none 0 0 / auto no-repeat #E3D30E;
+}
+
+.rockstar {
+    background: none 0 0 / auto no-repeat #E3A428;
+}
+
+.allegro {
+    background: none 0 0 / auto no-repeat #D8812A;
+}
+
+.vivace {
+    background: none 0 0 / auto no-repeat #DA6729;
+}
+
+.prodigy {
+    background: none 0 0 / auto no-repeat #D15815;
+}
+
+.maestro {
+    background: none 0 0 / auto no-repeat #B22B31;
+}
+
+.master {
+    background: none 0 0 / auto no-repeat #7C192A;
+}
+
+.superior {
+    background: none 0 0 / auto no-repeat #9D3962;
+}
+
+.champion {
+    background: none 0 0 / auto no-repeat #9D3396;
+}
+
+.superstar {
+    background: none 0 0 / auto no-repeat #76349F;
+}
+
+.prima {
+    background: none 0 0 / auto no-repeat #581B7E;
+}
+
+.bravo {
+    background: none 0 0 / auto no-repeat #5357A2;
+}
+
+.adept {
+    background: none 0 0 / auto no-repeat #434796;
+}
+
+.marvel {
+    background: none 0 0 / auto no-repeat #202474;
+}
+
+.ace {
+    background: none 0 0 / auto no-repeat #204A74;
+}
+
+.artist {
+    background: none 0 0 / auto no-repeat #226B71;
 }
