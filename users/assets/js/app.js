@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     //      Finding height of the window, then setting it to the height of the body.
     var setHeight = $(window).height();
-    $("body").height(setHeight);
+    $("#director-main-content").css("height", setHeight);
 
     //      Hamburger overlay functionality
 
@@ -460,11 +460,11 @@ $(document).ready(function () {
 
     //      Main nav functionality
     $(".options").hover(function () {
-        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
+        $(this).children("div.actions, .dropdown").toggleClass("active-nav-options");
         $(this).children(".dropdown").toggle();
     });
     $(".options").click(function () {
-        $(this).children("div.actions, div.dropdown").toggleClass("active-nav-options");
+        $(this).children("div.actions, .dropdown").toggleClass("active-nav-options");
         $(this).children(".dropdown").toggle();
     });
 
@@ -509,6 +509,8 @@ $(document).ready(function () {
         }
 
     });
+
+
 
 
 

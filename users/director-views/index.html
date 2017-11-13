@@ -28,232 +28,301 @@
     </script>
 </head>
 
-<body>
-    <header>
-        <div class="mobile-top-nav grid-container full">
-            <div class="grid-x">
-                <div class="small-2 cell hide-for-medium"><button><i id="home" class="fa fa-home home-button" aria-hidden="true"></i></button></div>
-                <div class="small-2 small-offset-3 medium-3 medium-offset-0 cell">
-                    <span class="music-logo"><a href="index.html"><img id="home-logo" src="../assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></a></span>
-                </div>
-                <div class="welcome-medium hide-for-small-only medium-6">
-                    <h2>Welcome Director!</h2>
-                </div>
-                <div class="small-2 small-offset-3 medium-offset-1 cell">
-                    <button class="logout-btn"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="director-main-content">
-        <div class="grid-container full">
-            <div class="grid-x nav-bar">
-                <div class="options small-12 medium-2 medium-offset-1 cell">
-                    <div class="actions">
-                        <div>
-                            <p>Students</p>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <div>
-                            <p>See All</p>
-                        </div>
-                        <div>
-                            <p>Add</p>
-                        </div>
-                        <div>
-                            <p>Edit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="options small-12 medium-2 cell">
-                    <div class="actions">
-                        <div>
-                            <p>Parents</p>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <div>
-                            <p>See All</p>
-                        </div>
-                        <div>
-                            <p>Add</p>
-                        </div>
-                        <div>
-                            <p>Edit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="options small-12 medium-2 cell">
-                    <div class="actions">
-                        <div>
-                            <p>Teachers</p>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <div>
-                            <p>See All</p>
-                        </div>
-                        <div>
-                            <p>Add</p>
-                        </div>
-                        <div>
-                            <p>Edit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="options small-12 medium-2 cell">
-                    <div class="actions ">
-                        <div>
-                            <p>Locations</p>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <div>
-                            <p>See All</p>
-                        </div>
-                        <div>
-                            <p>Add</p>
-                        </div>
-                        <div>
-                            <p>Edit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="options small-12 medium-2 cell">
-                    <div class="actions ">
-                        <div>
-                            <p>Events</p>
-                        </div>
-                    </div>
-
-                    <div class="dropdown">
-                        <div>
-                            <p>See All</p>
-                        </div>
-                        <div>
-                            <p>Add</p>
-                        </div>
-                        <div>
-                            <p>Edit</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="grid-x calendar-and-search">
-                <div class="small-12 medium-6 cell">
-                    <div class="grid-x search-bar">
-                        <div class="small-12 cell search-input">
-                            <input id="main-filter" type="text" placeholder="Search Students, Teachers, and Parents">
-                        </div>
-                        <div class="small-4 cell">
-                            <input id="check-teachers" type="checkbox" name="all-teachers" class="search-filter" checked="checked">
-                            <label for="all-teachers" class="search-filter">Teachers</label>
-                        </div>
-                        <div class="small-4 cell">
-                            <input id="check-parents" type="checkbox" name="all-parents" class="search-filter" checked="checked">
-                            <label for="all-parents" class="search-filter">Parents</label>
-                        </div>
-                        <div class="small-4 cell">
-                            <input id="check-students" type="checkbox" name="all-students" class="search-filter" checked="checked">
-                            <label for="all-students" class="search-filter">Students</label>
-                        </div>
-                    </div>
-
-                    <div id="search-director-results" class="search-results-holder">
-
-                        <div class="teachers-all">
-                            <div class="grid-x">
-                                <div class="teacher-list small-6 small-offset-3 cell">
-                                    <h2>Teachers</h2>
-                                </div>
-                            </div>
-                            <div class="grid-x">
-                                <div id="teacher-results" class="small-11 small-offset-1 cell">
-                                    <ul>
-                                        <li class="individual-user">TianaParentStudent Teacher Jen&#039;s Office</li>
-                                        <li class="individual-user">DavidStudent Teacher Jen&#039;s Kitchen</li>
-                                        <li class="individual-user">Ava Teacher </li>
-                                        <li class="individual-user">Shrek Teacher </li>
-                                        <li class="individual-user">MommaTeacher Parent </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="parents-all">
-                            <div class="grid-x">
-                                <div class="parent-list small-6 small-offset-3 cell">
-                                    <h2>Parents</h2>
-                                </div>
-                            </div>
-                            <div class="grid-x">
-                                <div id="parent-results" class="small-11 small-offset-1 cell">
-                                    <ul>
-                                        <a href="http://127.0.0.1:8000/show-user/parent/12467" target="_blank">
-                                            <li class="individual-user">SavannaStudent Parent Jen&#039;s Kitchen</li>
-                                        </a>
-                                        <a href="http://127.0.0.1:8000/show-user/parent/24016" target="_blank">
-                                            <li class="individual-user">Patrick Parent Jen&#039;s Living Room</li>
-                                        </a>
-                                        <a href="http://127.0.0.1:8000/show-user/parent/24017" target="_blank">
-                                            <li class="individual-user">MommaTeacher Parent </li>
-                                        </a>
-                                        <a href="http://127.0.0.1:8000/show-user/parent/12465" target="_blank">
-                                            <li class="individual-user">TianaParentStudent Teacher Jen&#039;s Office</li>
-                                        </a>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="students-all">
-                            <div class="grid-x">
-                                <div class="student-list small-6 small-offset-3 cell">
-                                    <h2>Students</h2>
-                                </div>
-                            </div>
-                            <div class="grid-x">
-                                <div id="student-results" class="small-11 small-offset-1 cell">
-                                    <ul>
-                                        <li class="individual-user">Noel Student 2017-01-01 Jen&#039;s Living Room</li>
-                                        <li class="individual-user">Riehle Student 2017-01-01 Jen&#039;s Living Room</li>
-                                        <li class="individual-user">Raisin Student 2017-01-01 Jen&#039;s Living Room</li>
-                                        <li class="individual-user">Shelbie Student 2017-01-01</li>
-                                        <li class="individual-user">Justin Student 2017-01-01 Jen&#039;s Kitchen</li>
-                                        <li class="individual-user">NoTeacher Student 2017-01-01</li>
-                                        <li class="individual-user">TianaParentStudent Teacher Jen&#039;s Office</li>
-                                        <li class="individual-user">SavannaStudent Parent Jen&#039;s Kitchen</li>
-                                        <li class="individual-user">DavidStudent Teacher Jen&#039;s Kitchen</li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Insert Results Here-->
-                    </div>
-
-
-                </div>
-                <div class="small-12 medium-6 cell calendar-container" id="calendar"></div>
-            </div>
+<body id="director-only">
+    <section>
+        <div class="hide-for-medium view-medium-only">
+            <p>Please view this page on a tablet or desktop only. Thank you.</p>
         </div>
     </section>
+    <div class="hide-for-small-only">
+        <header>
+            <div class="mobile-top-nav grid-container full">
+                <div class="grid-x">
+
+                    <div class="medium-2 cell">
+                        <span class="music-logo"><a href="index.html"><img id="home-logo" src="../assets/img/logo@2x-dark.png" alt="Musical Ladder Logo"></a></span>
+                    </div>
+                    <div class="welcome-medium medium-8">
+                        <h2>Welcome, Director!</h2>
+                    </div>
+                    <div class="medium-1 cell">
+                        <button class="logout-btn"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
+                    </div>
+                    <div class="medium-1 cell">
+                        <button><i class="fa fa-question-circle help" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <section id="help-overlay">
+            <div class="help-overlay grid-container full">
+                <div class="grid-x">
+                    <div class="medium-3 medium-offset-9 cell close-help"><i class="fa fa-window-close-o" aria-hidden="true"></i></div>
+                </div>
+                <div class="help-explain">
+                    <div class="grid-x">
+                        <div class="medium-6 medium-offset-3 cell">
+                            <p class="faq">*Frequently Asked Questions:</p>
+                            <p class="faq-how-to">*When you locate the question you have, simply click the question to reveal your answer.*</p>
+                        </div>
+                    </div>
+                    <div class="medium-help">
+                        <div class="grid-x">
+                            <div class="help-question-acc medium-10 medium-offset-1 cell">
+                                <div class="indiv-question">
+                                    <p>
+                                        Why am I seeing all of the Teachers, Parents, and Students at once when I log in?
+                                    </p>
+                                    <p class="see-answer">Show Answer</p>
+
+                                </div>
+
+                            </div>
+                            <div class="help-question-acc-open medium-8 medium-offset-2 cell">
+                                <div class="indiv-answer">
+                                    <p>
+                                        The list you see is ever user in your school. If you click on their name, you can see all of the info pertaining to them in another screen.
+                                    </p>
+                                    <p>
+                                        Conversely, if you want to narrow down the list, you can start typing their name into the search box and everyone with a name containing those letters will appear in the list for you.
+                                    </p>
+                                    <p>
+                                        If you want to see only teachers, students, or parents, then simply uncheck the boxes for the groups you don't wish to see.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="director-nav-bar">
+            <div class="grid-container full">
+                <div class="grid-x nav-bar">
+                    <div class="options medium-2 medium-offset-1">
+                        <div class="actions">
+                            <div>
+                                <p>Students</p>
+                            </div>
+                        </div>
 
 
+                        <div class="dropdown">
+                            <div class="medium-2 cell">
+                                <p>See All</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Add</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Edit</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="options medium-2 cell">
+                        <div class="actions">
+                            <div>
+                                <p>Parents</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown">
+                            <div class="medium-2 cell">
+                                <p>See All</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Add</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Edit</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="options medium-2 cell">
+                        <div class="actions">
+                            <div>
+                                <p>Teachers</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown">
+                            <div class="medium-2 cell">
+                                <p>See All</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Add</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Edit</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="options medium-2 cell">
+                        <div class="actions ">
+                            <div>
+                                <p>Locations</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown">
+                            <div class="medium-2 cell">
+                                <p>See All</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Add</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Edit</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="options medium-2 cell">
+                        <div class="actions ">
+                            <div>
+                                <p>Events</p>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown">
+                            <div class="medium-2 cell">
+                                <p>See All</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Add</p>
+                            </div>
+                            <div class="medium-2 cell">
+                                <p>Edit</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="director-main-content">
+            <div class="grid-container full">
+
+                <div class="grid-x calendar-and-search">
+                    <div class=" medium-6 cell">
+                        <div class="grid-x search-bar">
+                            <div class=" cell search-input">
+                                <input id="main-filter" type="text" placeholder="Search Students, Teachers, and Parents">
+                            </div>
+                            <div class="medium-4 cell">
+                                <input id="check-teachers" type="checkbox" name="all-teachers" class="search-filter" checked="checked">
+                                <label for="all-teachers" class="search-filter">Teachers</label>
+                            </div>
+                            <div class="medium-4 cell">
+                                <input id="check-parents" type="checkbox" name="all-parents" class="search-filter" checked="checked">
+                                <label for="all-parents" class="search-filter">Parents</label>
+                            </div>
+                            <div class="medium-4 cell">
+                                <input id="check-students" type="checkbox" name="all-students" class="search-filter" checked="checked">
+                                <label for="all-students" class="search-filter">Students</label>
+                            </div>
+                        </div>
+
+                        <div id="search-director-results" class="search-results-holder">
+
+                            <div class="teachers-all">
+                                <div class="grid-x">
+                                    <div class="teacher-list medium-6 medium-offset-3 cell">
+                                        <h2>Teachers</h2>
+                                    </div>
+                                </div>
+                                <div class="grid-x">
+                                    <div id="teacher-results" class="medium-11 medium-offset-1 cell">
+                                        <ul>
+                                            <li class="individual-user">TianaParentStudent Teacher Jen&#039;s Office</li>
+                                            <li class="individual-user">DavidStudent Teacher Jen&#039;s Kitchen</li>
+                                            <li class="individual-user">Ava Teacher </li>
+                                            <li class="individual-user">Shrek Teacher </li>
+                                            <li class="individual-user">MommaTeacher Parent </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="parents-all">
+                                <div class="grid-x">
+                                    <div class="parent-list medium-6 medium-offset-3 cell">
+                                        <h2>Parents</h2>
+                                    </div>
+                                </div>
+                                <div class="grid-x">
+                                    <div id="parent-results" class="medium-11 medium-offset-1 cell">
+                                        <ul>
+                                            <a href="http://127.0.0.1:8000/show-user/parent/12467" target="_blank">
+                                                <li class="individual-user">SavannaStudent Parent Jen&#039;s Kitchen</li>
+                                            </a>
+                                            <a href="http://127.0.0.1:8000/show-user/parent/24016" target="_blank">
+                                                <li class="individual-user">Patrick Parent Jen&#039;s Living Room</li>
+                                            </a>
+                                            <a href="http://127.0.0.1:8000/show-user/parent/24017" target="_blank">
+                                                <li class="individual-user">MommaTeacher Parent </li>
+                                            </a>
+                                            <a href="http://127.0.0.1:8000/show-user/parent/12465" target="_blank">
+                                                <li class="individual-user">TianaParentStudent Teacher Jen&#039;s Office</li>
+                                            </a>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="students-all">
+                                <div class="grid-x">
+                                    <div class="student-list medium-6 medium-offset-3 cell">
+                                        <h2>Students</h2>
+                                    </div>
+                                </div>
+                                <div class="grid-x">
+                                    <div id="student-results" class="medium-11 medium-offset-1 cell">
+                                        <ul>
+                                            <li class="individual-user">Noel Student 2017-01-01 Jen&#039;s Living Room</li>
+                                            <li class="individual-user">Riehle Student 2017-01-01 Jen&#039;s Living Room</li>
+                                            <li class="individual-user">Raisin Student 2017-01-01 Jen&#039;s Living Room</li>
+                                            <li class="individual-user">Shelbie Student 2017-01-01</li>
+                                            <li class="individual-user">Justin Student 2017-01-01 Jen&#039;s Kitchen</li>
+                                            <li class="individual-user">NoTeacher Student 2017-01-01</li>
+                                            <li class="individual-user">TianaParentStudent Teacher Jen&#039;s Office</li>
+                                            <li class="individual-user">SavannaStudent Parent Jen&#039;s Kitchen</li>
+                                            <li class="individual-user">DavidStudent Teacher Jen&#039;s Kitchen</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Insert Results Here-->
+                        </div>
+
+
+                    </div>
+                    <div class=" medium-6 cell calendar-container" id="calendar"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
 </body>
 <script src="../assets/js/vendor/what-input.js"></script>
 <script src="../assets/js/vendor/foundation.js"></script>
