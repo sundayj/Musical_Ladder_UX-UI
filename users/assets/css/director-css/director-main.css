@@ -1,4 +1,5 @@
 /*Fixed Header for Mobile. Student.*/
+
 * {
     font-family: arial, helvetica;
     font-size: 100%;
@@ -44,6 +45,7 @@ header div.mobile-top-nav {
 }
 
 /*Help overlay styles*/
+
 .help-overlay {
     position: fixed;
     text-align: center;
@@ -116,6 +118,7 @@ p.faq {
 }
 
 /*Director Styles Only*/
+
 .logout-btn {
     cursor: pointer;
     color: navy;
@@ -210,6 +213,7 @@ section#director-main-content {
 {
 	visibility: hidden;
 }*/
+
 .search-results-holder h2 {
     text-align: center;
     /*    display: none;*/
@@ -222,7 +226,9 @@ section#director-main-content {
 }
 
 /*user-student widget styles*/
+
 /*For Medium screen sizes and higher*/
+
 @media screen and (min-width: 40em) {
     /* Turn on custom 8px wide scrollbar */
     ::-webkit-scrollbar,
@@ -234,45 +240,47 @@ section#director-main-content {
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
     }
-    
+
     /* hover effect for both scrollbar area, and scrollbar 'thumb' */
     ::-webkit-scrollbar:hover,
     ::-moz-scrollbar:hover {
         background-color: rgba(0, 0, 0, 0.09);
     }
-    
+
     /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-    ::-webkit-scrollbar-thumb:vertical, ::-moz-scrollbar-thumb:vertical {
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-moz-scrollbar-thumb:vertical {
         /* This is the EXACT color of Mac OS scrollbars. 
                Yes, I pulled out digital color meter */
         background: rgba(0, 0, 0, 0.5);
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
     }
-    
-    ::-webkit-scrollbar-thumb:vertical:active, ::-moz-scrollbar-thumb:vertical:active {
+
+    ::-webkit-scrollbar-thumb:vertical:active,
+    ::-moz-scrollbar-thumb:vertical:active {
         background: rgba(0, 0, 0, 0.61);
         /* Some darker color when you click it */
         -webkit-border-radius: 100px;
         -moz-border-radius: 100px;
     }
-    
+
     header div.mobile-top-nav {
         height: 75px;
         z-index: 0;
     }
-    
+
     .music-logo img {
         height: 65px;
         width: auto;
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    
+
     .welcome-medium {
         padding-top: 9px;
     }
-    
+
     .mobile-top-nav button .help,
     .home-button {
         font-size: 2.2rem;
@@ -280,16 +288,16 @@ section#director-main-content {
         color: #0C2179;
         margin-top: 21px;
     }
-    
+
     /*    Help Overlay Styles*/
     .help-overlay {
         top: 75px;
     }
-    
+
     .school-icon {
         font-size: 1.5em;
     }
-    
+
     p.faq-how-to {
         font-size: 1em;
         /*+box-shadow: inset 0 0 37px 0px #252664;*/
@@ -297,7 +305,7 @@ section#director-main-content {
         -webkit-box-shadow: inset 0 0 37px 0px #252664;
         box-shadow: inset 0 0 37px 0px #252664;
     }
-    
+
     div.indiv-question {
         background-color: #378EFF;
         /*+border-radius: 55px;*/
@@ -309,21 +317,21 @@ section#director-main-content {
         margin-bottom: 10px;
         cursor: pointer;
     }
-    
+
     div.indiv-question p:first-of-type {
         margin: 0;
         padding-right: 11px;
         padding-left: 11px;
         padding-top: 0px;
     }
-    
+
     p.see-answer {
         font-size: 0.9em;
         font-style: italic;
         padding: 0px;
         margin: 0;
     }
-    
+
     .help-question-acc-open {
         display: none;
         /*+box-shadow: inset 0 0 295px 19px #303179;*/
@@ -340,13 +348,13 @@ section#director-main-content {
         -khtml-border-radius: 33px;
         border-radius: 33px;
     }
-    
+
     div.help-question-acc-open p {
         font-size: 1.2em;
         text-align: left;
         text-indent: 50px;
     }
-    
+
     /*For Director only*/
     header div.mobile-top-nav {
         background-image: url(../../img/header-bg.png);
@@ -361,19 +369,19 @@ section#director-main-content {
         width: 100%;
         text-align: center;
     }
-    
+
     .calendar-and-search {
         z-index: -1;
     }
-    
+
     div.search-results-holder {
         margin-top: 40px;
     }
-    
+
     div.parents-all {
         margin-top: 40px;
     }
-    
+
     div.student-list {
         margin-top: 40px;
     }
@@ -463,6 +471,7 @@ section#director-main-content {
 }
 
 /*    styles for the individual ladder levels*/
+
 .apprentice {
     background: none 0 0 / auto no-repeat #8FBF22;
 }
