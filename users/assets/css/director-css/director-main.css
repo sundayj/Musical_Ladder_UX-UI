@@ -370,7 +370,7 @@ section#director-main-content {
         text-align: center;
     }
 
-    .calendar-and-search {
+    xf {
         z-index: -1;
     }
 
@@ -475,6 +475,7 @@ section#director-main-content {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-top: 20px;
 }
 
 .panel-body-heading .student-name {
@@ -619,7 +620,7 @@ section#director-main-content {
     border-right: 1px solid navy;
 }
 
-div.dir-teach-student-events-container {
+.student-events-container {
     display: none;
 }
 
@@ -646,7 +647,7 @@ div.dir-teach-student-events-container {
 
 /*Notes Holder Styles*/
 
-div.dir-teach-student-notes-container {
+.student-notes-container {
     display: none;
 }
 
@@ -687,7 +688,7 @@ div.dir-teach-student-notes-container {
 
 /*Tests Holder Styles*/
 
-div.dir-teach-student-tests-container {
+.student-tests-container {
     display: none;
 }
 

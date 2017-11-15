@@ -526,10 +526,10 @@ $(document).ready(function () {
         }
     });
 
-    $("div#john-tests, div#john-notes, div#lindsey-notes, div#lindsey-tests, div#juliet-notes, div#juliet-tests").addClass("inactive-tab");
-    $("div#riehle-events-tab").addClass("active-tab");
+    $(".teacher-notes-tab, .teacher-tests-tab").addClass("inactive-tab");
+    $(".events-tab").addClass("active-tab");
 
-    $(".dir-teach-student-events-container").show();
+    $(".student-events-container").show();
 
     function dirTeachStuTabs(activeTab, inActiveTab, activePanel, inActivePanel) {
         $(activeTab).addClass("active-tab").removeClass("inactive-tab");
@@ -538,37 +538,15 @@ $(document).ready(function () {
         $(inActivePanel).hide();
     }
 
-    $("div#riehle-events-tab.events-tab").click(function () {
-        dirTeachStuTabs(this, "div#john-tests, div#john-notes, div#lindsey-notes, div#lindsey-tests, div#juliet-notes, div#juliet-tests", "div#riehle-events", "div#john-teacher-tests:visible, div#lindsey-teacher-notes:visible, div#juliet-teacher-notes:visible, div#john-teacher-notes:visible, div#lindsey - teacher - tests:visible, div#juliet-teacher-tests:visible")
+    $("div[class$='-tab']").click(function () {
+        var stuPanelId = $(this).attr("id");
+        dirTeachStuTabs(
+            this,
+            $("div[class$='-tab']").not(this),
+            $("section." + stuPanelId),
+            $("section").not($("section." + stuPanelId))
+        )
     });
-
-    $("div#john-notes").click(function () {
-        dirTeachStuTabs(this, "div#riehle-events-tab.events-tab, div#john-tests, div#lindsey-notes, div#lindsey-tests, div#juliet-notes, div#juliet-tests", "div#john-teacher-notes", "div#riehle-events:visible, div#lindsey-teacher-notes:visible, div#juliet-teacher-notes:visible, div#john-teacher-tests:visible, div#lindsey-teacher-tests:visible, div#juliet-teacher-tests:visible")
-    });
-
-    $("div#john-tests").click(function () {
-        dirTeachStuTabs(this, "div#riehle-events-tab.events-tab, div#john-notes, div#lindsey-notes, div#lindsey-tests, div#juliet-notes, div#juliet-tests", "div#john-teacher-tests", "div#riehle-events:visible, div#lindsey-teacher-notes:visible, div#juliet-teacher-notes:visible, div#john-teacher-notes:visible, div#lindsey-teacher-tests:visible, div#juliet-teacher-tests:visible")
-    });
-
-    $("div#lindsey-notes").click(function () {
-        dirTeachStuTabs(this, "div#riehle-events-tab.events-tab, div#john-notes, div#lindsey-tests, div#john-tests, div#juliet-notes, div#juliet-tests", "div#lindsey-teacher-notes", "div#riehle-events:visible, div#lindsey-teacher-tests:visible, div#juliet-teacher-notes:visible, div#john-teacher-notes:visible, div#john-teacher-tests:visible, div#juliet-teacher-tests:visible")
-    });
-
-    $("div#lindsey-tests").click(function () {
-        dirTeachStuTabs(this, "div#riehle-events-tab.events-tab, div#john-notes, div#lindsey-notes, div#john-tests, div#juliet-notes, div#juliet-tests", "div#lindsey-teacher-tests", "div#riehle-events:visible, div#lindsey-teacher-notes:visible, div#juliet-teacher-notes:visible, div#john-teacher-notes:visible, div#john-teacher-tests:visible, div#juliet-teacher-tests:visible")
-    });
-
-    $("div#juliet-notes").click(function () {
-        dirTeachStuTabs(this, "div#riehle-events-tab.events-tab, div#john-notes, div#lindsey-tests, div#john-tests, div#lindsey-notes, div#juliet-tests", "div#juliet-teacher-notes", "div#riehle-events:visible, div#lindsey-teacher-tests:visible, div#lindsey-teacher-notes:visible, div#john-teacher-notes:visible, div#john-teacher-tests:visible, div#juliet-teacher-tests:visible")
-    });
-
-    $("div#juliet-tests").click(function () {
-        dirTeachStuTabs(this, "div#riehle-events-tab.events-tab, div#john-notes, div#lindsey-notes, div#john-tests, div#juliet-notes, div#lindsey-tests", "div#juliet-teacher-tests", "div#riehle-events:visible, div#lindsey-teacher-notes:visible, div#juliet-teacher-notes:visible, div#john-teacher-notes:visible, div#john-teacher-tests:visible, div#lindsey-teacher-tests:visible")
-    });
-
-
-
-
 
 
 
