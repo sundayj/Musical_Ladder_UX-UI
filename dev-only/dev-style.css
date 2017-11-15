@@ -57,6 +57,7 @@ body {
 }
 
 /*Delete the next rule once a description is entered!*/
+
 .student-level .individual-description,
 .individual-description {
     padding-top: 6px;
@@ -84,3 +85,5 @@ body {
 .active-nav-option {
     background-color: ;
 }
+
+
