@@ -7,10 +7,10 @@ In the first folder, where this readme.md is found, the index page is meant as a
 ~  /Musical_Ladder_UX-UI/users:
 This folder holds the subfolders for the student, parent, and teacher views, respectively, as well as the assets folder required for all three views.
 
-~  /Musical_Ladder_UX-UI/users/assets/css:
+~  /Musical_Ladder_UX-UI/users/justin-assets/css:
 This folder holds all of the stylesheets for each indivual view. The files in each folder are specifically used for the views they're named after, with the excepton of the student stylesheets. The student stylesheets are referenced by all three views. The foundation stylesheets are also found in this folder.
 
-~  /Musical_Ladder_UX-UI/users/assets/js:
+~  /Musical_Ladder_UX-UI/users/justin-assets/js:
 This folder contains the vendor folder, which conatins the js necessary for foundations. The app.js file contains all of the javascript used for all of the views, mostly jQuery. However, it is important to note that editing the js in this file will not neccessarily effect the individual views. For student notes, tests, and events, the js that effects them indivually is written inline in their respective files since those files are generated after the user interacts with a button.
 
 Navigating through the main js file is super easy! Look through the table of contents at the top and simply copy the line of the subject of your interest into "find," then go to the next instance.
