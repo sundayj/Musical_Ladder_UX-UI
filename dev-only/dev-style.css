@@ -4,9 +4,44 @@ body {
     text-align: center;
 }
 
-::-webkit-scrollbar:hover,
+::-webkit-scrollbar,
 ::-moz-scrollbar {
-    visibility: visible;
+    width: 8px;
+    /* 1px wider than Lion. */
+    /* This is more usable for users trying to click it. */
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+}
+
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+
+::-webkit-scrollbar:hover,
+::-moz-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+
+::-webkit-scrollbar-thumb:vertical,
+::-moz-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal,
+::-moz-scrollbar-thumb:horizontal {
+    /* This is the EXACT color of Mac OS scrollbars. 
+               Yes, I pulled out digital color meter */
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active,
+::-moz-scrollbar-thumb:vertical:active,
+::-webkit-scrollbar-thumb:horizontal:active,
+::-moz-scrollbar-thumb:horizontal:active {
+    background: rgba(0, 0, 0, 0.61);
+    /* Some darker color when you click it */
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
 }
 
 .welcome {
@@ -85,5 +120,3 @@ body {
 .active-nav-option {
     background-color: ;
 }
-
-
